@@ -2,6 +2,7 @@ package com.example.m.mproject499
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val serviceIntent = Intent(this, AEScreenOnOffService::class.java)
+            this.startService(serviceIntent)
+        }
+
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
