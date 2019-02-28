@@ -8,11 +8,16 @@ import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.DefaultItemAnimator
+import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import com.example.m.mproject499.Adapter.DaysAdapter
+import com.example.m.mproject499.Model.Days
 import com.example.m.mproject499.R.string.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +37,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
         createFragment(MainFragment.fragment(this),getString(learning_mode))
+
     }
 
     override fun onBackPressed() {
@@ -81,4 +87,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.commit()
         supportActionBar?.title = title
     }
+
+    private fun generateData(): ArrayList<Days> {
+        val result = ArrayList<Days>()
+
+        for (i in 0..9) {
+            val user = Days("Bett", "Awesome work ;)")
+            result.add(user)
+        }
+        return result
+    }
+
 }
