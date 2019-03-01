@@ -4,50 +4,46 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
+import com.android.databinding.library.baseAdapters.BR
+import com.example.m.mproject499.Activity.WordsActivity
 import com.example.m.mproject499.Model.Days
-import com.example.m.mproject499.R
+import com.example.m.mproject499.databinding.DaysListBinding
 import java.util.*
 
 
-class DaysAdapter(private var items: ArrayList<Days>): RecyclerView.Adapter<DaysAdapter.ViewHolder>() {
+class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAdapterViewHolder>() {
 
-    override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
+    private var items: ArrayList<Days> = java.util.ArrayList()
 
-    }
 
     override fun getItemCount(): Int {
         return items.size
     }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int, payloads: MutableList<Any>) {
-        val userDto = items[position]
-        holder.txtName?.text = userDto.name
-        holder.txtComment?.text = userDto.comment
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DaysAdapterViewHolder {
+        val layoutInflator: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        return DaysAdapterViewHolder(com.example.m.mproject499.databinding.DaysListBinding.inflate(layoutInflator, parent, false))
     }
 
-    override fun onCreateViewHolder(p0: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(p0.context)
-            .inflate(com.example.m.mproject499.R.layout.days_list, p0, false)
-        return ViewHolder(itemView)
-    }
+    override fun onBindViewHolder(holder: DaysAdapterViewHolder, position: Int) = holder.bind(items[position])
 
-    class ViewHolder(row: View) : RecyclerView.ViewHolder(row) {
-        private val context: Context? = null
-        var txtName: TextView? = null
-        var txtComment: TextView? = null
-        var view:LinearLayout? = null
+    class DaysAdapterViewHolder(val binding: DaysListBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        init {
-            this.txtName = row.findViewById(R.id.txtName)
-            this.txtComment = row.findViewById(R.id.txtComment)
-            this.view = row.findViewById(R.id.days_view)
-            row.setOnClickListener {
-                Log.d("test","clicked $position" )
+        val context: Context = binding.root.context
+
+        fun bind(item: Days) {
+
+            binding.setVariable(BR.name, item.name)
+            binding.setVariable(BR.comment, item.comment)
+            itemView.setOnClickListener {
+                Log.d("","test $itemId")
             }
+
         }
+    }
+
+    fun loadDatas(data: ArrayList<Days>){
+        this.items = data
+        notifyDataSetChanged()
     }
 }

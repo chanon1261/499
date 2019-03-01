@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,13 +35,12 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         main_page.text = "MAIN FRAGMENT"
 
-        val recyclerView = day_recycle
-        val adapter = DaysAdapter(generateData())
+        val adapter = activity?.applicationContext?.let { DaysAdapter(it) }
         val layoutManager = LinearLayoutManager(activity?.applicationContext)
-        recyclerView?.layoutManager = layoutManager
-        recyclerView?.itemAnimator = DefaultItemAnimator()
-        recyclerView?.adapter = adapter
-        adapter.notifyDataSetChanged()
+        day_recycle?.layoutManager = layoutManager
+        day_recycle?.adapter = adapter
+        adapter?.loadDatas(generateData())
+        adapter?.notifyDataSetChanged()
         super.onViewCreated(view, savedInstanceState)
 
 
@@ -50,7 +50,7 @@ class MainFragment : Fragment() {
         val result = ArrayList<Days>()
 
         for (i in 1..30) {
-            val user = Days(i.toString(), " ")
+            val user = Days(i.toString(), "xxxx")
             result.add(user)
         }
         return result

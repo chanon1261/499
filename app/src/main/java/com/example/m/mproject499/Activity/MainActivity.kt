@@ -49,8 +49,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        user_name.text = "test"
-        user_email.text = "test@email.com"
+
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
@@ -87,15 +86,4 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.commit()
         supportActionBar?.title = title
     }
-
-    private fun generateData(): ArrayList<Days> {
-        val result = ArrayList<Days>()
-
-        for (i in 0..9) {
-            val user = Days("Bett", "Awesome work ;)")
-            result.add(user)
-        }
-        return result
-    }
-
 }

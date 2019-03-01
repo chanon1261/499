@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+                name="name"
+                type="String" />
+        <variable
+                name="comment"
+                type="String" />
+    </data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
@@ -16,16 +26,19 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:id="@+id/txtName"
-               android:text="number"/>
+               tools:text="xxxx"
+               android:text="@{name}"/>
 
        <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:id="@+id/txtComment"
-               android:text="comment"
+               android:text="@{comment}"
+
        />
 
 
    </LinearLayout>
 
 </LinearLayout>
+</layout>
