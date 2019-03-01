@@ -9,6 +9,8 @@ import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.Activity.WordsActivity
 import com.example.m.mproject499.Model.Days
 import com.example.m.mproject499.databinding.DaysListBinding
+import org.jetbrains.anko.toast
+
 import java.util.*
 
 
@@ -37,6 +39,9 @@ class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAd
             binding.setVariable(BR.comment, item.comment)
             itemView.setOnClickListener {
                 Log.d("","test $itemId")
+                var intent = WordsActivity.getStartIntent(context)
+                context.startActivity(intent)
+                context.toast("$position")
             }
 
         }
