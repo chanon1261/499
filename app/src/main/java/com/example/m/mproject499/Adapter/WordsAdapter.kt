@@ -44,6 +44,7 @@ class WordsAdapter(val context: Context): RecyclerView.Adapter<WordsAdapter.Word
                 val result = tts!!.setLanguage(Locale.US)
                 if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                     Log.e("TTS","The Language specified is not supported!")
+                    context.toast("The Language specified is not supported!")
                 } else {
                     //buttonSpeak!!.isEnabled = true
                 }
