@@ -2,12 +2,14 @@ package com.example.m.mproject499.Activity
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.m.mproject499.MainActivity
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
+import com.example.m.mproject499.Adapter.WordsAdapter
 import com.example.m.mproject499.MainApp
+import com.example.m.mproject499.Model.Words
 import com.example.m.mproject499.R
-import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.activity_words.*
 
 class WordsActivity : AppCompatActivity() {
 
@@ -32,11 +34,26 @@ class WordsActivity : AppCompatActivity() {
             }
         }
 
+        val adapter =   WordsAdapter(this)
+        val layoutManager = LinearLayoutManager(MainApp.instance.applicationContext)
+        word_recycle?.layoutManager = layoutManager
+        word_recycle?.adapter = adapter
+        adapter.loadDatas(generateDataWord())
+        adapter.notifyDataSetChanged()
 
 
     }
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun generateDataWord(): ArrayList<Words> {
+        val result = ArrayList<Words>()
+        for (i in 1..10) {
+            val user = Words(i.toString(), "meaning","des_eng","des_th")
+            result.add(user)
+        }
+        return result
     }
 }

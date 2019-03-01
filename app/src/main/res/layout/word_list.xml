@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+                name="word"
+                type="String" />
+        <variable
+                name="descEng"
+                type="String" />
+        <variable
+                name="meaning"
+                type="String" />
+        <variable
+                name="descTH"
+                type="String" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+>
+
+   <LinearLayout
+           android:id="@+id/days_view"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+       <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/txtName"
+               tools:text="word"
+               android:textSize="40dp"
+               android:text="@{word}"/>
+
+       <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="20dp"
+               android:id="@+id/txtMeaning"
+               android:text="@{meaning}"
+               tools:text="Meaning"/>
+
+       <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/txtEng"
+               android:text="@{descEng}"
+               tools:text="sentences_eng"/>
+
+       <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/txtTH"
+               android:text="@{descTH}"
+               tools:text="sentences_TH"/>
+
+
+   </LinearLayout>
+</LinearLayout>
+</layout>
