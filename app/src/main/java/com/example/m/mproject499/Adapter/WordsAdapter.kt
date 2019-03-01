@@ -2,6 +2,9 @@ package com.example.m.mproject499.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
+import android.speech.tts.TextToSpeech
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
@@ -18,8 +21,8 @@ import java.util.*
 
 class WordsAdapter(val context: Context): RecyclerView.Adapter<WordsAdapter.WordsAdapterViewHolder>() {
 
-    private var items: ArrayList<Words> = java.util.ArrayList()
 
+    private var items: ArrayList<Words> = java.util.ArrayList()
 
     override fun getItemCount(): Int {
         return items.size
@@ -31,7 +34,24 @@ class WordsAdapter(val context: Context): RecyclerView.Adapter<WordsAdapter.Word
 
     override fun onBindViewHolder(holder: WordsAdapterViewHolder, position: Int) = holder.bind(items[position])
 
-    class WordsAdapterViewHolder(val binding: WordListBinding) : RecyclerView.ViewHolder(binding.root) {
+    class WordsAdapterViewHolder(val binding: WordListBinding) : RecyclerView.ViewHolder(binding.root) ,
+        TextToSpeech.OnInitListener{
+
+        var tts: TextToSpeech? = null
+        override fun onInit(status: Int) {
+            if (status == TextToSpeech.SUCCESS) {
+                // set US English as language for tts
+                val result = tts!!.setLanguage(Locale.US)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS","The Language specified is not supported!")
+                } else {
+                    //buttonSpeak!!.isEnabled = true
+                }
+
+            } else {
+                Log.e("TTS", "Initilization Failed!")
+            }
+        }
 
         val context: Context = binding.root.context
 
@@ -39,7 +59,19 @@ class WordsAdapter(val context: Context): RecyclerView.Adapter<WordsAdapter.Word
             binding.setVariable(BR.word, item.word)
             binding.setVariable(BR.meaning, item.meaning)
             binding.setVariable(BR.descEng, item.desc_eng)
-            binding.setVariable(BR.descTH, item.desc_th)gigigit
+            binding.setVariable(BR.descTH, item.desc_th)
+
+            tts = TextToSpeech(MainApp.instance.applicationContext,this)
+            itemView.setOnClickListener {
+                speakOut(item.word)
+                context.toast(item.word)
+            }
+        }
+
+        fun speakOut(text:String) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null,"")
+            }
         }
     }
 
@@ -47,4 +79,9 @@ class WordsAdapter(val context: Context): RecyclerView.Adapter<WordsAdapter.Word
         this.items = data
         notifyDataSetChanged()
     }
+
+
+
+
+
 }
