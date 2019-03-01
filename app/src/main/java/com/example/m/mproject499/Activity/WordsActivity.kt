@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 
 class WordsActivity : AppCompatActivity() {
 
+    var number:Int? = null
     companion object {
         fun getStartIntent(context: Context) = Intent(context, WordsActivity::class.java)
     }
@@ -18,14 +19,24 @@ class WordsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_words)
         MainApp.graph.inject(this)
-        var value:String? = null
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
         val extras = intent.extras
         if (extras != null)
         {
-            value = extras.getString("key")
+            extras.getString("key")?.let {
+                //title = it
+                supportActionBar?.title = "DAY $it"
+                number = it.toInt()
+            }
         }
-        value?.let {
-            toolbar.title = "DAY"
-        }
+
+
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
