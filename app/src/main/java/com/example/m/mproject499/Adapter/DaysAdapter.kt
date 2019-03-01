@@ -1,12 +1,14 @@
 package com.example.m.mproject499.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.Activity.WordsActivity
+import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.Model.Days
 import com.example.m.mproject499.databinding.DaysListBinding
 import org.jetbrains.anko.toast
@@ -39,9 +41,14 @@ class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAd
             binding.setVariable(BR.comment, item.comment)
             itemView.setOnClickListener {
                 Log.d("","test $itemId")
-                var intent = WordsActivity.getStartIntent(context)
-                context.startActivity(intent)
+                MainApp.instance.applicationContext?.let {context  ->
+                    val intent = WordsActivity.getStartIntent(context)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    intent.putExtra("key",position+1)
+                    context.startActivity(intent)
+                }
                 context.toast("$position")
+
             }
 
         }
