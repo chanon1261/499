@@ -7,8 +7,10 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.example.m.mproject499.Adapter.WordsAdapter
 import com.example.m.mproject499.MainApp
+import com.example.m.mproject499.Model.TestWord
 import com.example.m.mproject499.Model.Words
 import com.example.m.mproject499.R
+import com.vicpin.krealmextensions.queryAll
 import kotlinx.android.synthetic.main.activity_words.*
 
 class WordsActivity : AppCompatActivity() {
@@ -50,10 +52,19 @@ class WordsActivity : AppCompatActivity() {
 
     private fun generateDataWord(): ArrayList<Words> {
         val result = ArrayList<Words>()
-        for (i in 1..10) {
-            val user = Words(i.toString(), "meaning","des_eng","des_th")
-            result.add(user)
+
+        TestWord().queryAll().let {
+            for (it in it) {
+                val user = it.word?.let { it1 -> it.meaning?.let { it2 -> it.desc_eng?.let { it3 ->
+                    Words(it1, it2,
+                        it3, it.desc_eng!!
+                    )
+                } } }
+                user?.let { it1 -> result.add(it1) }
+            }
         }
+
+
         return result
     }
 }

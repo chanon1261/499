@@ -67,4 +67,20 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.4'
     compileOnly 'org.glassfish:javax.annotation:10.0-b28'
 
+    // Parcelable Helper
+    implementation 'com.github.grandstaish.paperparcel:paperparcel:1.0.0'
+    implementation 'com.github.grandstaish.paperparcel:paperparcel-kotlin:1.0.0'
+    kapt 'com.github.grandstaish.paperparcel:compiler:1.0.0'
+
+
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }

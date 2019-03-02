@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.m.mproject499.Adapter.DaysAdapter
 import com.example.m.mproject499.Model.Days
+import com.example.m.mproject499.Model.TestWord
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {
