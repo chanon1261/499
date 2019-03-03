@@ -57,14 +57,12 @@ class WordsActivity : AppCompatActivity() {
             for (it in it) {
                 val user = it.word?.let { it1 -> it.meaning?.let { it2 -> it.desc_eng?.let { it3 ->
                     Words(it1, it2,
-                        it3, it.desc_eng!!
+                        it3, it.desc_th!!
                     )
                 } } }
                 user?.let { it1 -> result.add(it1) }
             }
         }
-
-
         return result
     }
 }
