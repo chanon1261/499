@@ -12,6 +12,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity.ListeningActivity">
+        </activity>
+        <activity android:name=".Activity.MatchingActivity">
+        </activity>
         <activity android:name=".Activity.SpeakingActivity">
         </activity>
         <activity android:name=".Activity.WordsActivity">

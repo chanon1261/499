@@ -7,19 +7,18 @@ import android.os.Bundle
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.R
 
-
-class SpeakingActivity : AppCompatActivity() {
+class ListeningActivity : AppCompatActivity() {
 
     companion object {
-        fun getStartIntent(context: Context) = Intent(context, SpeakingActivity::class.java)
+        fun getStartIntent(context: Context) = Intent(context, ListeningActivity::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_speaking)
+        setContentView(R.layout.activity_listening)
         MainApp.graph.inject(this)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Speaking"
+        supportActionBar?.title = "Listening"
     }
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
