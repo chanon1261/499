@@ -12,6 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity.SpeakingActivity">
+        </activity>
         <activity android:name=".Activity.WordsActivity">
         </activity>
         <activity
