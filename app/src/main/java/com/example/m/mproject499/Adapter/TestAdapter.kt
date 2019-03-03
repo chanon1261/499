@@ -39,7 +39,7 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
                 MainApp.instance.applicationContext?.let { context  ->
                     val intent = SpeakingActivity.getStartIntent(context)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.putExtra("key","${position+1}")
+                    intent.putExtra("key","${adapterPosition+1}")
                     context.startActivity(intent)
                 }
             }
