@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
+import com.example.m.mproject499.Activity.ListeningActivity
+import com.example.m.mproject499.Activity.MatchingActivity
 import com.example.m.mproject499.Activity.SpeakingActivity
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.databinding.TestListBinding
@@ -44,6 +46,14 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
                 }
             }
 
+        }
+
+        private fun doStartActivity(intent:Intent) {
+            MainApp.instance.applicationContext?.let { context ->
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.putExtra("key", "${position + 1}")
+                context.startActivity(intent)
+            }
         }
     }
     fun loadData(data: ArrayList<String>){
