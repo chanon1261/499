@@ -37,16 +37,12 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
         fun bind(item: String) {
             binding.setVariable(BR.test_name, item)
             itemView.setOnClickListener {
-                if(adapterPosition == 0 || adapterPosition == 1){
-                    context.toast("LISTENING")
-                    doStartActivity(ListeningActivity.getStartIntent(context))
-
-                }else if(adapterPosition == 2 || adapterPosition == 3){
-                    context.toast("MATCHING")
-                    doStartActivity(MatchingActivity.getStartIntent(context))
-                }else {
-                    context.toast("SPEAKING")
-                    doStartActivity(SpeakingActivity.getStartIntent(context))
+                context.toast("TEST")
+                MainApp.instance.applicationContext?.let { context  ->
+                    val intent = SpeakingActivity.getStartIntent(context)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    intent.putExtra("key","${adapterPosition+1}")
+                    context.startActivity(intent)
                 }
             }
 

@@ -47,7 +47,7 @@ class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAd
                     intent.putExtra("key","${adapterPosition+1}")
                     context.startActivity(intent)
                 }
-                context.toast("$position")
+                context.toast("$adapterPosition")
 
             }
 
