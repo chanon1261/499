@@ -6,17 +6,16 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.m.mproject499.R
 
-
-class SpeakingActivity : AppCompatActivity() {
+class MatchingActivity : AppCompatActivity() {
 
     companion object {
-        fun getStartIntent(context: Context) = Intent(context, SpeakingActivity::class.java)
+        fun getStartIntent(context: Context) = Intent(context, MatchingActivity::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_speaking)
+        setContentView(R.layout.activity_matching)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Speaking"
+        supportActionBar?.title = "Matching"
     }
 }

@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
+import com.example.m.mproject499.Activity.ListeningActivity
+import com.example.m.mproject499.Activity.MatchingActivity
 import com.example.m.mproject499.Activity.SpeakingActivity
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.databinding.TestListBinding
@@ -35,15 +37,27 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
         fun bind(item: String) {
             binding.setVariable(BR.test_name, item)
             itemView.setOnClickListener {
-                context.toast("TEST")
-                MainApp.instance.applicationContext?.let { context  ->
-                    val intent = SpeakingActivity.getStartIntent(context)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.putExtra("key","${position+1}")
-                    context.startActivity(intent)
+                if(position == 0 && position == 1){
+                    context.toast("LISTENING")
+                    doStartActivity(ListeningActivity.getStartIntent(context))
+
+                }else if(position == 0 && position == 1){
+                    context.toast("MATCHING")
+                    doStartActivity(MatchingActivity.getStartIntent(context))
+                }else {
+                    context.toast("SPEAKING")
+                    doStartActivity(SpeakingActivity.getStartIntent(context))
                 }
             }
 
+        }
+
+        private fun doStartActivity(intent:Intent) {
+            MainApp.instance.applicationContext?.let { context ->
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.putExtra("key", "${position + 1}")
+                context.startActivity(intent)
+            }
         }
     }
     fun loadData(data: ArrayList<String>){
