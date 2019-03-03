@@ -37,11 +37,11 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
         fun bind(item: String) {
             binding.setVariable(BR.test_name, item)
             itemView.setOnClickListener {
-                if(position == 0 && position == 1){
+                if(adapterPosition == 0 || adapterPosition == 1){
                     context.toast("LISTENING")
                     doStartActivity(ListeningActivity.getStartIntent(context))
 
-                }else if(position == 0 && position == 1){
+                }else if(adapterPosition == 2 || adapterPosition == 3){
                     context.toast("MATCHING")
                     doStartActivity(MatchingActivity.getStartIntent(context))
                 }else {
