@@ -47,6 +47,9 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
         // [START initialize_auth]
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
+        auth.currentUser?.uid.run {
+            startActivity(MainActivity.getStartIntent(this@GoogleLoginActivity))
+        }
         // [END initialize_auth]
     }
 

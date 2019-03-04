@@ -45,6 +45,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         googleSignInClient = GoogleSignIn.getClient(this, gso)
         auth = FirebaseAuth.getInstance()
 
+//        auth.currentUser?.uid.isNullOrEmpty().run{
+//            //val intent = GoogleLoginActivity.getStartIntent(MainApp.instance.applicationContext)
+//            //startActivity(intent)
+//            super.finish()
+//        }
+
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
@@ -58,8 +64,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
+
         } else {
             super.onBackPressed()
+        }
+
+        if (supportFragmentManager.backStackEntryCount == 1) {
+            this.finish()
+        }
+        else {
+            supportFragmentManager.popBackStack()
         }
     }
 
@@ -68,8 +82,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         auth.currentUser?.email?.let {
             user_email.text = it
         }
-
-
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
@@ -97,10 +109,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragment?.let {
             createFragment(it,title)
         }
-
         drawer_layout.closeDrawer(GravityCompat.START)
-
-
 
         return true
     }
@@ -108,10 +117,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun logout() {
         FirebaseAuth.getInstance().signOut()
         auth.signOut()
-        googleSignInClient.signOut().addOnCompleteListener(this){}
-        val intent = GoogleLoginActivity.getStartIntent(this)
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        startActivity(intent)
+        googleSignInClient.signOut().addOnCompleteListener(this){
+            super.finish()
+        }
+
     }
 
     private fun createFragment(fragment: Fragment,name: String) {
