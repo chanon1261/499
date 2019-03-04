@@ -6,6 +6,7 @@ import com.example.m.mproject499.Dagger.AppModule
 import com.example.m.mproject499.Dagger.DaggerAppComponent
 import com.example.m.mproject499.Data.RealmMigrations
 import com.example.m.mproject499.Model.TestWord
+import com.google.firebase.auth.FirebaseAuth
 import com.vicpin.krealmextensions.save
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -16,7 +17,7 @@ open class MainApp : Application() {
     companion object {
         @JvmStatic lateinit var graph: AppComponent
         lateinit var instance: MainApp
-            private set
+        private lateinit var auth: FirebaseAuth
     }
 
     override fun onCreate() {

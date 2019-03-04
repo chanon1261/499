@@ -89,7 +89,13 @@ dependencies {
     //multidex
     implementation 'com.android.support:multidex:1.0.3'
 
+    // Google Sign In SDK (only required for Google Sign In)
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
+    // Firebase UI
+    // Used in FirebaseUIActivity.
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+
 }
 
 apply plugin: 'com.google.gms.google-services'
-

@@ -8,19 +8,22 @@ import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import com.example.m.mproject499.Adapter.DaysAdapter
-import com.example.m.mproject499.Model.Days
+import com.example.m.mproject499.Activity.GoogleLoginActivity
 import com.example.m.mproject499.R.string.*
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     companion object {
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
@@ -30,7 +33,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        //supportActionBar?.hide()
         MainApp.graph.inject(this)
+
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        // [END config_signin]
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+        auth = FirebaseAuth.getInstance()
+
+//        auth.currentUser?.uid.isNullOrEmpty().run{
+//            //val intent = GoogleLoginActivity.getStartIntent(MainApp.instance.applicationContext)
+//            //startActivity(intent)
+//            super.finish()
+//        }
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -45,13 +64,24 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
+
         } else {
             super.onBackPressed()
+        }
+
+        if (supportFragmentManager.backStackEntryCount == 1) {
+            this.finish()
+        }
+        else {
+            supportFragmentManager.popBackStack()
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
+        auth.currentUser?.email?.let {
+            user_email.text = it
+        }
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
@@ -72,20 +102,32 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 title = getString(stat)
                 fragment = StatFragment.fragment(this)
             }
+            R.id.logout -> {
+                logout()
+            }
         }
         fragment?.let {
             createFragment(it,title)
         }
-
         drawer_layout.closeDrawer(GravityCompat.START)
+
         return true
     }
 
-    private fun createFragment(fragment: Fragment,title: String) {
+    private fun logout() {
+        FirebaseAuth.getInstance().signOut()
+        auth.signOut()
+        googleSignInClient.signOut().addOnCompleteListener(this){
+            super.finish()
+        }
+
+    }
+
+    private fun createFragment(fragment: Fragment,name: String) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.main_content, fragment)
         fragmentTransaction.commit()
-        supportActionBar?.title = title
+        title = name
     }
 }
