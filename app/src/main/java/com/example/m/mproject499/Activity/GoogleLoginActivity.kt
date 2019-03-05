@@ -1,5 +1,6 @@
 package com.example.m.mproject499.Activity
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.support.design.widget.Snackbar
 import android.util.Log
 import android.view.View
 import com.example.m.mproject499.MainActivity
+import com.example.m.mproject499.Model.User
 import com.example.m.mproject499.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -16,13 +18,15 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_google_login.*
 
 class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth
     // [END declare_auth]
-
+    private lateinit var database: DatabaseReference
     private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +51,9 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
         // [START initialize_auth]
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
-        auth.currentUser?.uid.run {
-            startActivity(MainActivity.getStartIntent(this@GoogleLoginActivity))
+        database = FirebaseDatabase.getInstance().reference
+        auth.currentUser?.let {
+            onAuthSuccess(it)
         }
         // [END initialize_auth]
     }
@@ -103,7 +108,7 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
                     Log.d(TAG, "signInWithCredential:success")
                     val user = auth.currentUser
                     updateUI(user)
-                    startActivity(MainActivity.getStartIntent(this))
+                    onAuthSuccess(task.result?.user!!)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
@@ -171,10 +176,34 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
+    private fun onAuthSuccess(user: FirebaseUser) {
+        val username = usernameFromEmail(user.email!!)
+
+        // Write new user
+        writeNewUser(user.uid, username, user.email)
+
+        // Go to MainActivity
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+
+    private fun usernameFromEmail(email: String): String {
+        return if (email.contains("@")) {
+            email.split("@".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0]
+        } else {
+            email
+        }
+    }
+
+    private fun writeNewUser(userId: String, name: String, email: String?) {
+        val user = User(name, email)
+        database.child("users").child(userId).setValue(user)
+    }
+
+
     companion object {
         private const val TAG = "GoogleActivity"
         private const val RC_SIGN_IN = 9001
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
-
     }
 }
