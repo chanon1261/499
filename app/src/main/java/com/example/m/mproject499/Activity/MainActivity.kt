@@ -146,7 +146,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             return
         }
 
-        val word = WordFireBase("Ant", "มด","ant is red","มดส้ม",1,2)
+
+        val choice: MutableList<String> = mutableListOf("A","B","C","D")
+        val word = WordFireBase("Ant", "มด","ant is red","มดส้ม",1,2,choice)
         val wordValues = word.toMap()
         val childUpdates = HashMap<String, Any>()
         childUpdates["/words/$key"] = wordValues

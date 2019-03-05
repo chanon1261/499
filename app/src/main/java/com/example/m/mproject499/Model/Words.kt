@@ -13,7 +13,8 @@ data class WordFireBase(
     var desc_eng:String,
     var desc_th:String,
     var day:Int,
-    var position:Int
+    var position:Int,
+    var choice: MutableList<String>
 ){
 
     @Exclude
@@ -24,7 +25,8 @@ data class WordFireBase(
             "desc_eng" to desc_eng,
             "desc_th" to desc_th,
             "day" to day,
-            "position" to position
+            "position" to position,
+            "choice" to choice
         )
     }
 }
