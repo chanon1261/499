@@ -95,6 +95,15 @@ dependencies {
     // Firebase UI
     // Used in FirebaseUIActivity.
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+    implementation 'com.firebaseui:firebase-ui-database:4.3.1'
+
+    //Realtime Database
+    implementation 'com.google.firebase:firebase-database:16.1.0'
+
+    // Needed to fix a dependency conflict with FirebaseUI'
+    implementation 'android.arch.core:runtime:1.1.1'
+
+
 
 }
 

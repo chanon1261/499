@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
+import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -116,11 +117,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun logout() {
         FirebaseAuth.getInstance().signOut()
-        auth.signOut()
-        googleSignInClient.signOut().addOnCompleteListener(this){
-            super.finish()
-        }
-
+        startActivity(Intent(this, GoogleLoginActivity::class.java))
+        finish()
     }
 
     private fun createFragment(fragment: Fragment,name: String) {
