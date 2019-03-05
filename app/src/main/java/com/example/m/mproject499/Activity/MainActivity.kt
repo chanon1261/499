@@ -8,23 +8,28 @@ import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.example.m.mproject499.Activity.GoogleLoginActivity
+import com.example.m.mproject499.Model.WordFireBase
 import com.example.m.mproject499.R.string.*
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
-import org.jetbrains.anko.startActivity
+import java.util.HashMap
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var database: DatabaseReference
 
     companion object {
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
@@ -45,8 +50,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
         auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance().reference
 
-//        auth.currentUser?.uid.isNullOrEmpty().run{
+//        auth.currentUser?.uid.isNullOrEmpty().run{t
 //            //val intent = GoogleLoginActivity.getStartIntent(MainApp.instance.applicationContext)
 //            //startActivity(intent)
 //            super.finish()
@@ -59,6 +65,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
         createFragment(MainFragment.fragment(this),getString(learning_mode))
+
+
+
+        writeNewWord()
+
 
     }
 
@@ -127,5 +138,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.replace(R.id.main_content, fragment)
         fragmentTransaction.commit()
         title = name
+    }
+    private fun writeNewWord(){
+        val key = database.child("words").push().key
+        if (key == null) {
+            Log.w("", "Couldn't get push key for posts")
+            return
+        }
+
+        val word = WordFireBase("Ant", "มด","ant is red","มดส้ม",1,2)
+        val wordValues = word.toMap()
+        val childUpdates = HashMap<String, Any>()
+        childUpdates["/words/$key"] = wordValues
+        database.updateChildren(childUpdates)
+        Log.d("Firebase word","$word")
     }
 }
