@@ -8,12 +8,12 @@ class Words(var word: String, var meaning: String,var desc_eng:String,var desc_t
 
 @IgnoreExtraProperties
 data class WordFireBase(
-    var word: String,
-    var meaning: String,
-    var desc_eng:String,
-    var desc_th:String,
-    var day:Int,
-    var position:Int,
+    var word: String = "",
+    var meaning: String = "",
+    var desc_eng:String = "",
+    var desc_th:String ="",
+    var day:Int = 0,
+    var position:Int = 0,
     var choice: MutableList<String>
 ){
 
@@ -30,3 +30,8 @@ data class WordFireBase(
         )
     }
 }
+
+data class Salad(
+    val name: String = "",
+    val description: String = "",
+    var uuid: String = "")

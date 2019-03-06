@@ -12,18 +12,21 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.example.m.mproject499.Activity.GoogleLoginActivity
+import com.example.m.mproject499.Model.Salad
+import com.example.m.mproject499.Model.User
 import com.example.m.mproject499.Model.WordFireBase
 import com.example.m.mproject499.R.string.*
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
-import java.util.HashMap
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
+import java.util.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -31,7 +34,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var database: DatabaseReference
 
+    private val user: MutableList<User> = mutableListOf()
+
     companion object {
+        const val TAG = "fxdxdk"
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
     }
 
@@ -52,11 +58,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
-//        auth.currentUser?.uid.isNullOrEmpty().run{t
-//            //val intent = GoogleLoginActivity.getStartIntent(MainApp.instance.applicationContext)
-//            //startActivity(intent)
-//            super.finish()
-//        }
+
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -66,9 +68,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
         createFragment(MainFragment.fragment(this),getString(learning_mode))
 
+        //writeNewWord()
+        doAsync {
+            initUser()
+            uiThread {
+                user.forEach { it ->
+                    Log.d(TAG,it.email)
+                }
+            }
+        }
 
-
-        writeNewWord()
 
 
     }
@@ -154,5 +163,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         childUpdates["/words/$key"] = wordValues
         database.updateChildren(childUpdates)
         Log.d("Firebase word","$word")
+    }
+
+    private fun initUser() {
+        val userListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                user.clear()
+                dataSnapshot.children.mapNotNullTo(user) { it.getValue<User>(User::class.java) }
+                Log.d(TAG,user.size.toString())
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                println("loadPost:onCancelled ${databaseError.toException()}")
+            }
+        }
+        database.child("users").addListenerForSingleValueEvent(userListener)
     }
 }
