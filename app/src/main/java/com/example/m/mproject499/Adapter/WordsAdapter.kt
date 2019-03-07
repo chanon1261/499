@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.Activity.WordsActivity
 import com.example.m.mproject499.MainApp
+import com.example.m.mproject499.Model.WordFireBase
 import com.example.m.mproject499.Model.Words
 import com.example.m.mproject499.databinding.DaysListBinding
 import com.example.m.mproject499.databinding.WordListBinding
@@ -22,7 +23,7 @@ import java.util.*
 class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.WordsAdapterViewHolder>() {
 
 
-    private var items: ArrayList<Words> = java.util.ArrayList()
+    private var items: ArrayList<WordFireBase> = java.util.ArrayList()
 
     override fun getItemCount(): Int {
         return items.size
@@ -63,7 +64,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
 
         val context: Context = binding.root.context
 
-        fun bind(item: Words) {
+        fun bind(item: WordFireBase) {
             binding.setVariable(BR.word, item.word)
             binding.setVariable(BR.meaning, item.meaning)
             binding.setVariable(BR.descEng, item.desc_eng)
@@ -83,7 +84,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
         }
     }
 
-    fun loadDatas(data: ArrayList<Words>) {
+    fun loadDatas(data: ArrayList<WordFireBase>) {
         this.items = data
         notifyDataSetChanged()
     }

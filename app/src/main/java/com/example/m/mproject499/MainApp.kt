@@ -24,7 +24,7 @@ open class MainApp : Application() {
         lateinit var graph: AppComponent
         lateinit var instance: MainApp
         private lateinit var database: DatabaseReference
-        private val wordsList: MutableList<WordFireBase> = mutableListOf()
+        var wordsList: MutableList<WordFireBase> = mutableListOf()
 
     }
 
@@ -43,7 +43,7 @@ open class MainApp : Application() {
         FirebaseDatabase.getInstance().setPersistenceEnabled(true)
         database = FirebaseDatabase.getInstance().reference
 
-        writeNewWord()
+        //writeNewWord()
         initWords()
     }
 
@@ -63,7 +63,7 @@ open class MainApp : Application() {
                 wordsList.clear()
                 dataSnapshot.children.mapNotNullTo(wordsList) { it.getValue<WordFireBase>(WordFireBase::class.java) }
                 Log.d(MainActivity.TAG, wordsList.size.toString())
-                generateWord()
+                //generateWord()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
@@ -73,18 +73,18 @@ open class MainApp : Application() {
         database.child("words").addListenerForSingleValueEvent(userListener)
     }
 
-    private fun generateWord() {
-        wordsList.forEachIndexed { index, wordFireBase ->
-            TestWord().let {
-                it.id = index
-                it.word = wordFireBase.word
-                it.meaning = wordFireBase.meaning
-                it.desc_th = wordFireBase.desc_th
-                it.desc_eng = wordFireBase.desc_eng
-                it.save()
-            }
-        }
-    }
+//    private fun generateWord() {
+//        wordsList.forEachIndexed { index, wordFireBase ->
+//            TestWord().let {
+//                it.id = index
+//                it.word = wordFireBase.word
+//                it.meaning = wordFireBase.meaning
+//                it.desc_th = wordFireBase.desc_th
+//                it.desc_eng = wordFireBase.desc_eng
+//                it.save()
+//            }
+//        }
+//    }
 
     private fun writeNewWord() {
         val key = database.child("words").push().key

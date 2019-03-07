@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.example.m.mproject499.Adapter.WordsAdapter
 import com.example.m.mproject499.MainApp
+import com.example.m.mproject499.MainApp.Companion.wordsList
 import com.example.m.mproject499.Model.TestWord
+import com.example.m.mproject499.Model.WordFireBase
 import com.example.m.mproject499.Model.Words
 import com.example.m.mproject499.R
 import com.vicpin.krealmextensions.queryAll
@@ -41,7 +43,7 @@ class WordsActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(MainApp.instance.applicationContext)
         word_recycle?.layoutManager = layoutManager
         word_recycle?.adapter = adapter
-        adapter.loadDatas(generateDataWord())
+        adapter.loadDatas(wordsList.filter { it.day == number } as java.util.ArrayList<WordFireBase>)
         adapter.notifyDataSetChanged()
 
 
