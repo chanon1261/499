@@ -1,20 +1,16 @@
 package com.example.m.mproject499.Adapter
 
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.speech.tts.TextToSpeech
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
-import com.example.m.mproject499.Activity.WordsActivity
 import com.example.m.mproject499.MainApp
+import com.example.m.mproject499.MainApp.Companion.database
 import com.example.m.mproject499.Model.WordFireBase
-import com.example.m.mproject499.Model.Words
-import com.example.m.mproject499.databinding.DaysListBinding
 import com.example.m.mproject499.databinding.WordListBinding
 import org.jetbrains.anko.toast
 import java.util.*
@@ -74,6 +70,15 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
             itemView.setOnClickListener {
                 speakOut(item.word)
                 context.toast(item.word)
+
+                val post = WordFireBase(item.word, item.meaning, item.desc_eng, item.desc_th,7,item.position)
+                val postValues = post.toMap()
+                val childUpdates = HashMap<String, Any>()
+                val key = database.child("words").push().key
+                childUpdates["/words/$key"] = postValues
+
+
+                database.updateChildren(childUpdates)
             }
         }
 
@@ -84,7 +89,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
         }
     }
 
-    fun loadDatas(data: ArrayList<WordFireBase>) {
+    fun loadData(data: ArrayList<WordFireBase>) {
         this.items = data
         notifyDataSetChanged()
     }

@@ -23,7 +23,7 @@ open class MainApp : Application() {
         @JvmStatic
         lateinit var graph: AppComponent
         lateinit var instance: MainApp
-        private lateinit var database: DatabaseReference
+        lateinit var database: DatabaseReference
         var wordsList: MutableList<WordFireBase> = mutableListOf()
 
     }
@@ -72,19 +72,6 @@ open class MainApp : Application() {
         }
         database.child("words").addListenerForSingleValueEvent(userListener)
     }
-
-//    private fun generateWord() {
-//        wordsList.forEachIndexed { index, wordFireBase ->
-//            TestWord().let {
-//                it.id = index
-//                it.word = wordFireBase.word
-//                it.meaning = wordFireBase.meaning
-//                it.desc_th = wordFireBase.desc_th
-//                it.desc_eng = wordFireBase.desc_eng
-//                it.save()
-//            }
-//        }
-//    }
 
     private fun writeNewWord() {
         val key = database.child("words").push().key
