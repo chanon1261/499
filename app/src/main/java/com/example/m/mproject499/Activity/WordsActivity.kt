@@ -54,24 +54,4 @@ class WordsActivity : AppCompatActivity() {
         return true
     }
 
-    private fun generateDataWord(): ArrayList<Words> {
-        val result = ArrayList<Words>()
-
-        TestWord().queryAll().let {
-            for (i in it) {
-                val user = i.word?.let { it1 ->
-                    i.meaning?.let { it2 ->
-                        i.desc_eng?.let { it3 ->
-                            Words(
-                                it1, it2,
-                                it3, i.desc_th!!
-                            )
-                        }
-                    }
-                }
-                user?.let { it1 -> result.add(it1) }
-            }
-        }
-        return result
-    }
 }
