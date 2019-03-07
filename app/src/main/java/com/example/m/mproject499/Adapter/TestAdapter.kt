@@ -15,7 +15,7 @@ import org.jetbrains.anko.toast
 import java.util.*
 
 
-class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAdapterViewHolder>() {
+class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestAdapterViewHolder>() {
 
     private var items: ArrayList<String> = java.util.ArrayList()
 
@@ -23,9 +23,16 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
     override fun getItemCount(): Int {
         return items.size
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TestAdapterViewHolder {
         val layoutInflator: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        return TestAdapterViewHolder(com.example.m.mproject499.databinding.TestListBinding.inflate(layoutInflator, parent, false))
+        return TestAdapterViewHolder(
+            com.example.m.mproject499.databinding.TestListBinding.inflate(
+                layoutInflator,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: TestAdapterViewHolder, position: Int) = holder.bind(items[position])
@@ -38,14 +45,14 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
             binding.setVariable(BR.test_name, item)
             itemView.setOnClickListener {
                 itemView.setOnClickListener {
-                    if(adapterPosition == 0 || adapterPosition == 1){
+                    if (adapterPosition == 0 || adapterPosition == 1) {
                         context.toast("LISTENING")
                         doStartActivity(ListeningActivity.getStartIntent(context))
 
-                    }else if(adapterPosition == 2 || adapterPosition == 3){
+                    } else if (adapterPosition == 2 || adapterPosition == 3) {
                         context.toast("MATCHING")
                         doStartActivity(MatchingActivity.getStartIntent(context))
-                    }else {
+                    } else {
                         context.toast("SPEAKING")
                         doStartActivity(SpeakingActivity.getStartIntent(context))
                     }
@@ -54,7 +61,7 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
 
         }
 
-        private fun doStartActivity(intent:Intent) {
+        private fun doStartActivity(intent: Intent) {
             MainApp.instance.applicationContext?.let { context ->
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 intent.putExtra("key", "${adapterPosition + 1}")
@@ -62,7 +69,8 @@ class TestAdapter(val context: Context): RecyclerView.Adapter<TestAdapter.TestAd
             }
         }
     }
-    fun loadData(data: ArrayList<String>){
+
+    fun loadData(data: ArrayList<String>) {
         this.items = data
         notifyDataSetChanged()
     }

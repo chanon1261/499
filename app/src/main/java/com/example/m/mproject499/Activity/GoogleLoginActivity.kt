@@ -62,7 +62,6 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     public override fun onStart() {
 
 
-
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
@@ -180,7 +179,7 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
         val username = usernameFromEmail(user.email!!)
 
         // Write new user
-        writeNewUser(user.uid, username, user.email)
+        writeNewUser(user.uid, username, user.email!!)
 
         // Go to MainActivity
         startActivity(Intent(this, MainActivity::class.java))
@@ -195,7 +194,7 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
-    private fun writeNewUser(userId: String, name: String, email: String?) {
+    private fun writeNewUser(userId: String, name: String, email: String) {
         val user = User(name, email)
         database.child("users").child(userId).setValue(user)
     }

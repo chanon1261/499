@@ -20,6 +20,7 @@ class ListeningActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Listening"
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

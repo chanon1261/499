@@ -4,18 +4,18 @@ import com.google.firebase.database.Exclude
 import com.google.firebase.database.IgnoreExtraProperties
 
 
-class Words(var word: String, var meaning: String,var desc_eng:String,var desc_th:String)
+class Words(var word: String, var meaning: String, var desc_eng: String, var desc_th: String)
 
 @IgnoreExtraProperties
 data class WordFireBase(
-    var word: String,
-    var meaning: String,
-    var desc_eng:String,
-    var desc_th:String,
-    var day:Int,
-    var position:Int,
-    var choice: MutableList<String>
-){
+    var word: String = "",
+    var meaning: String = "",
+    var desc_eng: String = "",
+    var desc_th: String = "",
+    var day: Int = 0,
+    var position: Int = 0,
+    var choice: MutableList<String> = mutableListOf()
+) {
 
     @Exclude
     fun toMap(): Map<String, Any?> {

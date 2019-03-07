@@ -20,6 +20,7 @@ class MatchingActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Matching"
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

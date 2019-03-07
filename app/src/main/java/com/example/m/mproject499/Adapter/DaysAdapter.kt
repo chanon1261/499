@@ -16,7 +16,7 @@ import org.jetbrains.anko.toast
 import java.util.*
 
 
-class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAdapterViewHolder>() {
+class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysAdapterViewHolder>() {
 
     private var items: ArrayList<Days> = java.util.ArrayList()
 
@@ -24,9 +24,16 @@ class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAd
     override fun getItemCount(): Int {
         return items.size
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DaysAdapterViewHolder {
         val layoutInflator: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        return DaysAdapterViewHolder(com.example.m.mproject499.databinding.DaysListBinding.inflate(layoutInflator, parent, false))
+        return DaysAdapterViewHolder(
+            com.example.m.mproject499.databinding.DaysListBinding.inflate(
+                layoutInflator,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: DaysAdapterViewHolder, position: Int) = holder.bind(items[position])
@@ -40,11 +47,11 @@ class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAd
             binding.setVariable(BR.name, item.name)
             binding.setVariable(BR.comment, item.comment)
             itemView.setOnClickListener {
-                Log.d("","test $itemId")
-                MainApp.instance.applicationContext?.let {context  ->
+                Log.d("", "test $itemId")
+                MainApp.instance.applicationContext?.let { context ->
                     val intent = WordsActivity.getStartIntent(context)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.putExtra("key","${adapterPosition+1}")
+                    intent.putExtra("key", "${adapterPosition + 1}")
                     context.startActivity(intent)
                 }
                 context.toast("$adapterPosition")
@@ -54,7 +61,7 @@ class DaysAdapter(val context: Context): RecyclerView.Adapter<DaysAdapter.DaysAd
         }
     }
 
-    fun loadDatas(data: ArrayList<Days>){
+    fun loadDatas(data: ArrayList<Days>) {
         this.items = data
         notifyDataSetChanged()
     }

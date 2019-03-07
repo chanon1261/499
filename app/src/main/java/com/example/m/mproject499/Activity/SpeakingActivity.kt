@@ -21,6 +21,7 @@ class SpeakingActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Speaking"
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

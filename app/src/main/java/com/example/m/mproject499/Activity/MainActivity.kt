@@ -8,11 +8,9 @@ import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.example.m.mproject499.Activity.GoogleLoginActivity
-import com.example.m.mproject499.Model.WordFireBase
 import com.example.m.mproject499.R.string.*
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -23,7 +21,6 @@ import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
-import java.util.HashMap
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -32,6 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var database: DatabaseReference
 
     companion object {
+        const val TAG = "fxdxdk"
         fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
     }
 
@@ -52,11 +50,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
-//        auth.currentUser?.uid.isNullOrEmpty().run{t
-//            //val intent = GoogleLoginActivity.getStartIntent(MainApp.instance.applicationContext)
-//            //startActivity(intent)
-//            super.finish()
-//        }
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -64,12 +57,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
-        createFragment(MainFragment.fragment(this),getString(learning_mode))
-
-
-
-        writeNewWord()
-
+        createFragment(MainFragment.fragment(this), getString(learning_mode))
 
     }
 
@@ -83,8 +71,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (supportFragmentManager.backStackEntryCount == 1) {
             this.finish()
-        }
-        else {
+        } else {
             supportFragmentManager.popBackStack()
         }
     }
@@ -119,7 +106,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
         fragment?.let {
-            createFragment(it,title)
+            createFragment(it, title)
         }
         drawer_layout.closeDrawer(GravityCompat.START)
 
@@ -132,27 +119,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         finish()
     }
 
-    private fun createFragment(fragment: Fragment,name: String) {
+    private fun createFragment(fragment: Fragment, name: String) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.main_content, fragment)
         fragmentTransaction.commit()
         title = name
     }
-    private fun writeNewWord(){
-        val key = database.child("words").push().key
-        if (key == null) {
-            Log.w("", "Couldn't get push key for posts")
-            return
-        }
 
-
-        val choice: MutableList<String> = mutableListOf("A","B","C","D")
-        val word = WordFireBase("Ant", "มด","ant is red","มดส้ม",1,2,choice)
-        val wordValues = word.toMap()
-        val childUpdates = HashMap<String, Any>()
-        childUpdates["/words/$key"] = wordValues
-        database.updateChildren(childUpdates)
-        Log.d("Firebase word","$word")
-    }
 }
