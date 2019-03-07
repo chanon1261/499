@@ -12,20 +12,17 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.example.m.mproject499.Activity.GoogleLoginActivity
-import com.example.m.mproject499.Model.Salad
-import com.example.m.mproject499.Model.User
 import com.example.m.mproject499.Model.WordFireBase
 import com.example.m.mproject499.R.string.*
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.uiThread
 import java.util.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -33,8 +30,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var database: DatabaseReference
-
-    private val user: MutableList<User> = mutableListOf()
 
     companion object {
         const val TAG = "fxdxdk"
@@ -67,18 +62,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
         createFragment(MainFragment.fragment(this),getString(learning_mode))
-
-        //writeNewWord()
-        doAsync {
-            initUser()
-            uiThread {
-                user.forEach { it ->
-                    Log.d(TAG,it.email)
-                }
-            }
-        }
-
-
 
     }
 
@@ -148,35 +131,5 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentTransaction.commit()
         title = name
     }
-    private fun writeNewWord(){
-        val key = database.child("words").push().key
-        if (key == null) {
-            Log.w("", "Couldn't get push key for posts")
-            return
-        }
 
-
-        val choice: MutableList<String> = mutableListOf("A","B","C","D")
-        val word = WordFireBase("Ant", "มด","ant is red","มดส้ม",1,2,choice)
-        val wordValues = word.toMap()
-        val childUpdates = HashMap<String, Any>()
-        childUpdates["/words/$key"] = wordValues
-        database.updateChildren(childUpdates)
-        Log.d("Firebase word","$word")
-    }
-
-    private fun initUser() {
-        val userListener = object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                user.clear()
-                dataSnapshot.children.mapNotNullTo(user) { it.getValue<User>(User::class.java) }
-                Log.d(TAG,user.size.toString())
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-                println("loadPost:onCancelled ${databaseError.toException()}")
-            }
-        }
-        database.child("users").addListenerForSingleValueEvent(userListener)
-    }
 }

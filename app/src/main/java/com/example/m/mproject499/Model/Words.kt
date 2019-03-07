@@ -14,7 +14,7 @@ data class WordFireBase(
     var desc_th:String ="",
     var day:Int = 0,
     var position:Int = 0,
-    var choice: MutableList<String>
+    var choice: MutableList<String> =  mutableListOf()
 ){
 
     @Exclude
@@ -30,8 +30,3 @@ data class WordFireBase(
         )
     }
 }
-
-data class Salad(
-    val name: String = "",
-    val description: String = "",
-    var uuid: String = "")
