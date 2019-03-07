@@ -20,7 +20,8 @@ import java.util.HashMap
 open class MainApp : Application() {
 
     companion object {
-        @JvmStatic lateinit var graph: AppComponent
+        @JvmStatic
+        lateinit var graph: AppComponent
         lateinit var instance: MainApp
         private lateinit var database: DatabaseReference
         private val wordsList: MutableList<WordFireBase> = mutableListOf()
@@ -61,9 +62,10 @@ open class MainApp : Application() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 wordsList.clear()
                 dataSnapshot.children.mapNotNullTo(wordsList) { it.getValue<WordFireBase>(WordFireBase::class.java) }
-                Log.d(MainActivity.TAG,wordsList.size.toString())
+                Log.d(MainActivity.TAG, wordsList.size.toString())
                 generateWord()
             }
+
             override fun onCancelled(databaseError: DatabaseError) {
                 println("loadPost:onCancelled ${databaseError.toException()}")
             }
@@ -71,7 +73,7 @@ open class MainApp : Application() {
         database.child("words").addListenerForSingleValueEvent(userListener)
     }
 
-    private fun generateWord(){
+    private fun generateWord() {
         wordsList.forEachIndexed { index, wordFireBase ->
             TestWord().let {
                 it.id = index
@@ -84,18 +86,18 @@ open class MainApp : Application() {
         }
     }
 
-    private fun writeNewWord(){
+    private fun writeNewWord() {
         val key = database.child("words").push().key
         if (key == null) {
             Log.w("", "Couldn't get push key for posts")
             return
         }
-        val choice: MutableList<String> = mutableListOf("A","B","C","D")
-        val word = WordFireBase("Ant", "มด","ant is red","มดส้ม",1,2,choice)
+        val choice: MutableList<String> = mutableListOf("A", "B", "C", "D")
+        val word = WordFireBase("Ant", "มด", "ant is red", "มดส้ม", 1, 2, choice)
         val wordValues = word.toMap()
         val childUpdates = HashMap<String, Any>()
         childUpdates["/words/$key"] = wordValues
         database.updateChildren(childUpdates)
-        Log.d("Firebase word","$word")
+        Log.d("Firebase word", "$word")
     }
 }

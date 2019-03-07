@@ -51,14 +51,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         database = FirebaseDatabase.getInstance().reference
 
 
-
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
-        createFragment(MainFragment.fragment(this),getString(learning_mode))
+        createFragment(MainFragment.fragment(this), getString(learning_mode))
 
     }
 
@@ -72,8 +71,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (supportFragmentManager.backStackEntryCount == 1) {
             this.finish()
-        }
-        else {
+        } else {
             supportFragmentManager.popBackStack()
         }
     }
@@ -108,7 +106,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
         fragment?.let {
-            createFragment(it,title)
+            createFragment(it, title)
         }
         drawer_layout.closeDrawer(GravityCompat.START)
 
@@ -121,7 +119,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         finish()
     }
 
-    private fun createFragment(fragment: Fragment,name: String) {
+    private fun createFragment(fragment: Fragment, name: String) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.main_content, fragment)

@@ -18,5 +18,5 @@ interface AppComponent {
     fun inject(wordsActivity: WordsActivity)
     fun inject(speakingActivity: SpeakingActivity)
     fun inject(listeningActivity: ListeningActivity)
-    fun inject(matchingActivity:MatchingActivity)
+    fun inject(matchingActivity: MatchingActivity)
 }
