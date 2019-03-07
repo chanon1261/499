@@ -42,17 +42,8 @@ open class MainApp : Application() {
         FirebaseDatabase.getInstance().setPersistenceEnabled(true)
         database = FirebaseDatabase.getInstance().reference
 
-
-        doAsync {
-            writeNewWord()
-            initWords()
-            uiThread {
-
-            }
-        }
-
-
-
+        writeNewWord()
+        initWords()
     }
 
     open fun initializeGraph() {
@@ -73,29 +64,15 @@ open class MainApp : Application() {
                 Log.d(MainActivity.TAG,wordsList.size.toString())
                 generateWord()
             }
-
             override fun onCancelled(databaseError: DatabaseError) {
                 println("loadPost:onCancelled ${databaseError.toException()}")
             }
         }
         database.child("words").addListenerForSingleValueEvent(userListener)
-
     }
 
     private fun generateWord(){
-//        for (i in 1..30) {
-//            TestWord().let {
-//                it.id = i
-//                it.word = i.toString()
-//                it.meaning = "Meaning $i"
-//                it.desc_th = "DESCRIPTION TH $i"
-//                it.desc_eng = "DESCRIPTION ENG $i"
-//                it.save()
-//            }
-//        }
-
         wordsList.forEachIndexed { index, wordFireBase ->
-
             TestWord().let {
                 it.id = index
                 it.word = wordFireBase.word
