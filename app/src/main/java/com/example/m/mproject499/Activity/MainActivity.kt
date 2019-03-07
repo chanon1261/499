@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -78,8 +79,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
-        auth.currentUser?.email?.let {
-            user_email.text = it
+        try {
+            auth.currentUser?.email?.let {
+                user_email.text = it
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
         menuInflater.inflate(R.menu.main, menu)
         return true
