@@ -70,19 +70,16 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
             itemView.setOnClickListener {
                 speakOut(item.word)
                 context.toast(item.word)
-
-                val post = WordFireBase(item.word, item.meaning, item.desc_eng, item.desc_th,7,item.position)
-                val postValues = post.toMap()
-                val childUpdates = HashMap<String, Any>()
-                val key = database.child("words").push().key
-                childUpdates["/words/$key"] = postValues
-
-
-                database.updateChildren(childUpdates)
+//                val post = WordFireBase(item.word, item.meaning, item.desc_eng, item.desc_th,7,item.position)
+//                val postValues = post.toMap()
+//                val childUpdates = HashMap<String, Any>()
+//                val key = database.child("words").push().key
+//                childUpdates["/words/$key"] = postValues
+//                database.updateChildren(childUpdates)
             }
         }
 
-        fun speakOut(text: String) {
+        private fun speakOut(text: String) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
             }

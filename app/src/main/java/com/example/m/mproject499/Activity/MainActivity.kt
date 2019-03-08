@@ -18,10 +18,10 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
-import java.lang.Exception
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -80,8 +80,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
         try {
-            auth.currentUser?.email?.let {
-                user_email.text = it
+            auth.currentUser?.let {
+                Picasso.with(this).load(it.photoUrl).into(imageView)
+                user_name.text = it.displayName
+                user_email.text = it.email
             }
         } catch (e: Exception) {
             e.printStackTrace()
