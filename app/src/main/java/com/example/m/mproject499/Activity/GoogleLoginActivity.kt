@@ -203,20 +203,18 @@ open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
         val user = User(name, email)
         database.child("users").child(userId).setValue(user)
     }
+
     fun setGooglePlusButtonFont(signInButton: SignInButton) {
         // Find the TextView that is inside of the SignInButton and set its text
-        for (i in 0 until signInButton.childCount)
-        {
+        for (i in 0 until signInButton.childCount) {
             val v = signInButton.getChildAt(i)
-            if (v is TextView)
-            {
+            if (v is TextView) {
                 val tv = v
                 tv.typeface = Typeface.createFromAsset(assets, Constants.FONT)
                 return
             }
         }
     }
-
 
     companion object {
         private const val TAG = "GoogleActivity"
