@@ -45,9 +45,11 @@ class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysA
 
         fun bind(item: Chapter) {
 
-            val day = "DAY ${item.day}:"
+            val day = "Day ${item.day}:"
             binding.setVariable(BR.name, day)
-            binding.setVariable(BR.comment, "${item.eng} ${item.day}")
+            binding.setVariable(BR.eng, item.eng)
+            binding.setVariable(BR.th, item.th)
+
             itemView.setOnClickListener {
                 Log.d("", "test $itemId")
                 MainApp.instance.applicationContext?.let { context ->

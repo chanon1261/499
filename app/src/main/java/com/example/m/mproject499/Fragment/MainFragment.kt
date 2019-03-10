@@ -17,8 +17,8 @@ import kotlinx.android.synthetic.main.fragment_main.*
 class MainFragment : Fragment() {
 
     private lateinit var mainActivity: MainActivity
-    private lateinit var database:DatabaseReference
-    private lateinit var dayList:MutableList<Chapter>
+    private lateinit var database: DatabaseReference
+    private lateinit var dayList: MutableList<Chapter>
 
 
     companion object {
@@ -43,7 +43,7 @@ class MainFragment : Fragment() {
         main_page.text = "CHAPTER LIST"
 
         database = FirebaseDatabase.getInstance().reference
-        dayList  = mutableListOf()
+        dayList = mutableListOf()
 
         val adapter = DaysAdapter(MainApp.instance.applicationContext)
         val layoutManager = LinearLayoutManager(MainApp.instance.applicationContext)
@@ -68,12 +68,12 @@ class MainFragment : Fragment() {
         return result
     }
 
-    private fun initChapter(adapter:DaysAdapter){
+    private fun initChapter(adapter: DaysAdapter) {
         val userListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 dayList.clear()
                 dataSnapshot.children.mapNotNullTo(dayList) { it.getValue<Chapter>(Chapter::class.java) }
-                Log.d("SIZEE","${dayList.size}")
+                Log.d("SIZEE", "${dayList.size}")
                 adapter.loadData(dayList as java.util.ArrayList<Chapter>)
             }
 

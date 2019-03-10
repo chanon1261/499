@@ -2,17 +2,22 @@ package com.example.m.mproject499.Activity
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.Toolbar
 import android.util.Log
+import android.widget.TextView
 import com.example.m.mproject499.Adapter.WordsAdapter
+import com.example.m.mproject499.Data.Constants
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.MainApp.Companion.wordsList
 import com.example.m.mproject499.Model.WordFireBase
 import com.example.m.mproject499.R
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_words.*
+import kotlinx.android.synthetic.main.app_bar_main.*
 
 class WordsActivity : AppCompatActivity() {
 
@@ -30,6 +35,7 @@ class WordsActivity : AppCompatActivity() {
         MainApp.graph.inject(this)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         database = FirebaseDatabase.getInstance().reference
+        //toolbar.changeToolbarFont()
 
         val extras = intent.extras
         if (extras != null) {
@@ -44,13 +50,13 @@ class WordsActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(MainApp.instance.applicationContext)
         word_recycle?.layoutManager = layoutManager
         word_recycle?.adapter = adapter
-        adapter.loadData(wordsList.filter { it.day == number } as java.util.ArrayList<WordFireBase>)
         adapter.notifyDataSetChanged()
 
         val userListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 wordsList.clear()
                 dataSnapshot.children.mapNotNullTo(wordsList) { it.getValue<WordFireBase>(WordFireBase::class.java) }
+                adapter.loadData(wordsList.filter { it.day == number } as java.util.ArrayList<WordFireBase>)
                 Log.d(TAG, wordsList.size.toString())
             }
 
@@ -65,6 +71,16 @@ class WordsActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun Toolbar.changeToolbarFont() {
+        for (i in 0 until childCount) {
+            val view = getChildAt(i)
+            if (view is TextView && view.text == title) {
+                view.typeface = Typeface.createFromAsset(assets, Constants.FONT)
+                break
+            }
+        }
     }
 
 }
