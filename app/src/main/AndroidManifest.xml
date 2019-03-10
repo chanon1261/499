@@ -15,18 +15,18 @@
         <activity android:name=".MainActivity"
                   android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".Activity.BaseActivity">
+        <activity android:name=".activity.BaseActivity">
         </activity>
-        <activity android:name=".Activity.ListeningActivity">
+        <activity android:name=".activity.ListeningActivity">
         </activity>
-        <activity android:name=".Activity.MatchingActivity">
+        <activity android:name=".activity.MatchingActivity">
         </activity>
-        <activity android:name=".Activity.SpeakingActivity">
+        <activity android:name=".activity.SpeakingActivity">
         </activity>
-        <activity android:name=".Activity.WordsActivity">
+        <activity android:name=".activity.WordsActivity">
         </activity>
         <activity
-                android:name=".Activity.GoogleLoginActivity"
+                android:name=".activity.GoogleLoginActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
