@@ -164,17 +164,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    fun menuChangFont(){
+    fun menuChangFont() {
         val navView = findViewById<NavigationView>(R.id.nav_view)
         val m = navView.menu
-        for (i in 0 until m.size())
-        {
+        for (i in 0 until m.size()) {
             val mi = m.getItem(i)
             val subMenu = mi.subMenu
-            if (subMenu != null && subMenu.size() > 0)
-            {
-                for (j in 0 until subMenu.size())
-                {
+            if (subMenu != null && subMenu.size() > 0) {
+                for (j in 0 until subMenu.size()) {
                     val subMenuItem = subMenu.getItem(j)
                     applyFontToMenuItem(subMenuItem)
                 }
@@ -184,6 +181,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
     }
+
     private fun applyFontToMenuItem(mi: MenuItem) {
         val font = Typeface.createFromAsset(assets, FONT)
         val mNewTitle = SpannableString(mi.title)
