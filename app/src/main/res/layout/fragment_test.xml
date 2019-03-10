@@ -12,6 +12,7 @@
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/fontApp"
             android:text="TEST"/>
     <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"

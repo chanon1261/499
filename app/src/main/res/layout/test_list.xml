@@ -7,7 +7,7 @@
     </data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="wrap_content"
+              android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
 
@@ -15,6 +15,7 @@
                   android:layout_height="wrap_content"
                   android:textSize="25dp"
                   android:layout_margin="10dp"
+                  style="@style/fontApp"
                   android:id="@+id/test_mode_name"
                   tools:text="TEST NAME"
                   android:text="@{test_name}"/>

@@ -41,6 +41,7 @@
         <item name="android:padding">4dp</item>
         <item name="android:scrollbars">vertical</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/cloud</item>
     </style>
 
     <style name="ThemeOverlay.FirebaseIcon" parent="AppTheme">
@@ -51,6 +52,10 @@
     <style name="ThemeOverlay.MyTitleText" parent="AppTheme">
     <item name="android:gravity">center</item>
     <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="fontApp">
+        <item name="android:fontFamily">@font/cloud</item>
     </style>
 
 </resources>
