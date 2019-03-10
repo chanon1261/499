@@ -26,6 +26,10 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
+import android.text.Spannable
+import com.example.m.mproject499.Data.CustomTypefaceSpan
+import android.text.SpannableString
+import android.view.SubMenu
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -68,6 +72,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
         createFragment(MainFragment.fragment(this), getString(learning_mode))
+        menuChangFont()
+
+
     }
 
     override fun onBackPressed() {
@@ -157,5 +164,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    fun menuChangFont(){
+        val navView = findViewById<NavigationView>(R.id.nav_view)
+        val m = navView.menu
+        for (i in 0 until m.size())
+        {
+            val mi = m.getItem(i)
+            val subMenu = mi.subMenu
+            if (subMenu != null && subMenu.size() > 0)
+            {
+                for (j in 0 until subMenu.size())
+                {
+                    val subMenuItem = subMenu.getItem(j)
+                    applyFontToMenuItem(subMenuItem)
+                }
+            }
+            //the method we have create in activity
+            applyFontToMenuItem(mi)
+        }
+
+    }
+    private fun applyFontToMenuItem(mi: MenuItem) {
+        val font = Typeface.createFromAsset(assets, FONT)
+        val mNewTitle = SpannableString(mi.title)
+        mNewTitle.setSpan(CustomTypefaceSpan("", font), 0, mNewTitle.length, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
+        mi.title = mNewTitle
+    }
 }
 

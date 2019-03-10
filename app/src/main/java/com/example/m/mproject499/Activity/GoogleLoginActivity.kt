@@ -1,12 +1,14 @@
 package com.example.m.mproject499.Activity
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.util.Log
 import android.view.View
+import android.widget.TextView
+import com.example.m.mproject499.Data.Constants
 import com.example.m.mproject499.MainActivity
 import com.example.m.mproject499.Model.User
 import com.example.m.mproject499.R
@@ -14,6 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -22,7 +25,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_google_login.*
 
-class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
+open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth
     // [END declare_auth]
@@ -45,6 +48,8 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
             .requestEmail()
             .build()
         // [END config_signin]
+
+        setGooglePlusButtonFont(signInButton)
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
@@ -106,7 +111,7 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
                     val user = auth.currentUser
-                    updateUI(user)
+                    //updateUI(user)
                     onAuthSuccess(task.result?.user!!)
                 } else {
                     // If sign in fails, display a message to the user.
@@ -197,6 +202,19 @@ class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     private fun writeNewUser(userId: String, name: String, email: String) {
         val user = User(name, email)
         database.child("users").child(userId).setValue(user)
+    }
+    fun setGooglePlusButtonFont(signInButton: SignInButton) {
+        // Find the TextView that is inside of the SignInButton and set its text
+        for (i in 0 until signInButton.childCount)
+        {
+            val v = signInButton.getChildAt(i)
+            if (v is TextView)
+            {
+                val tv = v
+                tv.typeface = Typeface.createFromAsset(assets, Constants.FONT)
+                return
+            }
+        }
     }
 
 
