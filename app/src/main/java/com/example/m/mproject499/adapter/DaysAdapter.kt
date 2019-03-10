@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Adapter
+package com.example.m.mproject499.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -7,9 +7,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
-import com.example.m.mproject499.Activity.WordsActivity
+import com.example.m.mproject499.activity.WordsActivity
 import com.example.m.mproject499.MainApp
-import com.example.m.mproject499.Model.Days
+import com.example.m.mproject499.model.Chapter
 import com.example.m.mproject499.databinding.DaysListBinding
 import org.jetbrains.anko.toast
 
@@ -18,7 +18,7 @@ import java.util.*
 
 class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysAdapterViewHolder>() {
 
-    private var items: ArrayList<Days> = java.util.ArrayList()
+    private var items: ArrayList<Chapter> = java.util.ArrayList()
 
 
     override fun getItemCount(): Int {
@@ -42,10 +42,13 @@ class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysA
 
         val context: Context = binding.root.context
 
-        fun bind(item: Days) {
+        fun bind(item: Chapter) {
 
-            binding.setVariable(BR.name, item.name)
-            binding.setVariable(BR.comment, item.comment)
+            val day = "Day ${item.day}:"
+            binding.setVariable(BR.name, day)
+            binding.setVariable(BR.eng, item.eng)
+            binding.setVariable(BR.th, item.th)
+
             itemView.setOnClickListener {
                 Log.d("", "test $itemId")
                 MainApp.instance.applicationContext?.let { context ->
@@ -59,7 +62,7 @@ class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysA
         }
     }
 
-    fun loadDatas(data: ArrayList<Days>) {
+    fun loadData(data: ArrayList<Chapter>) {
         this.items = data
         notifyDataSetChanged()
     }

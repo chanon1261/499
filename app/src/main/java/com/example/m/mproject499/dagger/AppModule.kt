@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Dagger
+package com.example.m.mproject499.dagger
 
 import com.example.m.mproject499.MainApp
 import dagger.Module

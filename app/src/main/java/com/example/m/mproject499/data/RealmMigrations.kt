@@ -1,7 +1,5 @@
-package com.example.m.mproject499.Data
+package com.example.m.mproject499.data
 
-import io.realm.RealmObjectSchema
-import io.realm.RealmSchema
 import io.realm.DynamicRealm
 import io.realm.RealmMigration
 import io.realm.FieldAttribute

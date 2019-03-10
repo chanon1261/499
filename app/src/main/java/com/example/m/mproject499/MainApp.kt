@@ -2,18 +2,15 @@ package com.example.m.mproject499
 
 import android.app.Application
 import android.util.Log
-import com.example.m.mproject499.Dagger.AppComponent
-import com.example.m.mproject499.Dagger.AppModule
-import com.example.m.mproject499.Dagger.DaggerAppComponent
-import com.example.m.mproject499.Data.RealmMigrations
-import com.example.m.mproject499.Model.TestWord
-import com.example.m.mproject499.Model.WordFireBase
+import com.example.m.mproject499.dagger.AppComponent
+import com.example.m.mproject499.dagger.AppModule
+import com.example.m.mproject499.dagger.DaggerAppComponent
+import com.example.m.mproject499.data.RealmMigrations
+import com.example.m.mproject499.model.Chapter
+import com.example.m.mproject499.model.WordFireBase
 import com.google.firebase.database.*
-import com.vicpin.krealmextensions.save
 import io.realm.Realm
 import io.realm.RealmConfiguration
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.uiThread
 import java.util.HashMap
 
 
@@ -44,6 +41,7 @@ open class MainApp : Application() {
         database = FirebaseDatabase.getInstance().reference
 
         //writeNewWord()
+        //writeChapter()
         initWords()
     }
 
@@ -86,5 +84,20 @@ open class MainApp : Application() {
         childUpdates["/words/$key"] = wordValues
         database.updateChildren(childUpdates)
         Log.d("Firebase word", "$word")
+    }
+
+    private fun writeChapter() {
+        for (i in 1..30){
+            val key = database.child("chapters").push().key
+            if (key == null) {
+                Log.w("", "Couldn't get push key for posts")
+                return
+            }
+            val chapter = Chapter(" ", " ", i)
+            val chapterValue = chapter.toMap()
+            val childUpdates = HashMap<String, Any>()
+            childUpdates["/chapters/$key"] = chapterValue
+            database.updateChildren(childUpdates)
+        }
     }
 }

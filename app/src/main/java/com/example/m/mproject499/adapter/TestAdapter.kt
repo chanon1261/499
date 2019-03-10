@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Adapter
+package com.example.m.mproject499.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -6,9 +6,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
-import com.example.m.mproject499.Activity.ListeningActivity
-import com.example.m.mproject499.Activity.MatchingActivity
-import com.example.m.mproject499.Activity.SpeakingActivity
+import com.example.m.mproject499.activity.ListeningActivity
+import com.example.m.mproject499.activity.MatchingActivity
+import com.example.m.mproject499.activity.SpeakingActivity
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.databinding.TestListBinding
 import org.jetbrains.anko.toast

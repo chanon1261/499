@@ -13,8 +13,8 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import com.example.m.mproject499.Activity.GoogleLoginActivity
-import com.example.m.mproject499.Data.Constants.FONT
+import com.example.m.mproject499.activity.GoogleLoginActivity
+import com.example.m.mproject499.data.Constants.FONT
 import com.example.m.mproject499.R.string.*
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -27,9 +27,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
 import android.text.Spannable
-import com.example.m.mproject499.Data.CustomTypefaceSpan
+import com.example.m.mproject499.data.CustomTypefaceSpan
 import android.text.SpannableString
-import android.view.SubMenu
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

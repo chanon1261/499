@@ -1,7 +1,7 @@
-package com.example.m.mproject499.Data
+package com.example.m.mproject499.data
 
 import android.content.SharedPreferences
-import com.example.m.mproject499.Model.Token
+import com.example.m.mproject499.model.Token
 import com.google.gson.Gson
 import javax.inject.Inject
 

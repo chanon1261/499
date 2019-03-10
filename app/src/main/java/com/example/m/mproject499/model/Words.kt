@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Model
+package com.example.m.mproject499.model
 
 import com.google.firebase.database.Exclude
 import com.google.firebase.database.IgnoreExtraProperties

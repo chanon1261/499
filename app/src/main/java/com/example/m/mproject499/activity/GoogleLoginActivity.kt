@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Activity
+package com.example.m.mproject499.activity
 
 import android.content.Context
 import android.content.Intent
@@ -8,9 +8,9 @@ import android.support.design.widget.Snackbar
 import android.util.Log
 import android.view.View
 import android.widget.TextView
-import com.example.m.mproject499.Data.Constants
+import com.example.m.mproject499.data.Constants
 import com.example.m.mproject499.MainActivity
-import com.example.m.mproject499.Model.User
+import com.example.m.mproject499.model.User
 import com.example.m.mproject499.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount

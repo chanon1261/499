@@ -1,10 +1,10 @@
-package com.example.m.mproject499.Dagger
+package com.example.m.mproject499.dagger
 
 
-import com.example.m.mproject499.Activity.ListeningActivity
-import com.example.m.mproject499.Activity.MatchingActivity
-import com.example.m.mproject499.Activity.SpeakingActivity
-import com.example.m.mproject499.Activity.WordsActivity
+import com.example.m.mproject499.activity.ListeningActivity
+import com.example.m.mproject499.activity.MatchingActivity
+import com.example.m.mproject499.activity.SpeakingActivity
+import com.example.m.mproject499.activity.WordsActivity
 import com.example.m.mproject499.MainActivity
 import com.example.m.mproject499.MainApp
 import dagger.Component

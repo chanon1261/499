@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Model
+package com.example.m.mproject499.model
 
 import com.google.gson.annotations.SerializedName
 import io.realm.annotations.PrimaryKey

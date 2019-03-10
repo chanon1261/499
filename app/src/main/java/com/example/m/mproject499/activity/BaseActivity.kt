@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Activity
+package com.example.m.mproject499.activity
 
 
 import android.app.ProgressDialog

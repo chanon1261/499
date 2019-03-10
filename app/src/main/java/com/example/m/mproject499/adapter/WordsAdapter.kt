@@ -1,4 +1,4 @@
-package com.example.m.mproject499.Adapter
+package com.example.m.mproject499.adapter
 
 import android.content.Context
 import android.os.Build
@@ -9,8 +9,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.MainApp
-import com.example.m.mproject499.MainApp.Companion.database
-import com.example.m.mproject499.Model.WordFireBase
+import com.example.m.mproject499.model.WordFireBase
 import com.example.m.mproject499.databinding.WordListBinding
 import org.jetbrains.anko.toast
 import java.util.*
