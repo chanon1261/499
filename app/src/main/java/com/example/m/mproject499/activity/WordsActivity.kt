@@ -34,14 +34,14 @@ class WordsActivity : AppCompatActivity() {
         MainApp.graph.inject(this)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         database = FirebaseDatabase.getInstance().reference
-        //toolbar.changeToolbarFont()
 
         val extras = intent.extras
         if (extras != null) {
             extras.getString("key")?.let {
-                //title = it
-                supportActionBar?.title = "DAY $it"
                 number = it.toInt()
+            }
+            extras.getString("name")?.let {
+                supportActionBar?.title = "Day $number : $it"
             }
         }
 
@@ -53,10 +53,10 @@ class WordsActivity : AppCompatActivity() {
 
         val userListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                wordsList.clear()
-                dataSnapshot.children.mapNotNullTo(wordsList) { it.getValue<WordFireBase>(WordFireBase::class.java) }
-                adapter.loadData(wordsList.filter { it.day == number } as java.util.ArrayList<WordFireBase>)
-                Log.d(TAG, wordsList.size.toString())
+                val wordList:MutableList<WordFireBase> = mutableListOf()
+                dataSnapshot.children.mapNotNullTo(wordList) { it.getValue<WordFireBase>(WordFireBase::class.java) }
+                adapter.loadData(wordList.filter { it.day == number } as java.util.ArrayList<WordFireBase>)
+                Log.d(TAG, wordList.size.toString())
             }
 
             override fun onCancelled(databaseError: DatabaseError) {

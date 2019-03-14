@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.m.mproject499.adapter.TestAdapter
+import com.example.m.mproject499.data.Constants.TEST_MODE
 import kotlinx.android.synthetic.main.fragment_test.*
 
 class TestFragment : Fragment() {
@@ -29,13 +30,13 @@ class TestFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        test_page.text = "TEST FRAGMENT"
-
+        test_page.text = "TEST FRAGMENT" +
+                "
         val adapter = activity?.applicationContext?.let { TestAdapter(it) }
         val layoutManager = LinearLayoutManager(activity?.applicationContext)
         test_recycle?.layoutManager = layoutManager
         test_recycle?.adapter = adapter
-        adapter?.loadData(generateDataTest())
+        adapter?.loadData(TEST_MODE)
         adapter?.notifyDataSetChanged()
 
         super.onViewCreated(view, savedInstanceState)

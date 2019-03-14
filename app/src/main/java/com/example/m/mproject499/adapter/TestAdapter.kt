@@ -13,11 +13,12 @@ import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.databinding.TestListBinding
 import org.jetbrains.anko.toast
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestAdapterViewHolder>() {
 
-    private var items: ArrayList<String> = java.util.ArrayList()
+    private var items: Array<String> = emptyArray()
 
 
     override fun getItemCount(): Int {
@@ -70,7 +71,7 @@ class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestA
         }
     }
 
-    fun loadData(data: ArrayList<String>) {
+    fun loadData(data: Array<String>) {
         this.items = data
         notifyDataSetChanged()
     }

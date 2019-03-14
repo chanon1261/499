@@ -55,6 +55,7 @@ class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysA
                     val intent = WordsActivity.getStartIntent(context)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.putExtra("key", "${adapterPosition + 1}")
+                    intent.putExtra("name", item.eng)
                     context.startActivity(intent)
                 }
                 context.toast("${adapterPosition + 1}")

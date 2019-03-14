@@ -72,22 +72,28 @@ open class MainApp : Application() {
     }
 
     private fun writeNewWord() {
-        val key = database.child("words").push().key
-        if (key == null) {
-            Log.w("", "Couldn't get push key for posts")
-            return
+        for (i in 1..30) {
+            for (j in 1..10) {
+
+                val key = database.child("words").push().key
+                if (key == null) {
+                    Log.w("", "Couldn't get push key for posts")
+                    return
+                }
+                val choice: MutableList<String> = mutableListOf("A", "B", "C", "D")
+                val word = WordFireBase(" ", " ", " ", " ", i, 0, choice)
+                val wordValues = word.toMap()
+                val childUpdates = HashMap<String, Any>()
+                childUpdates["/words/$key"] = wordValues
+                database.updateChildren(childUpdates)
+
+            }
         }
-        val choice: MutableList<String> = mutableListOf("A", "B", "C", "D")
-        val word = WordFireBase("Ant", "มด", "ant is red", "มดส้ม", 1, 2, choice)
-        val wordValues = word.toMap()
-        val childUpdates = HashMap<String, Any>()
-        childUpdates["/words/$key"] = wordValues
-        database.updateChildren(childUpdates)
-        Log.d("Firebase word", "$word")
+
     }
 
     private fun writeChapter() {
-        for (i in 1..30){
+        for (i in 1..30) {
             val key = database.child("chapters").push().key
             if (key == null) {
                 Log.w("", "Couldn't get push key for posts")
