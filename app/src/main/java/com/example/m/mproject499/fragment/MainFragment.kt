@@ -51,8 +51,6 @@ class MainFragment : Fragment() {
         initChapter(adapter)
         adapter.loadData(dayList as java.util.ArrayList<Chapter>)
         adapter.notifyDataSetChanged()
-
-
         super.onViewCreated(view, savedInstanceState)
 
     }
