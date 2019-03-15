@@ -2,10 +2,13 @@ package com.example.m.mproject499
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Typeface
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
@@ -49,6 +52,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
         //supportActionBar?.hide()
         MainApp.graph.inject(this)
+        requestPermissions()
 
         typeface = Typeface.createFromAsset(assets, FONT)
         toolbar.changeToolbarFont()
@@ -186,6 +190,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val mNewTitle = SpannableString(mi.title)
         mNewTitle.setSpan(CustomTypefaceSpan("", font), 0, mNewTitle.length, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
         mi.title = mNewTitle
+    }
+
+    @Throws(PackageManager.NameNotFoundException::class)
+    private fun requestPermissions(): Boolean {
+        val info = packageManager.getPackageInfo(packageName, PackageManager.GET_PERMISSIONS)
+        val toRequest = java.util.ArrayList<String>()
+        if (info.requestedPermissions != null) {
+            for (p in info.requestedPermissions) {
+                if (ContextCompat.checkSelfPermission(this, p) != PackageManager.PERMISSION_GRANTED) {
+                    toRequest.add(p)
+                }
+            }
+        }
+
+        if (toRequest.size > 0) {
+            val tra = arrayOfNulls<String>(toRequest.size)
+            for (i in tra.indices) {
+                tra[i] = toRequest[i]
+            }
+            ActivityCompat.requestPermissions(this, tra, 102)
+        }
+        return toRequest.size == 0
     }
 }
 

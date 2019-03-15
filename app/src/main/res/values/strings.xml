@@ -99,4 +99,6 @@
     <string name="email_fmt">Email: %s</string>
 
     <string name="font_style">cloud.tff</string>
+    <string name="text_hint">You will see text here..</string>
+    <string name="btn_info">Press &amp; hold to speak..</string>
 </resources>
