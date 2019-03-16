@@ -53,7 +53,7 @@ class WordsActivity : AppCompatActivity() {
 
         val userListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val wordList:MutableList<WordFireBase> = mutableListOf()
+                val wordList: MutableList<WordFireBase> = mutableListOf()
                 dataSnapshot.children.mapNotNullTo(wordList) { it.getValue<WordFireBase>(WordFireBase::class.java) }
                 adapter.loadData(wordList.filter { it.day == number } as java.util.ArrayList<WordFireBase>)
                 Log.d(TAG, wordList.size.toString())
@@ -72,14 +72,9 @@ class WordsActivity : AppCompatActivity() {
         return true
     }
 
-    private fun Toolbar.changeToolbarFont() {
-        for (i in 0 until childCount) {
-            val view = getChildAt(i)
-            if (view is TextView && view.text == title) {
-                view.typeface = Typeface.createFromAsset(assets, Constants.FONT)
-                break
-            }
-        }
+    override fun onDestroy() {
+        MainApp.instance.stopTTS()
+        super.onDestroy()
     }
 
 }

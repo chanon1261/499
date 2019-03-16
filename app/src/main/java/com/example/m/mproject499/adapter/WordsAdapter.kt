@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.MainApp
+import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.model.WordFireBase
 import com.example.m.mproject499.databinding.WordListBinding
 import kotlinx.android.synthetic.main.word_list.view.*
@@ -38,28 +39,9 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
 
     override fun onBindViewHolder(holder: WordsAdapterViewHolder, position: Int) = holder.bind(items[position])
 
-    class WordsAdapterViewHolder(val binding: WordListBinding) : RecyclerView.ViewHolder(binding.root),
-        TextToSpeech.OnInitListener {
+    class WordsAdapterViewHolder(val binding: WordListBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        var tts: TextToSpeech? = null
-        override fun onInit(status: Int) {
-            if (status == TextToSpeech.SUCCESS) {
-                // set US English as language for tts
-                val result = tts!!.setLanguage(Locale.US)
-                tts!!.setSpeechRate(0.75F)
-                //tts!!.setPitch(0.1F)
-                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    Log.e("TTS", "The Language specified is not supported!")
-                    context.toast("The Language specified is not supported!")
-                } else {
-                    //buttonSpeak!!.isEnabled = true
-                }
-
-            } else {
-                Log.e("TTS", "Initilization Failed!")
-            }
-        }
-
+        var tts: TextToSpeech? = MainApp.tts
         val context: Context = binding.root.context
 
         fun bind(item: WordFireBase) {
@@ -68,13 +50,12 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
             binding.setVariable(BR.descEng, item.desc_eng)
             binding.setVariable(BR.descTH, "?")
 
-            tts = TextToSpeech(MainApp.instance.applicationContext, this)
             itemView.txtName.setOnClickListener {
                 speakOut(item.word)
-
             }
             itemView.txtEng.setOnClickListener {
                 speakOut(item.desc_eng)
+                History.add(item)
             }
             itemView.txtMeaning.setOnClickListener {
                 binding.setVariable(BR.meaning, item.meaning)

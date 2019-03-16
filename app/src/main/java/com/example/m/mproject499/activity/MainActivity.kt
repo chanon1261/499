@@ -106,6 +106,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 user_email.typeface = typeface
             }
         } catch (e: Exception) {
+            startActivity(Intent(this, GoogleLoginActivity::class.java))
+            finish()
             e.printStackTrace()
         }
         menuInflater.inflate(R.menu.main, menu)
