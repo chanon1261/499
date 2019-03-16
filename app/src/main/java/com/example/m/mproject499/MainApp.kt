@@ -22,6 +22,7 @@ open class MainApp : Application() {
         lateinit var instance: MainApp
         lateinit var database: DatabaseReference
         var wordsList: MutableList<WordFireBase> = mutableListOf()
+        var NUMBER = 0
 
     }
 

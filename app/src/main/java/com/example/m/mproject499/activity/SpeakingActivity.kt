@@ -12,13 +12,16 @@ import android.provider.Settings
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
+import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.view.MotionEvent
 import android.widget.EditText
 import android.widget.Toast
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.R
+import com.example.m.mproject499.fragment.SpeakingFragment
 import kotlinx.android.synthetic.main.activity_speaking.*
+import kotlinx.android.synthetic.main.app_bar_main.*
 import java.util.*
 
 
@@ -37,6 +40,7 @@ class SpeakingActivity : AppCompatActivity() {
 
         checkPermission()
         startSpeechToText()
+        createFragment(SpeakingFragment.fragment(this), "XFDF")
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -104,4 +108,13 @@ class SpeakingActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun createFragment(fragment: Fragment, name: String) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.speaking_frag, fragment)
+        fragmentTransaction.commit()
+        title = name
+    }
+
 }
