@@ -3,7 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.m.mproject499">
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
             android:name=".MainApp"
@@ -14,8 +14,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".fragment.SpeakingActivity">
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".activity.BaseActivity">
         </activity>
