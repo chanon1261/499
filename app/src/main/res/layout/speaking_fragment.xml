@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/speaking"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".activity.SpeakingActivity">
+    <TextView
+            android:textColor="@color/colorAccent"
+            android:textSize="60dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WORD"
+            android:id="@+id/test_word"
+    />
+
+    <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/text_hint"
+            android:maxLines="5"
+            android:textColorHint="@color/colorAccent"
+            android:padding="20dp"
+            android:editable="false"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimaryDark"
+            tools:ignore="Deprecated" />
+
+    <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/btn_info"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatImageButton
+            android:layout_gravity="center"
+            android:id="@+id/btSpeech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_background" />
 
 
     <TextView
@@ -19,5 +60,4 @@
             android:layout_height="wrap_content"
             android:focusable="true"/>
 
-
-</FrameLayout>
+</LinearLayout>

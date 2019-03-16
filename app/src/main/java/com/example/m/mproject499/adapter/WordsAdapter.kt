@@ -55,10 +55,11 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
             }
             itemView.txtEng.setOnClickListener {
                 speakOut(item.desc_eng)
-                History.add(item)
             }
             itemView.txtMeaning.setOnClickListener {
                 binding.setVariable(BR.meaning, item.meaning)
+                History.add(item)
+                Log.d("addItem",item.word)
             }
             itemView.txtTH.setOnClickListener {
                 binding.setVariable(BR.descTH, item.desc_th)
@@ -71,7 +72,6 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
             }
         }
     }
-
 
     fun loadData(data: ArrayList<WordFireBase>) {
         this.items = data

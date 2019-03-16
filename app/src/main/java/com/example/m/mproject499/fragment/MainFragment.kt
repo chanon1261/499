@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.m.mproject499.adapter.DaysAdapter
 import com.example.m.mproject499.model.Chapter
-import com.example.m.mproject499.model.Days
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_main.*
 
@@ -53,16 +52,6 @@ class MainFragment : Fragment() {
         adapter.notifyDataSetChanged()
         super.onViewCreated(view, savedInstanceState)
 
-    }
-
-    private fun generateData(): ArrayList<Days> {
-        val result = ArrayList<Days>()
-
-        for (i in 1..30) {
-            val user = Days(i.toString(), "Occupations อาชีพต่างๆ")
-            result.add(user)
-        }
-        return result
     }
 
     private fun initChapter(adapter: DaysAdapter) {

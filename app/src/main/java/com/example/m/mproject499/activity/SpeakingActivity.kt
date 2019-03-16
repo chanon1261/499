@@ -39,7 +39,7 @@ class SpeakingActivity : AppCompatActivity() {
         supportActionBar?.title = "Speaking"
 
         checkPermission()
-        startSpeechToText()
+        //startSpeechToText()
         createFragment(SpeakingFragment.fragment(this), "XFDF")
     }
 
@@ -48,54 +48,12 @@ class SpeakingActivity : AppCompatActivity() {
         return true
     }
 
-    private fun startSpeechToText() {
-        val editText = findViewById<EditText>(R.id.editText)
-
-        val speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
-        val speechRecognizerIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-        speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-        speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
-
-        speechRecognizer.setRecognitionListener(object : RecognitionListener {
-            override fun onReadyForSpeech(bundle: Bundle) {}
-
-            override fun onBeginningOfSpeech() {}
-
-            override fun onRmsChanged(v: Float) {}
-
-            override fun onBufferReceived(bytes: ByteArray) {}
-
-            override fun onEndOfSpeech() {}
-
-            override fun onError(i: Int) {}
-
-            override fun onResults(bundle: Bundle) {
-                val matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)//getting all the matches
-                //displaying the first match
-                if (matches != null)
-                    editText.setText(matches[0])
-            }
-
-            override fun onPartialResults(bundle: Bundle) {}
-
-            override fun onEvent(i: Int, bundle: Bundle) {}
-        })
-
-        btSpeech.setOnTouchListener { _, motionEvent ->
-            when (motionEvent.action) {
-                MotionEvent.ACTION_UP -> {
-                    speechRecognizer.stopListening()
-                    editText.hint = getString(R.string.text_hint)
-                }
-
-                MotionEvent.ACTION_DOWN -> {
-                    speechRecognizer.startListening(speechRecognizerIntent)
-                    editText.setText("")
-                    editText.hint = "Listening..."
-                }
-            }
-            false
-        }
+    private fun createFragment(fragment: Fragment, name: String) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.speaking_frag, fragment)
+        fragmentTransaction.commit()
+        title = name
     }
 
     private fun checkPermission() {
@@ -107,14 +65,6 @@ class SpeakingActivity : AppCompatActivity() {
                 Toast.makeText(this, "Enable Microphone Permission..!!", Toast.LENGTH_SHORT).show()
             }
         }
-    }
-
-    private fun createFragment(fragment: Fragment, name: String) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.speaking_frag, fragment)
-        fragmentTransaction.commit()
-        title = name
     }
 
 }
