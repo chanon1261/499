@@ -30,33 +30,38 @@
            android:orientation="vertical">
 
        <TextView
-               android:layout_width="wrap_content"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/txtName"
                tools:text="word"
-               android:textSize="40dp"
+               android:textColor="@color/colorAccent"
+               android:textSize="42dp"
                android:text="@{word}"
                style="@style/fontApp"/>
 
        <TextView
-               android:layout_width="wrap_content"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:textSize="20dp"
+               android:textSize="30dp"
                android:id="@+id/txtMeaning"
                android:text="@{meaning}"
                tools:text="Meaning"
                style="@style/fontApp"/>
 
        <TextView
-               android:layout_width="wrap_content"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
+               android:textSize="20dp"
                android:id="@+id/txtEng"
                android:text="@{descEng}"
                style="@style/fontApp"
                tools:text="sentences_eng"/>
 
        <TextView
-               android:layout_width="wrap_content"
+               android:textSize="15dp"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/txtTH"
                android:text="@{descTH}"

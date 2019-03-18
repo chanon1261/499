@@ -45,21 +45,20 @@ class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestA
         fun bind(item: String) {
             binding.setVariable(BR.test_name, item)
             itemView.setOnClickListener {
-                itemView.setOnClickListener {
-                    if (adapterPosition == 0 || adapterPosition == 1) {
-                        context.toast("LISTENING")
-                        doStartActivity(ListeningActivity.getStartIntent(context))
-
-                    } else if (adapterPosition == 2 || adapterPosition == 3) {
-                        context.toast("MATCHING")
-                        doStartActivity(MatchingActivity.getStartIntent(context))
-                    } else {
-                        context.toast("SPEAKING")
-                        doStartActivity(SpeakingActivity.getStartIntent(context))
-                    }
+                if (adapterPosition == 0 || adapterPosition == 1) {
+                    val intent = ListeningActivity.getStartIntent(context)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    context.startActivity(intent)
+                } else if (adapterPosition == 2 || adapterPosition == 3) {
+                    val intent = MatchingActivity.getStartIntent(context)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    context.startActivity(intent)
+                } else {
+                    val intent = SpeakingActivity.getStartIntent(context)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    context.startActivity(intent)
                 }
             }
-
         }
 
         private fun doStartActivity(intent: Intent) {
