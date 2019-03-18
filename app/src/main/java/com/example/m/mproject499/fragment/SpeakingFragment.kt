@@ -69,14 +69,8 @@ class SpeakingFragment : Fragment() {
         nextFrag.setOnClickListener {
 
             imgSpeak_show.visibility = View.INVISIBLE
+            speakAns.visibility = View.VISIBLE
             editText.text.clear()
-
-//            answer = editText.text.toString().trim()
-//            if(answer.isEmpty()){
-//                editText.error = "Press mic to speak"
-//                editText.requestFocus()
-//                return@setOnClickListener
-//            }
 
             NUMBER += 1
             question = History[NUMBER].word
@@ -98,7 +92,6 @@ class SpeakingFragment : Fragment() {
             if (answer.toLowerCase() == question.toLowerCase()) {
                 imgSpeak_show.setImageResource(R.drawable.ic_check)
                 speakAns.visibility = View.INVISIBLE
-
             } else {
                 imgSpeak_show.setImageResource(R.drawable.ic_close)
                 imgSpeak_show.setBackgroundColor(
@@ -108,7 +101,7 @@ class SpeakingFragment : Fragment() {
                     )
                 )
             }
-            Log.d("test fx","${answer.toLowerCase()} == ${question.toLowerCase()}")
+            Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
 
         }
 
