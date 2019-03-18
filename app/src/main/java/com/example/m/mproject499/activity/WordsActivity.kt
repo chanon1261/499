@@ -63,7 +63,7 @@ class WordsActivity : AppCompatActivity() {
                 println("loadPost:onCancelled ${databaseError.toException()}")
             }
         }
-        database.child("words").addListenerForSingleValueEvent(userListener)
+        database.child("words").addValueEventListener(userListener)
 
     }
 
