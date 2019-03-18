@@ -1,12 +1,15 @@
 package com.example.m.mproject499.fragment
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -19,14 +22,17 @@ import com.example.m.mproject499.MainApp.Companion.wordsList
 import com.example.m.mproject499.R
 import com.example.m.mproject499.activity.SpeakingActivity
 import kotlinx.android.synthetic.main.speaking_fragment.*
+import org.jetbrains.anko.custom.style
+import org.jetbrains.anko.toast
 import java.util.*
+import javax.annotation.Resource
 
 class SpeakingFragment : Fragment() {
 
 
     private lateinit var speakingActivity: SpeakingActivity
     lateinit var editText: EditText
-    private lateinit var answer : String
+    var answer: String = ""
 
 
     companion object {
@@ -55,24 +61,26 @@ class SpeakingFragment : Fragment() {
         if (History.isNotEmpty()) {
             question = History[NUMBER].word
             test_word.text = question
-            nextFrag.text = "click ${NUMBER + 1}"
+            nextFrag.text = "Next"
         } else {
             activity?.finish()
         }
 
         nextFrag.setOnClickListener {
 
-            answer = editText.text.toString().trim()
+            imgSpeak_show.visibility = View.INVISIBLE
+            editText.text.clear()
+
+//            answer = editText.text.toString().trim()
 //            if(answer.isEmpty()){
 //                editText.error = "Press mic to speak"
 //                editText.requestFocus()
 //                return@setOnClickListener
 //            }
+
             NUMBER += 1
-
-            nextFrag.text = "click ${NUMBER + 1}"
+            question = History[NUMBER].word
             test_word.text = History[NUMBER].word
-
 
             if (NUMBER == 9) {
                 nextFrag.text = "EXIT"
@@ -80,8 +88,30 @@ class SpeakingFragment : Fragment() {
                     activity?.finish()
                 }
             }
+        }
+
+        speakAns.setOnClickListener {
+            context?.toast("Click")
+            Log.d("fxdxdl", "check ans click")
+            answer = answer.replace(" ".toRegex(), "")
+            imgSpeak_show.visibility = View.VISIBLE
+            if (answer.toLowerCase() == question.toLowerCase()) {
+                imgSpeak_show.setImageResource(R.drawable.ic_check)
+                speakAns.visibility = View.INVISIBLE
+
+            } else {
+                imgSpeak_show.setImageResource(R.drawable.ic_close)
+                imgSpeak_show.setBackgroundColor(
+                    ContextCompat.getColor(
+                        MainApp.instance.applicationContext,
+                        R.color.fail
+                    )
+                )
+            }
+            Log.d("test fx","${answer.toLowerCase()} == ${question.toLowerCase()}")
 
         }
+
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -116,8 +146,9 @@ class SpeakingFragment : Fragment() {
             override fun onResults(bundle: Bundle) {
                 val matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)//getting all the matches
                 //displaying the first match
-                if (matches != null){
+                if (matches != null) {
                     editText.setText(matches[0])
+                    answer = matches[0]
                 }
             }
 
