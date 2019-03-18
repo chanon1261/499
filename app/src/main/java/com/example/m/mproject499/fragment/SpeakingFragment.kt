@@ -19,14 +19,15 @@ import com.example.m.mproject499.MainApp.Companion.wordsList
 import com.example.m.mproject499.R
 import com.example.m.mproject499.activity.SpeakingActivity
 import kotlinx.android.synthetic.main.speaking_fragment.*
-import org.jetbrains.anko.toast
 import java.util.*
 
 class SpeakingFragment : Fragment() {
 
 
     private lateinit var speakingActivity: SpeakingActivity
-    val editText: EditText = view!!.findViewById(R.id.editText)
+    lateinit var editText: EditText
+    private lateinit var answer : String
+
 
     companion object {
         fun fragment(speakingActivity: SpeakingActivity): SpeakingFragment {
@@ -46,18 +47,38 @@ class SpeakingFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         startSpeechToText()
+        editText = view.findViewById(R.id.editText)
+        var question = ""
 
-        nextFrag.text = "click $NUMBER"
-        test_word.text = History[NUMBER].word
+        randomQuiz()
+        println(History)
+        if (History.isNotEmpty()) {
+            question = History[NUMBER].word
+            test_word.text = question
+            nextFrag.text = "click ${NUMBER + 1}"
+        } else {
+            activity?.finish()
+        }
 
         nextFrag.setOnClickListener {
+
+            answer = editText.text.toString().trim()
+//            if(answer.isEmpty()){
+//                editText.error = "Press mic to speak"
+//                editText.requestFocus()
+//                return@setOnClickListener
+//            }
             NUMBER += 1
-            nextFrag.text = "click $NUMBER"
-            //context?.toast("click $NUMBER")
+
+            nextFrag.text = "click ${NUMBER + 1}"
             test_word.text = History[NUMBER].word
 
-            if (NUMBER == 11) {
-                activity?.finish()
+
+            if (NUMBER == 9) {
+                nextFrag.text = "EXIT"
+                nextFrag.setOnClickListener {
+                    activity?.finish()
+                }
             }
 
         }
@@ -70,7 +91,6 @@ class SpeakingFragment : Fragment() {
     }
 
     private fun startSpeechToText() {
-
 
         val speechRecognizer = SpeechRecognizer.createSpeechRecognizer(MainApp.instance.applicationContext)
         val speechRecognizerIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
@@ -96,8 +116,9 @@ class SpeakingFragment : Fragment() {
             override fun onResults(bundle: Bundle) {
                 val matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)//getting all the matches
                 //displaying the first match
-                if (matches != null)
+                if (matches != null){
                     editText.setText(matches[0])
+                }
             }
 
             override fun onPartialResults(bundle: Bundle) {}
@@ -120,6 +141,21 @@ class SpeakingFragment : Fragment() {
             }
             false
         }
+    }
+
+    private fun randomQuiz() {
+        History.clear()
+        val numbers: MutableList<Int> = mutableListOf()
+        val numberOfNumbersYouWant = 10
+        val random = Random()
+        do {
+            //val next = random.nextInt(wordsList.size)
+            val next = random.nextInt(10)
+            if (!numbers.contains(next)) {
+                numbers.add(next)
+                History.add(wordsList[next])
+            }
+        } while (numbers.size < numberOfNumbersYouWant)
     }
 
 

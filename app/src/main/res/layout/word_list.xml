@@ -35,7 +35,7 @@
                android:id="@+id/txtName"
                tools:text="word"
                android:textColor="@color/colorAccent"
-               android:textSize="48dp"
+               android:textSize="42dp"
                android:text="@{word}"
                style="@style/fontApp"/>
 
