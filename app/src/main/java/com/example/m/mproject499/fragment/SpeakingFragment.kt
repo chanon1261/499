@@ -26,7 +26,7 @@ class SpeakingFragment : Fragment() {
 
 
     private lateinit var speakingActivity: SpeakingActivity
-    var random = 0
+    val editText: EditText = view!!.findViewById(R.id.editText)
 
     companion object {
         fun fragment(speakingActivity: SpeakingActivity): SpeakingFragment {
@@ -70,7 +70,7 @@ class SpeakingFragment : Fragment() {
     }
 
     private fun startSpeechToText() {
-        val editText = view!!.findViewById<EditText>(R.id.editText)
+
 
         val speechRecognizer = SpeechRecognizer.createSpeechRecognizer(MainApp.instance.applicationContext)
         val speechRecognizerIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)

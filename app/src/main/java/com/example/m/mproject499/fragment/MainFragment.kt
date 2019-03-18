@@ -67,7 +67,7 @@ class MainFragment : Fragment() {
                 println("loadPost:onCancelled ${databaseError.toException()}")
             }
         }
-        database.child("chapters").addListenerForSingleValueEvent(userListener)
+        database.child("chapters").addValueEventListener(userListener)
     }
 
 }

@@ -46,7 +46,7 @@ class WordsActivity : AppCompatActivity() {
         }
 
         val adapter = WordsAdapter(this)
-        val layoutManager = LinearLayoutManager(MainApp.instance.applicationContext)
+        val layoutManager = LinearLayoutManager(this)
         word_recycle?.layoutManager = layoutManager
         word_recycle?.adapter = adapter
         adapter.notifyDataSetChanged()
