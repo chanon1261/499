@@ -1,7 +1,6 @@
 package com.example.m.mproject499.fragment
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognitionListener
@@ -22,10 +21,8 @@ import com.example.m.mproject499.MainApp.Companion.wordsList
 import com.example.m.mproject499.R
 import com.example.m.mproject499.activity.SpeakingActivity
 import kotlinx.android.synthetic.main.speaking_fragment.*
-import org.jetbrains.anko.custom.style
 import org.jetbrains.anko.toast
 import java.util.*
-import javax.annotation.Resource
 
 class SpeakingFragment : Fragment() {
 
