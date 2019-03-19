@@ -61,19 +61,21 @@
             android:background="@drawable/oval_shape"
             android:visibility="invisible"/>
 
-    <android.support.v7.widget.AppCompatEditText
+    <EditText
             android:id="@+id/editTextListen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_margin="10dp"
+            android:inputType="text"
             android:maxLines="2"
             android:scrollHorizontally="false"
             android:textColorHint="@color/black"
             android:padding="20dp"
+            android:imeOptions="actionDone"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="@color/colorPrimaryDark"
-            tools:ignore="Deprecated"/>
+            android:textColor="@color/colorPrimaryDark"/>
+
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="wrap_content">
         <TextView

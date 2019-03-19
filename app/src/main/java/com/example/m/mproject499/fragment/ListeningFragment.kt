@@ -13,6 +13,10 @@ import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
+import android.widget.TextView
 import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.MainApp.Companion.NUMBER
 import com.example.m.mproject499.activity.ListeningActivity
@@ -73,13 +77,18 @@ class ListeningFragment : Fragment() {
             speakOut(question)
         }
 
-        editTextListen.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                //Perform Code
-                return@OnKeyListener true
+        editTextListen.setOnEditorActionListener { v, actionId, event ->
+            return@setOnEditorActionListener when (actionId) {
+                EditorInfo.IME_ACTION_DONE -> {
+                    if (imgListening_show.visibility == View.INVISIBLE) {
+                        checkAnswer()
+                    }
+                    editTextListen.hideKeyboard()
+                    true
+                }
+                else -> false
             }
-            false
-        })
+        }
 
 
         listenNextFrag.setOnClickListener {
@@ -172,6 +181,12 @@ class ListeningFragment : Fragment() {
             )
         }
         listenAns.visibility = View.INVISIBLE
-        Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
+        //Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
     }
+
+    private fun View.hideKeyboard() {
+        val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(windowToken, 0)
+    }
+
 }
