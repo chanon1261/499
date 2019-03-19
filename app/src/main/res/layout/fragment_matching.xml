@@ -6,12 +6,13 @@
               android:orientation="vertical"
               tools:context=".activity.MatchingActivity">
     <TextView
-            style="@style/fontApp"
-            android:id="@+id/stat_page"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Matching"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
