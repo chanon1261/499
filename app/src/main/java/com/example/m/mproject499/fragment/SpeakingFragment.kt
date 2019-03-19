@@ -20,6 +20,7 @@ import com.example.m.mproject499.MainApp.Companion.NUMBER
 import com.example.m.mproject499.MainApp.Companion.wordsList
 import com.example.m.mproject499.R
 import com.example.m.mproject499.activity.SpeakingActivity
+import com.example.m.mproject499.data.Constants.maxQuestions
 import kotlinx.android.synthetic.main.speaking_fragment.*
 import org.jetbrains.anko.toast
 import java.util.*
@@ -30,6 +31,7 @@ class SpeakingFragment : Fragment() {
     private lateinit var speakingActivity: SpeakingActivity
     lateinit var editText: EditText
     var answer: String = ""
+    var question = ""
 
 
     companion object {
@@ -51,7 +53,8 @@ class SpeakingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         startSpeechToText()
         editText = view.findViewById(R.id.editText)
-        var question = ""
+        speak_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
+
 
         randomQuiz()
         println(History)
@@ -65,11 +68,19 @@ class SpeakingFragment : Fragment() {
 
         nextFrag.setOnClickListener {
 
+            NUMBER += 1
+
+            if (imgSpeak_show.visibility == View.INVISIBLE) {
+                checkAnswer()
+                return@setOnClickListener
+            }
+
             imgSpeak_show.visibility = View.INVISIBLE
             speakAns.visibility = View.VISIBLE
             editText.text.clear()
 
-            NUMBER += 1
+            speak_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
+
             question = History[NUMBER].word
             test_word.text = History[NUMBER].word
 
@@ -82,24 +93,7 @@ class SpeakingFragment : Fragment() {
         }
 
         speakAns.setOnClickListener {
-            context?.toast("Click")
-            Log.d("fxdxdl", "check ans click")
-            answer = answer.replace(" ".toRegex(), "")
-            imgSpeak_show.visibility = View.VISIBLE
-            if (answer.toLowerCase() == question.toLowerCase()) {
-                imgSpeak_show.setImageResource(R.drawable.ic_check)
-                speakAns.visibility = View.INVISIBLE
-            } else {
-                imgSpeak_show.setImageResource(R.drawable.ic_close)
-                imgSpeak_show.setBackgroundColor(
-                    ContextCompat.getColor(
-                        MainApp.instance.applicationContext,
-                        R.color.fail
-                    )
-                )
-            }
-            Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
-
+            checkAnswer()
         }
 
         super.onViewCreated(view, savedInstanceState)
@@ -167,7 +161,6 @@ class SpeakingFragment : Fragment() {
     private fun randomQuiz() {
         History.clear()
         val numbers: MutableList<Int> = mutableListOf()
-        val numberOfNumbersYouWant = 10
         val random = Random()
         do {
             //val next = random.nextInt(wordsList.size)
@@ -176,7 +169,26 @@ class SpeakingFragment : Fragment() {
                 numbers.add(next)
                 History.add(wordsList[next])
             }
-        } while (numbers.size < numberOfNumbersYouWant)
+        } while (numbers.size < maxQuestions)
+    }
+
+    fun checkAnswer() {
+        answer = answer.replace(" ".toRegex(), "")
+        imgSpeak_show.visibility = View.VISIBLE
+        if (answer.toLowerCase() == question.toLowerCase()) {
+            imgSpeak_show.setImageResource(R.drawable.ic_check)
+            imgSpeak_show.setBackgroundResource(R.drawable.oval_shape)
+            speakAns.visibility = View.INVISIBLE
+        } else {
+            imgSpeak_show.setImageResource(R.drawable.ic_close)
+            imgSpeak_show.setBackgroundColor(
+                ContextCompat.getColor(
+                    MainApp.instance.applicationContext,
+                    R.color.fail
+                )
+            )
+        }
+        Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
     }
 
 
