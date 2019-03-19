@@ -2,19 +2,14 @@ package com.example.m.mproject499.activity
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.Toolbar
 import android.util.Log
-import android.widget.TextView
-import com.example.m.mproject499.adapter.WordsAdapter
-import com.example.m.mproject499.data.Constants
 import com.example.m.mproject499.MainApp
-import com.example.m.mproject499.MainApp.Companion.wordsList
-import com.example.m.mproject499.model.WordFireBase
 import com.example.m.mproject499.R
+import com.example.m.mproject499.adapter.WordsAdapter
+import com.example.m.mproject499.model.WordFireBase
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_words.*
 

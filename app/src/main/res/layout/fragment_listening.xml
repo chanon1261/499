@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/speaking"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".activity.SpeakingActivity">
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".activity.ListeningActivity">
     <TextView
-            android:id="@+id/speak_count"
+            android:id="@+id/list_count"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:textSize="30dp"
@@ -21,19 +16,42 @@
             android:layout_height="wrap_content"
             android:text="Listening"/>
 
+
+
+    <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/play_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:layout_gravity="center"/>
+
+    <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Press to listen"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"/>
+
+
+
+
     <TextView
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/list_show_ans"
             android:textColor="@color/black"
-            android:textSize="40dp"
+            android:text="answer"
+            android:textSize="18dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="WORD"
-            android:id="@+id/test_word"
+            android:visibility="invisible"
     />
 
     <ImageView
-            android:id="@+id/imgSpeak_show"
+            android:id="@+id/imgListening_show"
             android:layout_marginTop="10dp"
             android:tint="@color/white"
             android:layout_width="50dp"
@@ -41,46 +59,26 @@
             android:src="@drawable/ic_check"
             android:layout_gravity="center"
             android:background="@drawable/oval_shape"
-            android:visibility="invisible"
-    />
+            android:visibility="invisible"/>
 
     <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/editText"
+            android:id="@+id/editTextListen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="@string/text_hint"
-            android:maxLines="5"
             android:textAlignment="center"
-            android:textColorHint="@color/colorAccent"
+            android:layout_margin="10dp"
+            android:maxLines="2"
+            android:scrollHorizontally="false"
+            android:textColorHint="@color/black"
             android:padding="20dp"
-            android:editable="false"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textColor="@color/colorPrimaryDark"
             tools:ignore="Deprecated"/>
-
-    <android.support.v7.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="@string/btn_info"
-            android:textColor="@color/colorAccent"
-            android:textSize="12sp"/>
-
-    <android.support.v7.widget.AppCompatImageButton
-            android:layout_gravity="center"
-            android:id="@+id/btSpeech"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/btn_background"/>
-
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="wrap_content">
         <TextView
                 android:layout_gravity="top|center"
-                android:id="@+id/speakAns"
+                android:id="@+id/listenAns"
                 android:text="Answer"
                 android:textSize="20dp"
                 android:clickable="true"
@@ -90,7 +88,7 @@
                 android:focusable="true"/>
         <TextView
                 android:layout_marginRight="20dp"
-                android:id="@+id/nextFrag"
+                android:id="@+id/listenNextFrag"
                 android:text="next"
                 android:textSize="20dp"
                 android:layout_gravity="right"

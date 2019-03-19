@@ -10,10 +10,9 @@ import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.MainApp.Companion.History
-import com.example.m.mproject499.model.WordFireBase
 import com.example.m.mproject499.databinding.WordListBinding
+import com.example.m.mproject499.model.WordFireBase
 import kotlinx.android.synthetic.main.word_list.view.*
-import org.jetbrains.anko.toast
 import java.util.*
 
 
