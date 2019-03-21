@@ -10,9 +10,9 @@ import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.MainApp.Companion.History
-import com.example.m.mproject499.databinding.WordListBinding
+import com.example.m.mproject499.databinding.ItemWordBinding
 import com.example.m.mproject499.model.WordFireBase
-import kotlinx.android.synthetic.main.word_list.view.*
+import kotlinx.android.synthetic.main.item_word.view.*
 import java.util.*
 
 
@@ -28,7 +28,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordsAdapterViewHolder {
         val layoutInflator: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         return WordsAdapterViewHolder(
-            com.example.m.mproject499.databinding.WordListBinding.inflate(
+            com.example.m.mproject499.databinding.ItemWordBinding.inflate(
                 layoutInflator,
                 parent,
                 false
@@ -38,7 +38,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
 
     override fun onBindViewHolder(holder: WordsAdapterViewHolder, position: Int) = holder.bind(items[position])
 
-    class WordsAdapterViewHolder(val binding: WordListBinding) : RecyclerView.ViewHolder(binding.root) {
+    class WordsAdapterViewHolder(val binding: ItemWordBinding) : RecyclerView.ViewHolder(binding.root) {
 
         var tts: TextToSpeech? = MainApp.tts
         val context: Context = binding.root.context
@@ -58,7 +58,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
             itemView.txtMeaning.setOnClickListener {
                 binding.setVariable(BR.meaning, item.meaning)
                 History.add(item)
-                Log.d("addItem",item.word)
+                Log.d("addItem", item.word)
             }
             itemView.txtTH.setOnClickListener {
                 binding.setVariable(BR.descTH, item.desc_th)

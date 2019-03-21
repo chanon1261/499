@@ -6,14 +6,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
+import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.activity.ListeningActivity
 import com.example.m.mproject499.activity.MatchingActivity
 import com.example.m.mproject499.activity.SpeakingActivity
-import com.example.m.mproject499.MainApp
-import com.example.m.mproject499.databinding.TestListBinding
-import org.jetbrains.anko.toast
-import java.util.*
-import kotlin.collections.ArrayList
+import com.example.m.mproject499.databinding.ItemTestBinding
 
 
 class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestAdapterViewHolder>() {
@@ -28,7 +25,7 @@ class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestA
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TestAdapterViewHolder {
         val layoutInflator: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         return TestAdapterViewHolder(
-            com.example.m.mproject499.databinding.TestListBinding.inflate(
+            com.example.m.mproject499.databinding.ItemTestBinding.inflate(
                 layoutInflator,
                 parent,
                 false
@@ -38,7 +35,7 @@ class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestA
 
     override fun onBindViewHolder(holder: TestAdapterViewHolder, position: Int) = holder.bind(items[position])
 
-    class TestAdapterViewHolder(val binding: TestListBinding) : RecyclerView.ViewHolder(binding.root) {
+    class TestAdapterViewHolder(val binding: ItemTestBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val context: Context = binding.root.context
 
