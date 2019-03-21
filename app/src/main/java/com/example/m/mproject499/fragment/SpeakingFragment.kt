@@ -19,6 +19,7 @@ import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.MainApp.Companion.NUMBER
 import com.example.m.mproject499.MainApp.Companion.wordsList
 import com.example.m.mproject499.R
+import com.example.m.mproject499.activity.ResultActivity
 import com.example.m.mproject499.activity.SpeakingActivity
 import com.example.m.mproject499.data.Constants.maxQuestions
 import kotlinx.android.synthetic.main.speaking_fragment.*
@@ -68,12 +69,13 @@ class SpeakingFragment : Fragment() {
 
         nextFrag.setOnClickListener {
 
-            NUMBER += 1
-
             if (imgSpeak_show.visibility == View.INVISIBLE) {
                 checkAnswer()
                 return@setOnClickListener
             }
+
+            NUMBER += 1
+
 
             imgSpeak_show.visibility = View.INVISIBLE
             speakAns.visibility = View.VISIBLE
@@ -87,6 +89,8 @@ class SpeakingFragment : Fragment() {
             if (NUMBER == 9) {
                 nextFrag.text = "EXIT"
                 nextFrag.setOnClickListener {
+                    checkAnswer()
+                    startActivity(  ResultActivity.getStartIntent(MainApp.instance.applicationContext))
                     activity?.finish()
                 }
             }
@@ -172,13 +176,14 @@ class SpeakingFragment : Fragment() {
         } while (numbers.size < maxQuestions)
     }
 
-    fun checkAnswer() {
+    private fun checkAnswer() {
         answer = answer.replace(" ".toRegex(), "")
         imgSpeak_show.visibility = View.VISIBLE
         if (answer.toLowerCase() == question.toLowerCase()) {
             imgSpeak_show.setImageResource(R.drawable.ic_check)
             imgSpeak_show.setBackgroundResource(R.drawable.oval_shape)
             speakAns.visibility = View.INVISIBLE
+            MainApp.Result.add(true)
         } else {
             imgSpeak_show.setImageResource(R.drawable.ic_close)
             imgSpeak_show.setBackgroundColor(
@@ -187,6 +192,7 @@ class SpeakingFragment : Fragment() {
                     R.color.fail
                 )
             )
+            MainApp.Result.add(false)
         }
         Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
     }

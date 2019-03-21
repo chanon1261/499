@@ -14,6 +14,7 @@ import io.realm.Realm
 import io.realm.RealmConfiguration
 import org.jetbrains.anko.toast
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 open class MainApp : Application(), TextToSpeech.OnInitListener {
@@ -26,6 +27,7 @@ open class MainApp : Application(), TextToSpeech.OnInitListener {
         var wordsList: MutableList<WordFireBase> = mutableListOf()
         var NUMBER = 0
         var History: MutableList<WordFireBase> = mutableListOf()
+        var Result:ArrayList<Boolean> = ArrayList()
         var tts: TextToSpeech? = null
 
     }

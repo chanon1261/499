@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
 import com.example.m.mproject499.activity.WordsActivity
 import com.example.m.mproject499.MainApp
+import com.example.m.mproject499.databinding.ItemDayBinding
 import com.example.m.mproject499.model.Chapter
-import com.example.m.mproject499.databinding.DaysListBinding
 import org.jetbrains.anko.toast
 
 import java.util.*
@@ -28,7 +28,7 @@ class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysA
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DaysAdapterViewHolder {
         val layoutInflator: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         return DaysAdapterViewHolder(
-            com.example.m.mproject499.databinding.DaysListBinding.inflate(
+            com.example.m.mproject499.databinding.ItemDayBinding.inflate(
                 layoutInflator,
                 parent,
                 false
@@ -38,7 +38,7 @@ class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysA
 
     override fun onBindViewHolder(holder: DaysAdapterViewHolder, position: Int) = holder.bind(items[position])
 
-    class DaysAdapterViewHolder(val binding: DaysListBinding) : RecyclerView.ViewHolder(binding.root) {
+    class DaysAdapterViewHolder(val binding: ItemDayBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val context: Context = binding.root.context
 
