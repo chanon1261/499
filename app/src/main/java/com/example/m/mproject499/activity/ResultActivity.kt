@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.MainApp.Companion.Result
 import com.example.m.mproject499.R
@@ -21,7 +22,11 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
         super.onCreate(savedInstanceState)
 
-        title = "score"
+        var score = 0
+        for (it in MainApp.Result.filter { it }) {
+            score += 1
+        }
+        title = "SCORE $score/10"
 
         val adapter = ResultAdapter(this)
         val layoutManager = LinearLayoutManager(this)
