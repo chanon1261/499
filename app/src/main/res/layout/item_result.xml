@@ -1,6 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<layout>
+    <data>
+        <variable
+                name="result_word"
+                type="String" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="25dp"
+                  android:layout_margin="10dp"
+                  style="@style/fontApp"
+                  android:id="@+id/result_word"
+                  tools:text="TEST NAME"
+                  android:text="@{result_word}"/>
+
+        <ImageView
+                android:id="@+id/result_img"
+                android:tint="@color/white"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_check"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="right"
+                android:background="@drawable/oval_shape"/>
+
+    </FrameLayout>
+</layout>

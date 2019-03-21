@@ -19,7 +19,9 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.MainApp.Companion.NUMBER
+import com.example.m.mproject499.MainApp.Companion.Result
 import com.example.m.mproject499.activity.ListeningActivity
+import com.example.m.mproject499.activity.ResultActivity
 import com.example.m.mproject499.data.Constants.maxQuestions
 import kotlinx.android.synthetic.main.fragment_listening.*
 import kotlinx.android.synthetic.main.speaking_fragment.*
@@ -30,8 +32,8 @@ import java.util.*
 class ListeningFragment : Fragment() {
 
     private lateinit var listeningActivity: ListeningActivity
-    var tts: TextToSpeech? = MainApp.tts
-    var question = ""
+    private var tts: TextToSpeech? = MainApp.tts
+    private var question = ""
 
     companion object {
         fun fragment(listeningActivity: ListeningActivity): ListeningFragment {
@@ -110,6 +112,8 @@ class ListeningFragment : Fragment() {
             if (NUMBER == 9) {
                 listenNextFrag.text = "EXIT"
                 listenNextFrag.setOnClickListener {
+                    checkAnswer()
+                    startActivity(  ResultActivity.getStartIntent(MainApp.instance.applicationContext))
                     activity?.finish()
                 }
             }
@@ -164,6 +168,7 @@ class ListeningFragment : Fragment() {
                     R.color.correct
                 )
             )
+            Result.add(true)
 
         } else {
             imgListening_show.setImageResource(R.drawable.ic_close)
@@ -179,8 +184,9 @@ class ListeningFragment : Fragment() {
                     R.color.fail
                 )
             )
+            Result.add(false)
         }
-        listenAns.visibility = View.INVISIBLE
+        //listenAns.visibility = View.INVISIBLE
         //Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
     }
 
