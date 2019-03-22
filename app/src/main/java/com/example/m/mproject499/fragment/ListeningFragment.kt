@@ -24,7 +24,7 @@ import com.example.m.mproject499.activity.ListeningActivity
 import com.example.m.mproject499.activity.ResultActivity
 import com.example.m.mproject499.data.Constants.maxQuestions
 import kotlinx.android.synthetic.main.fragment_listening.*
-import kotlinx.android.synthetic.main.speaking_fragment.*
+import kotlinx.android.synthetic.main.fragment_speaking.*
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -97,9 +97,11 @@ class ListeningFragment : Fragment() {
 
             if (imgListening_show.visibility == View.INVISIBLE) {
                 checkAnswer()
+                listenAns.isClickable = false
                 return@setOnClickListener
             }
 
+            listenAns.isClickable = true
             listenAns.visibility = View.VISIBLE
             list_show_ans.visibility = View.INVISIBLE
             imgListening_show.visibility = View.INVISIBLE
@@ -186,6 +188,7 @@ class ListeningFragment : Fragment() {
             )
             Result.add(false)
         }
+        listenAns.isClickable = false
         //listenAns.visibility = View.INVISIBLE
         //Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
     }

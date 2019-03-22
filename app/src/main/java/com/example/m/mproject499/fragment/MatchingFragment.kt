@@ -6,18 +6,24 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.MainApp.Companion.NUMBER
 import com.example.m.mproject499.activity.MatchingActivity
 import com.example.m.mproject499.activity.ResultActivity
+import com.example.m.mproject499.adapter.MatchingAdapter
 import com.example.m.mproject499.data.Constants
+import com.vicpin.krealmextensions.save
 import kotlinx.android.synthetic.main.fragment_listening.*
 import kotlinx.android.synthetic.main.fragment_matching.*
+import kotlinx.android.synthetic.main.item_matching.view.*
+import org.jetbrains.anko.toast
 import java.util.*
 
 
 class MatchingFragment : Fragment() {
 
     private lateinit var matchingActivity: MatchingActivity
+    private lateinit var adapter: MatchingAdapter
 
     companion object {
         fun fragment(matchingActivity: MatchingActivity): MatchingFragment {
@@ -40,9 +46,15 @@ class MatchingFragment : Fragment() {
 
         randomQuiz()
         match_quest.text = MainApp.History[NUMBER].let {
-            it.desc_eng.replace(it.word.toLowerCase(),"______")
+            it.desc_eng.replace(it.word.toLowerCase(), "______")
         }
         match_count.text = "Question " + (NUMBER + 1).toString() + "/" + Constants.maxQuestions.toString()
+
+
+        adapter = MatchingAdapter(MainApp.instance.applicationContext, History[NUMBER].choice, History[NUMBER].word)
+        gridView.adapter = adapter
+
+
 
         match_next.setOnClickListener {
 
@@ -57,8 +69,11 @@ class MatchingFragment : Fragment() {
 
             match_count.text = "Question " + (NUMBER + 1).toString() + "/" + Constants.maxQuestions.toString()
             MainApp.History[NUMBER].let { q ->
-                match_quest.text = q.desc_eng.replace(q.word.toLowerCase(),"______")
+                match_quest.text = q.desc_eng.replace(q.word.toLowerCase(), "______")
             }
+
+            adapter = MatchingAdapter(MainApp.instance.applicationContext, History[NUMBER].choice,History[NUMBER].word)
+            gridView.adapter = adapter
         }
 
 

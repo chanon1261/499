@@ -22,8 +22,7 @@ import com.example.m.mproject499.R
 import com.example.m.mproject499.activity.ResultActivity
 import com.example.m.mproject499.activity.SpeakingActivity
 import com.example.m.mproject499.data.Constants.maxQuestions
-import kotlinx.android.synthetic.main.speaking_fragment.*
-import org.jetbrains.anko.toast
+import kotlinx.android.synthetic.main.fragment_speaking.*
 import java.util.*
 
 class SpeakingFragment : Fragment() {
@@ -47,7 +46,7 @@ class SpeakingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.speaking_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_speaking, container, false)
     }
 
     @SuppressLint("SetTextI18n")
@@ -71,12 +70,13 @@ class SpeakingFragment : Fragment() {
 
             if (imgSpeak_show.visibility == View.INVISIBLE) {
                 checkAnswer()
+                speakAns.isClickable = false
                 return@setOnClickListener
             }
 
             NUMBER += 1
 
-
+            speakAns.isClickable = true
             imgSpeak_show.visibility = View.INVISIBLE
             speakAns.visibility = View.VISIBLE
             editText.text.clear()
@@ -97,6 +97,7 @@ class SpeakingFragment : Fragment() {
         }
 
         speakAns.setOnClickListener {
+            speakAns.isClickable = false
             checkAnswer()
         }
 
