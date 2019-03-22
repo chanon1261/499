@@ -44,25 +44,20 @@ class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestA
             itemView.setOnClickListener {
                 if (adapterPosition == 0 || adapterPosition == 1) {
                     val intent = ListeningActivity.getStartIntent(context)
+                    intent.putExtra("key", "$adapterPosition")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     context.startActivity(intent)
                 } else if (adapterPosition == 2 || adapterPosition == 3) {
                     val intent = MatchingActivity.getStartIntent(context)
+                    intent.putExtra("key", "$adapterPosition")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     context.startActivity(intent)
                 } else {
                     val intent = SpeakingActivity.getStartIntent(context)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    intent.putExtra("key", "$adapterPosition")
                     context.startActivity(intent)
                 }
-            }
-        }
-
-        private fun doStartActivity(intent: Intent) {
-            MainApp.instance.applicationContext?.let { context ->
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                intent.putExtra("key", "${adapterPosition + 1}")
-                context.startActivity(intent)
             }
         }
     }

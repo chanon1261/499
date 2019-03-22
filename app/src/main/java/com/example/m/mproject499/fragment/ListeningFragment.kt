@@ -113,7 +113,7 @@ class ListeningFragment : Fragment() {
                 listenNextFrag.text = "EXIT"
                 listenNextFrag.setOnClickListener {
                     checkAnswer()
-                    startActivity(  ResultActivity.getStartIntent(MainApp.instance.applicationContext))
+                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext))
                     activity?.finish()
                 }
             }
