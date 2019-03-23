@@ -3,11 +3,14 @@ package com.example.m.mproject499
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.MainApp.Companion.NUMBER
+import com.example.m.mproject499.MainApp.Companion.Result
 import com.example.m.mproject499.activity.MatchingActivity
 import com.example.m.mproject499.activity.ResultActivity
 import com.example.m.mproject499.adapter.MatchingAdapter
@@ -58,11 +61,19 @@ class MatchingFragment : Fragment() {
 
         match_next.setOnClickListener {
 
+            val count = gridView.count
+            Log.d("count", count.toString())
+            if (gridView.getChildAt(0).isClickable) {
+                context!!.toast("pls select choice")
+                return@setOnClickListener
+            }
+
             NUMBER += 1
+
             if (NUMBER == 9) {
                 match_next.text = "EXIT"
                 match_next.setOnClickListener {
-                    //startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext))
+                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext))
                     activity?.finish()
                 }
             }
@@ -72,12 +83,9 @@ class MatchingFragment : Fragment() {
                 match_quest.text = q.desc_eng.replace(q.word.toLowerCase(), "______")
             }
 
-            adapter = MatchingAdapter(MainApp.instance.applicationContext, History[NUMBER].choice,History[NUMBER].word)
+            adapter = MatchingAdapter(MainApp.instance.applicationContext, History[NUMBER].choice, History[NUMBER].word)
             gridView.adapter = adapter
         }
-
-
-
 
         super.onViewCreated(view, savedInstanceState)
     }

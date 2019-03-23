@@ -3,6 +3,7 @@ package com.example.m.mproject499.adapter
 import android.annotation.SuppressLint
 import android.content.Context
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,13 +43,30 @@ class MatchingAdapter(context: Context, var choice: List<String>, var ans: Strin
                         R.color.correct
                     )
                 )
-            }else{
+                MainApp.Result.add(true)
+            } else {
+                MainApp.Result.add(false)
                 grid.setBackgroundColor(
                     ContextCompat.getColor(
                         MainApp.instance.applicationContext,
                         R.color.fail
                     )
                 )
+
+                val count = parent?.childCount
+                //Log.d("count", count.toString())
+                for (i in 0 until count!!) {
+                    val c = parent.getChildAt(i)
+                    c.isClickable = false
+                    if (ans.toLowerCase() in c.item_choice.text) {
+                        c.setBackgroundColor(
+                            ContextCompat.getColor(
+                                MainApp.instance.applicationContext,
+                                R.color.correct
+                            )
+                        )
+                    }
+                }
             }
         }
 
