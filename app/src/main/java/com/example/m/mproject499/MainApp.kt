@@ -37,7 +37,6 @@ open class MainApp : Application(), TextToSpeech.OnInitListener {
         initializeGraph()
         instance = this
 
-
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder().schemaVersion(9).migration(RealmMigrations()).build()
         Realm.setDefaultConfiguration(realmConfig)
@@ -102,7 +101,7 @@ open class MainApp : Application(), TextToSpeech.OnInitListener {
                 println("loadPost:onCancelled ${databaseError.toException()}")
             }
         }
-        database.child("words").addListenerForSingleValueEvent(userListener)
+        database.child("words").addValueEventListener(userListener)
     }
 
     private fun writeNewWord() {

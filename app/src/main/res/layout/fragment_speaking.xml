@@ -22,7 +22,7 @@
             android:text="Listening"/>
 
     <TextView
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:textColor="@color/black"
             android:textSize="40dp"
             android:layout_gravity="center"
