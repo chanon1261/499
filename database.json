@@ -1,0 +1,2889 @@
+{
+  "chapters" : {
+    "-L_awjTtd6VNEES_liNW" : {
+      "day" : 1,
+      "eng" : "Occupations",
+      "th" : "อาชีพต่างๆ"
+    },
+    "-L_awjUFS2tHYVPylT1B" : {
+      "day" : 2,
+      "eng" : "Pets",
+      "th" : "สัตว์เลี้ยง"
+    },
+    "-L_awjUHsKS08BwSuZI6" : {
+      "day" : 3,
+      "eng" : "Wild animal",
+      "th" : "สัตว์ป่า"
+    },
+    "-L_awjUIeUB9EfA149Lv" : {
+      "day" : 4,
+      "eng" : "Aquatic animal",
+      "th" : "สัตว์น้ำ"
+    },
+    "-L_awjUKC8Ks8W34TjfL" : {
+      "day" : 5,
+      "eng" : "Sport",
+      "th" : "กีฬา"
+    },
+    "-L_awjUL92pZ1kGlrg4d" : {
+      "day" : 6,
+      "eng" : "Bathroom",
+      "th" : "ห้องน้ำ"
+    },
+    "-L_awjUNy7FWJa3i-Ou8" : {
+      "day" : 7,
+      "eng" : "Beverage",
+      "th" : "เครื่องดื่ม"
+    },
+    "-L_awjURh6ktdhK0COe6" : {
+      "day" : 8,
+      "eng" : "Fruit",
+      "th" : "ผลไม้"
+    },
+    "-L_awjUTuaERvs4yr6QL" : {
+      "day" : 9,
+      "eng" : "Universe and Space",
+      "th" : "จักรวาลและอวกาศ"
+    },
+    "-L_awjUUXZi0DDT4iuXq" : {
+      "day" : 10,
+      "eng" : "Classroom",
+      "th" : "ห้องเรียน"
+    },
+    "-L_awjUWeyFZnjNTcF1w" : {
+      "day" : 11,
+      "eng" : "Living Room",
+      "th" : "ห้องนั่งเล่น"
+    },
+    "-L_awjUXtDXou157nBGO" : {
+      "day" : 12,
+      "eng" : "Transportation",
+      "th" : "การขนส่งและยานพาหนะ"
+    },
+    "-L_awjUZwiknJy93KV4Z" : {
+      "day" : 13,
+      "eng" : "Zoo",
+      "th" : "สวนสัตว์"
+    },
+    "-L_awjU_3Hp8rJzDFDfT" : {
+      "day" : 14,
+      "eng" : "Musical Instruments",
+      "th" : "เครื่องดนตรี"
+    },
+    "-L_awjUbULuaBmyWGQet" : {
+      "day" : 15,
+      "eng" : "Under the sea",
+      "th" : "ใต้ทะเล"
+    },
+    "-L_awjUcsTgQqQIk_mOX" : {
+      "day" : 16,
+      "eng" : "Natural",
+      "th" : "ธรรมชาติ"
+    },
+    "-L_awjUe4h34PORNvSBR" : {
+      "day" : 17,
+      "eng" : "Library",
+      "th" : "ห้องสมุด"
+    },
+    "-L_awjUfDypPnL9uj2FP" : {
+      "day" : 18,
+      "eng" : "Vegetables",
+      "th" : "พืชผัก"
+    },
+    "-L_awjUgyXMDTjWMKbal" : {
+      "day" : 19,
+      "eng" : "Family",
+      "th" : "ครอบครัว"
+    },
+    "-L_awjUiatFvWN3bqMFX" : {
+      "day" : 20,
+      "eng" : "Emotions and Feelings",
+      "th" : "อารมณ์และความรู้สึก"
+    },
+    "-L_awjUjjSkjVDwP3ima" : {
+      "day" : 21,
+      "eng" : "At the seaside",
+      "th" : "ชายทะเล"
+    },
+    "-L_awjUkUARyr7c2wY8q" : {
+      "day" : 22,
+      "eng" : "Reptiles",
+      "th" : "สัตว์เลื้อยคลาน"
+    },
+    "-L_awjUlZYOpfO4EB41s" : {
+      "day" : 23,
+      "eng" : "Traffic Sign",
+      "th" : "เครื่องหมายจราจร"
+    },
+    "-L_awjUmncO-Pt9FV4kU" : {
+      "day" : 24,
+      "eng" : "Hospital",
+      "th" : "โรงพยาบาล"
+    },
+    "-L_awjUoDrp6qjr-9YIN" : {
+      "day" : 25,
+      "eng" : "Insects",
+      "th" : "แมลง"
+    },
+    "-L_awjUpnajvFTsheOSf" : {
+      "day" : 26,
+      "eng" : "Symptoms and Illnesses",
+      "th" : " อาการเจ็บป่วยและโรคภัยไข้เจ็บ"
+    },
+    "-L_awjUqJvDZhFDoMN4s" : {
+      "day" : 27,
+      "eng" : "Internal Organs",
+      "th" : "อวัยวะภายใน"
+    },
+    "-L_awjUsZrMfmq_8d0sf" : {
+      "day" : 28,
+      "eng" : "Apparatus",
+      "th" : "เครื่องมือช่าง"
+    },
+    "-L_awjUt7UfNC2aRd1o8" : {
+      "day" : 29,
+      "eng" : "Food",
+      "th" : "อาหาร"
+    },
+    "-L_awjUuOkRK4UVE4Y6C" : {
+      "day" : 30,
+      "eng" : "Places",
+      "th" : "สถานที่"
+    }
+  },
+  "user-words" : {
+    "gm2mQTZOc3bowo5Ov6bAO9k5kQi1" : {
+      "-LaPAE-56BxSOJggtYO_" : {
+        "id" : "-L_fvyrVf-Ybx5KbHJ9y"
+      },
+      "-LaPALxq_zlJijpmoeFM" : {
+        "id" : "-L_fvyrxl__gW1XTkVVf"
+      },
+      "-LaPAPW8sf2yUbyDqGDW" : {
+        "id" : "-L_fvys-iz8Z8MW5kbCz"
+      },
+      "-LaPARhGedO23Nox3OII" : {
+        "id" : "-L_fvys3tOrFribGJQOm"
+      },
+      "-LaPAVg751oWVEQFuwaI" : {
+        "id" : "-L_fvys3tOrFribGJQOm"
+      }
+    }
+  },
+  "users" : {
+    "8xSXafK0Y7QKgMFMHuwYTQZn47H2" : {
+      "email" : "chanon_w@elearning.cmu.ac.th",
+      "username" : "chanon_w"
+    },
+    "X0jrwySFNcQYKFvHGD8A4CPIBDN2" : {
+      "email" : "llakiyama2@gmail.com",
+      "username" : "llakiyama2"
+    },
+    "gm2mQTZOc3bowo5Ov6bAO9k5kQi1" : {
+      "email" : "llakiyama1@gmail.com",
+      "username" : "llakiyama1"
+    }
+  },
+  "words" : {
+    "-L_fvyrVf-Ybx5KbHJ9y" : {
+      "choice" : [ "doctor", "decor", "decorum", "deviant" ],
+      "day" : 1,
+      "desc_eng" : "You'd better see a doctor about that cut.",
+      "desc_th" : "คุณหมอจะมาพบคุณในอีกสักครู่",
+      "meaning" : "หมอ",
+      "position" : 1,
+      "word" : "Doctor"
+    },
+    "-L_fvyrxl__gW1XTkVVf" : {
+      "choice" : [ "lawyer", "ladder", "labor", "landmark " ],
+      "day" : 1,
+      "desc_eng" : "Maybe she wanted to talk to a lawyer first.",
+      "desc_th" : "เธออาจต้องการพูดคุยกับทนายความก่อน",
+      "meaning" : "ทนายความ",
+      "position" : 7,
+      "word" : "Lawyer"
+    },
+    "-L_fvys-iz8Z8MW5kbCz" : {
+      "choice" : [ "nurse", "nation", "native", "nacre" ],
+      "day" : 1,
+      "desc_eng" : "The hospital wants nurses to care for its patients.",
+      "desc_th" : "โรงพยาบาลต้องการให้พยาบาลดูแลผู้ป่วย",
+      "meaning" : "พยาบาล",
+      "position" : 3,
+      "word" : "Nurse"
+    },
+    "-L_fvys3tOrFribGJQOm" : {
+      "choice" : [ "soldier", "salesman", "sander", "satirist" ],
+      "day" : 1,
+      "desc_eng" : "The soldiers fought against the enemy.",
+      "desc_th" : "ทหารต่อสู้กับศัตรู",
+      "meaning" : "ทหาร",
+      "position" : 1,
+      "word" : "Soldier"
+    },
+    "-L_fvys6XyI97QUbcLrx" : {
+      "choice" : [ "postman", "piece", "protagonist", "pickle" ],
+      "day" : 1,
+      "desc_eng" : "The postman brings letters to your home.",
+      "desc_th" : "บุรุษไปรษณีย์นำจดหมายมาให้บ้านคุณ",
+      "meaning" : "บุรุษไปรษณีย์",
+      "position" : 1,
+      "word" : "Postman"
+    },
+    "-L_fvysA6aOgi7Ay0jXw" : {
+      "choice" : [ "dentist", "dacoit", "dander", "danger" ],
+      "day" : 1,
+      "desc_eng" : "A dentist looks after your teeth.",
+      "desc_th" : "ทันตะแพทย์ดูแลรักษาฟันของคุณ",
+      "meaning" : "ทันตแพทย์",
+      "position" : 1,
+      "word" : "Dentist"
+    },
+    "-L_fvysDo2Dh1LGE8hRu" : {
+      "choice" : [ "labourer", "lupine", "laburnum", "laggard" ],
+      "day" : 1,
+      "desc_eng" : "These labourer are helping to build a road.",
+      "desc_th" : "คนงานเหล่านี้กำลังช่วยกันสร้างถนน",
+      "meaning" : "กรรมกร, คนงาน",
+      "position" : 0,
+      "word" : "Labourer"
+    },
+    "-L_fvysHnh-Ho0kMHBZ3" : {
+      "choice" : [ "desinger", "density", "dispatch", "devour" ],
+      "day" : 1,
+      "desc_eng" : "It could have been done by a professional designer.",
+      "desc_th" : "มันควรจะทำโดยนักออกแบบมืออาชีพ",
+      "meaning" : "นักออกแบบ",
+      "position" : 0,
+      "word" : "Designer"
+    },
+    "-L_fvysKPNes1vcN5zjn" : {
+      "choice" : [ "accountant", "assassin", "acolyte", "affection" ],
+      "day" : 1,
+      "desc_eng" : "He is the chief accountant of a firm.",
+      "desc_th" : "เขาเป็นหัวหน้าแผนกบัญชีของบริษัท",
+      "meaning" : "นักบัญชี",
+      "position" : 4,
+      "word" : "Accountant"
+    },
+    "-L_fvysNpd_K1U0lumu9" : {
+      "choice" : [ "reporter", "repose", "repent", "replant" ],
+      "day" : 1,
+      "desc_eng" : "That reporter has a nose for news.",
+      "desc_th" : "ผู้สื่อข่าวคนนั้นมีมีความสามารถในการรับรู้ข่าว",
+      "meaning" : "ผู้สื่อข่าว, ผู้รายงาน, นักข่าว",
+      "position" : 1,
+      "word" : "Reporter"
+    },
+    "-L_fvysRu9FwTyYC9O2L" : {
+      "choice" : [ "animal", "ability", "ablaze", "aggregation" ],
+      "day" : 2,
+      "desc_eng" : "We're not allowed animals in the flat.",
+      "desc_th" : "แฟลตนี้ไม่อนุญาตให้เราเลี้ยงสัตว์",
+      "meaning" : "สัตว์",
+      "position" : 0,
+      "word" : "Animal"
+    },
+    "-L_fvysU9T4W6_eok7KG" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvysX23DUcROQ64BF" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvys_SX2GJSJlBr3U" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyscytnfjkz1PqWw" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvysfSBqZdzofG6-g" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvysisMNsUItwYfRs" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvysl1nFdR8zxbUUM" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyso6nhIPDkgrz8y" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvysrcTrqxkhTtELF" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 2,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvysvCJS2VBzsi48n" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : "Love makees a beast a man ,and a man a beast",
+      "desc_th" : "ความรักทำให้สัตว์กลายเป็นคน และทำให้คนกลายเป็นสัตว์",
+      "meaning" : "สัตว์ป่า",
+      "position" : 0,
+      "word" : "Beast"
+    },
+    "-L_fvysyXtyvvxOC1sIh" : {
+      "choice" : [ "gazelle", "gazette", "gauze", "gauche" ],
+      "day" : 3,
+      "desc_eng" : "A gazelle is any of many antelope species in the genus Gazella.",
+      "desc_th" : "ละมั่งเป็นหนึ่งในสายพันธุ์ละมั่งมากมายในสกุลกาเซลล์",
+      "meaning" : "ละมั่ง",
+      "position" : 0,
+      "word" : "Gazelle"
+    },
+    "-L_fvyt0xPV1qjDPnyvU" : {
+      "choice" : [ "Polar Bear", "Patency", "Polecat", "Penguin" ],
+      "day" : 3,
+      "desc_eng" : "Polar Bears are national symbols of Russia.",
+      "desc_th" : "หมีขั้วโลกเป็นสัญลักษณ์ประจำชาติของรัสเซีย",
+      "meaning" : "หมีขาวขั้วโลก",
+      "position" : 0,
+      "word" : "Polar Bear"
+    },
+    "-L_fvyt4CtclO4Nnzcnj" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : "วัว",
+      "position" : 0,
+      "word" : "Wildebeest"
+    },
+    "-L_fvyt7paHfABZIZQiY" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : "แรด",
+      "position" : 0,
+      "word" : "Rhinoceros"
+    },
+    "-L_fvytABtALUxkJzSck" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : "เม่น",
+      "position" : 0,
+      "word" : "Porcupine"
+    },
+    "-L_fvytDbrDLtxcOx5qN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : "ลามะ",
+      "position" : 0,
+      "word" : "Llama"
+    },
+    "-L_fvytGp9GhgAuU84VO" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : "กวางขนาดใหญ่ที่มีเขาแบน",
+      "position" : 0,
+      "word" : "Moose"
+    },
+    "-L_fvytJKe1eyJ1FNYci" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : "จิงโจ้",
+      "position" : 0,
+      "word" : "Kangaroo"
+    },
+    "-L_fvytM0hDwh--1vTNz" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 3,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : "ชะนี",
+      "position" : 0,
+      "word" : "Gibbon"
+    },
+    "-L_fvytP-LEaCRaJurwy" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytUcBeCibXM8rM4" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytY5ddvLIg0mn45" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyta7ZvxSy5dhRbB" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytdOKmLOBrg1A5L" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytgKj48-rfO8K_e" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytjxpsUgkxV3GGg" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytnuQDLxToH1q5q" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytqPyUImNg3nxvb" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytuugrlqz2LSASQ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 4,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvytx3WOaPhPHqhin" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyu0xnLcOBU94OwM" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyu48at4aPgHxshP" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyu7K2WsZyREdORZ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuBDvtRUC3Nqlcu" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuEXmxxnQ_8DsTb" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuHmsp5lBzZ0mzu" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuKfSMR4TxWfKd3" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuNuHN_edce7WAA" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuQqYTkEedbf5i4" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 5,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuTx77DrBC3-0Gi" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuVfQZYXbrS_VTb" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuZfPDMseQy5Z2r" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyub9b_li1K_uf6X" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuevzBAQcP6Yq7R" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuhFsKY8PDEawkL" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuknBJkW3CjCm8j" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyun5EhdTMH4Pi6k" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuq0A7aEy6JZbN2" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyut-gJSGnvtr6sN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 6,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuw0onQv9E17rWW" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyuzEKwJBpKlaVK5" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyv1GJaXyQ3LFDOE" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyv4RBjMJJ0xL3fg" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyv75yu6n78Oi7Rs" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvAnObqhS925htj" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvCrtlaDIKo7OZA" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvFKppF06GO9xzi" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvHOy0HpZjX86FK" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvKLH_R1FHAExDm" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 7,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvNtqdrBFktFRU_" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvQmYINJVEHiHCX" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvT_etDUOL71-0N" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvVa8ujhLE7l_pv" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvYlPzh1x6MzbUA" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvafdBHncbQSUKl" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvcWfpLm_g1V3NV" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvfl_Zu0fAICoEr" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvi57Sq8XSBmNNN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvlXrHzG_PeliAY" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 8,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvnRM6p_HRnGN4w" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvq7u8dO0F677X7" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvtjGfCcn4B38mO" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvwDEuwENFShxov" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyvyOCqtalVHKi9I" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyw0a6rY8PXKLxzi" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyw2bzRg_UisyBLm" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyw5m1cr8Ot_McZr" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyw8RqSpNsCY3JTS" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywAbsTDGCMawQrl" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 9,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywDTv9jJRYs_rL8" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywGSRWSdBgF5mga" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywIr2vLcrejSoPU" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywLgoWB6QHIPnKG" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywON8OBOv3T4I9Z" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywQY9ldOyfZ5x7l" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywSou0As7vAqhrB" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywV7gHQrx81YIpK" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywY1dsE5R02kQ41" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywauzirz0St_j_5" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 10,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywcfXkJO-yDe6Vl" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywf4DO4Y1pAd8np" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywhqlZunL6bm__k" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywjzytT6o9V9Po7" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywmP_yN_ZNWj_Qg" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywpsxnharkIHaC6" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywr_FZmQeqZOJ8F" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywtmlRQ7frooGEE" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywvXltkYJESLGQY" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywxACf9PE4SnNO8" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 11,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvywzypvtfctVkLyp" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyx1NHvgJEfnWXfP" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyx3S6gpR4tRwnLm" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyx5MuTnYlQc1sOf" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyx8YSdfzr-a_DhG" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxAHje3y24YZiRx" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxCVJr0cQSpMY_Q" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxFS1yn5xNiBuQj" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxHbjSgRCtzOiJN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxJXjnRj38y5IfT" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 12,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxLapboCWvstDZ6" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxNMwWio719e-Gn" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxP63BSiaD52fBW" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxRlx3Rui7NSchh" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxTZLfwxGd-QyZD" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxV-gCSl2VdJK0Z" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxXoWkcDn6qmpDF" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxYnU_SlHAyCe-t" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyx_bpKCu9aFkIZp" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxbvJ9Rgq7pc26x" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 13,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxe4_0AmM1Er7yd" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxgZ9Qv04Cp2vt3" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxiMNMnPtAhXZei" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxkQN-bLIh0RUay" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxmEEMWYXzfqCX5" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxnL8pjxBSw0g85" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxpMJQxm5y9h5Qq" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxrAd0aOqzuUBSF" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxtxqKeztF9jCaZ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxviewBnis3VMpm" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 14,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxx9YyRUWaU4mLl" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyxzkLxpnsUDjNuo" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyy0e8knEkJzn7nW" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyy2PnpRbRgnJbav" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyy4M0aCCTHNgolA" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyy6yb72gv1hUnI4" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyy8W1_y-uPlZNUA" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyy9Me5qTcbxOcoH" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyB3cc33XDWx8YI" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyD_tO132keP767" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 15,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyFc-riv13u_BGZ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyHVE5WvUb8ETK9" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyIhCMFD_b3od-x" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyKgWFU0UT98bu4" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyNWcqn1sZmev5r" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyOxqkbqHDD7kyY" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyQLGyOPtvPI4sa" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyySHk0mAHafMURh" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyUz4AJj568olsj" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyVj5clG3f-MdlO" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 16,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyYbcD70tpMEBXQ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyZVwmdYZ8UuA9s" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyaysQ9PJ5oD9de" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyybDXUOqncFaHkL" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyd79eL3OtAEuYY" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyfU_u-7_HStcuL" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyygqJfFbprSdjmX" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyi3UZZx4q1e-ft" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyj5DPuxvuBmEIg" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyl0Looiiafe8W4" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 17,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyymW5t1UzqqU19B" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyynvxJ6XxWuPk23" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyp4XLBvEU-N9P3" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyqSocUyD6OtRX2" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyys9G2Tj8uP3-kN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyytaKWtFMvPr-Ol" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyuXhtuc0LOy-4K" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyywNjxwf6W5W1N8" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyxJVSBWmHU64IH" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyyyIFgPl8NzEkXe" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 18,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz-UMf77_8KAoYX" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz0-g_xYfNR3-co" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz2t8plh5UlERA1" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz3-CMCmy59pJC6" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz4HrAEPvD4npLs" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz6bCDqGX9uQoDP" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz78tk1tN2sEZIN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz8RPkuPJGlvQgO" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz9RzeM6SKlz13T" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzB5eKvT2BrfhhP" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 19,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzCobt6hez1BUza" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzDj1fX7O4K5Pr_" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzE3rHZ0O9PsInE" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzFahiBshIfss0-" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzHuvtbHcLGl3nU" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzID3yb8nA9_czW" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzJHS9lbTS4IqP5" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzKxqT3paO3IRHi" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzLkhqvQsC_VE6k" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzMX8XM09IWXeFn" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 20,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzNa1XAfUtTTpOf" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzO9ZRXpLDhWsV1" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzPQ9zh7lv8NGjC" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzQGFxfr84-UNip" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzRCLmjl02JJErG" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzTAzFO2oMr6UQ8" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzUaZf56fl6XDrl" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzVgAArXSgAFXLF" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzWmuUz8y-_nb7-" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzXrCf3ed0_5-hT" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 21,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzZ_dx26GrCgFB-" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyz_MrmMbpJo004J" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyza5Brt7Ejrp9bB" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzbuQhsXYyfCUCQ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzchBOxF1F_TXug" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzdZPqqw7nNS9D3" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzeLgeBRH-m9CJM" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzfnkk_rV6Sv2DS" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzgmPmTuYlp8nCg" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzjyAJQ8y3nDfnN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 22,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzkYNlrlUUT_5y_" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzmLUl2QlGBO3ie" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzn23yzPlQPuo3F" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzpv1WzZcBKjzJ8" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzqwmWkTmZoOD_z" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzsIjHxf24VwwyF" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyztpRyS-P1KBNeD" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzvD9Ac7uuMfP8I" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzxEoLsObgdhO7Z" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzyF5ex6ISA-YGj" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 23,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvyzzqn5Tee9LPWo2" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-0ScxwNUEH9umJ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-1_-9NCTQxGtLg" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-3TfkuC2_EE2Xb" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-4xYdUfAMi264W" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-5wfeeioRlmkMQ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-78uo_VX_XnA9z" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-8c_Mw1BaQKNxt" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-9mbSwCNbQOzYO" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-BAcPbPZMGpNCn" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 24,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-CohGVrw4j2d4N" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-DamcO_bdr20xq" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-FNeae5cIKjILl" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-G8XJFz97KOqUJ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-HUK_ZQuKS-AW_" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-IalR2-7T2y_Ng" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-JtvbVhY0eEoWQ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-KzGqG2wSDI5Bd" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-Ly_hjesGM-R-C" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-M_ch8Xd7TSKG9" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 25,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-N2ACLejFtn6gi" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-OgXUiiBCovsln" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-PKAc2cxZujvfQ" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-QMOk5rOL-fsw7" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-RtfYwabboVAgs" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-T57k-A_wvRdUW" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-UGXXHZmMpEMYk" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-V7nFqykXSOLIr" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-Wp_G0K1DSIjDN" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-XFAOWwHeInLCx" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 26,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-YvsrOnJf1U-OK" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-ZLdgLtxlaM-7I" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-_DmsoB0JwOFzA" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-afMQo-WpD4awV" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-b2-_oTFN5FoHx" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-cv_3Ywon_F8Mm" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-dwBSyFrEmLbxi" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-eTWOTqKMDJXox" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-fhTvm7AJr8d7W" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-gR3EyF1HbRXJx" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 27,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-hcKQBq3XwZek8" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-iBcwBzyWIEit9" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-jdVOLZP-i0tfs" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-kcbReeyeM4rCY" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-liA1SRGWd5KLw" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-madcq_xN1od8t" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-n4a-bPNrkUHy5" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-n4a-bPNrkUHy6" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-oVcX-MmIHPyml" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-pD-mTr-ixo2S2" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 28,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-qCOTFIuf10b_e" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-rebnX4wAYja7Q" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-sqZE5sOy4Bmi2" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-tqc-cbm6UAQEU" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-tqc-cbm6UAQEV" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-u1Jp8KkAsTLIS" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-vqxB7Tp0fDen0" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-wm9K7D_flfG3X" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-wm9K7D_flfG3Y" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-xK57pN0xkNdXF" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 29,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-ymDPPOYdO2Mr9" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz-zj5o18Jmwv-1m" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz0-sr_EFNS5Lpzi" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz0-sr_EFNS5Lpzj" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz00h-WlBlW1YvOp" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz01c4do8QHwB-JY" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz02KTjnDnMp2ezo" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz03nsqwgJc_elWs" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz04ilwe1HMr72h9" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    },
+    "-L_fvz05DMkZ5G56pjuI" : {
+      "choice" : [ "A", "B", "C", "D" ],
+      "day" : 30,
+      "desc_eng" : " ",
+      "desc_th" : " ",
+      "meaning" : " ",
+      "position" : 0,
+      "word" : " "
+    }
+  }
+}
