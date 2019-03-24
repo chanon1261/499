@@ -25,6 +25,7 @@ class ListeningActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        MainApp.Result.clear()
         onBackPressed()
         return true
     }

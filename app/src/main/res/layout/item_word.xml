@@ -16,14 +16,15 @@
     </data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
+              android:background="@color/white"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
               android:orientation="vertical"
 >
 
    <LinearLayout
            android:id="@+id/days_view"
-           android:layout_marginTop="10dp"
            android:layout_marginLeft="10dp"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -40,6 +41,7 @@
                style="@style/fontApp"/>
 
        <TextView
+               android:textColor="@color/black"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:textSize="30dp"
@@ -60,7 +62,8 @@
                tools:text="sentences_eng"/>
 
        <TextView
-               android:textSize="15dp"
+               android:textColor="@color/black"
+               android:textSize="20sp"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/txtTH"

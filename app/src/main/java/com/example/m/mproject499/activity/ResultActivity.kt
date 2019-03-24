@@ -19,8 +19,9 @@ class ResultActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setContentView(R.layout.activity_result)
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_result)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var score = 0
         for (it in MainApp.Result.filter { it }) {
@@ -34,6 +35,12 @@ class ResultActivity : AppCompatActivity() {
         ListResult?.adapter = adapter
         adapter.loadData(History, Result)
         adapter.notifyDataSetChanged()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        MainApp.Result.clear()
+        onBackPressed()
+        return true
     }
 
     override fun onDestroy() {
