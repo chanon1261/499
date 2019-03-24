@@ -81,18 +81,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onBackPressed() {
-        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
-            drawer_layout.closeDrawer(GravityCompat.START)
-
-        } else {
-            super.onBackPressed()
-        }
-
-        if (supportFragmentManager.backStackEntryCount == 1) {
-            this.finish()
-        } else {
-            supportFragmentManager.popBackStack()
-        }
+//        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+//            drawer_layout.closeDrawer(GravityCompat.START)
+//
+//        } else {
+//
+//        }
+//
+//        if (supportFragmentManager.backStackEntryCount == 1) {
+//            this.finish()
+//        } else {
+//            supportFragmentManager.popBackStack()
+//        }
+        MainApp.Result.clear()
+        super.onBackPressed()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

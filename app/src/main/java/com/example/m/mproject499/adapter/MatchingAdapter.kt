@@ -37,13 +37,19 @@ class MatchingAdapter(context: Context, var choice: List<String>, var ans: Strin
         grid.item_choice.text = data
         grid.setOnClickListener {
             if (ans.toLowerCase() in data) {
+                MainApp.Result.add(true)
                 grid.setBackgroundColor(
                     ContextCompat.getColor(
                         MainApp.instance.applicationContext,
                         R.color.correct
                     )
                 )
-                MainApp.Result.add(true)
+                val count = parent?.childCount
+                for (i in 0 until count!!) {
+                    val c = parent.getChildAt(i)
+                    c.isClickable = false
+                }
+
             } else {
                 MainApp.Result.add(false)
                 grid.setBackgroundColor(
