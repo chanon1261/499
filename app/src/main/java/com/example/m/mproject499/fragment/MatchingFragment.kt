@@ -54,7 +54,8 @@ class MatchingFragment : Fragment() {
         match_count.text = "Question " + (NUMBER + 1).toString() + "/" + Constants.maxQuestions.toString()
 
 
-        adapter = MatchingAdapter(MainApp.instance.applicationContext, History[NUMBER].choice, History[NUMBER].word)
+
+        adapter = MatchingAdapter(MainApp.instance.applicationContext,randomChoice(), History[NUMBER].word)
         gridView.adapter = adapter
 
 
@@ -83,7 +84,7 @@ class MatchingFragment : Fragment() {
                 match_quest.text = q.desc_eng.replace(q.word.toLowerCase(), "______")
             }
 
-            adapter = MatchingAdapter(MainApp.instance.applicationContext, History[NUMBER].choice, History[NUMBER].word)
+            adapter = MatchingAdapter(MainApp.instance.applicationContext,randomChoice(), History[NUMBER].word)
             gridView.adapter = adapter
         }
 
@@ -107,6 +108,21 @@ class MatchingFragment : Fragment() {
                 MainApp.History.add(MainApp.wordsList[next])
             }
         } while (numbers.size < Constants.maxQuestions)
+    }
+
+    private fun randomChoice(): MutableList<String> {
+        val choice: MutableList<String> = mutableListOf()
+        val numbers: MutableList<Int> = mutableListOf()
+        val random = Random()
+        do {
+            //val next = random.nextInt(wordsList.size)
+            val next = random.nextInt(4)
+            if (!numbers.contains(next)) {
+                numbers.add(next)
+                choice.add(History[NUMBER].choice[next])
+            }
+        } while (numbers.size < 4)
+        return choice
     }
 
 
