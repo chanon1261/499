@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import com.example.m.mproject499.ListeningFragment
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.R
@@ -21,7 +22,15 @@ class ListeningActivity : AppCompatActivity() {
         MainApp.graph.inject(this)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Listening"
-        createFragment(ListeningFragment.fragment(this))
+
+
+        val extras = intent.extras
+        if (extras != null) {
+            extras.getString("key")?.let {
+                createFragment(ListeningFragment.fragment(this, it))
+            }
+        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
