@@ -26,6 +26,10 @@ class ResultActivity : AppCompatActivity() {
     private var flag_l: Boolean = false
     private var flag_s: Boolean = false
     private var flag_m: Boolean = false
+
+    private var score1: Double = 0.0
+    private var score2: Double = 0.0
+    private var score3: Double = 0.0
     private var s = 0
 
     companion object {
@@ -85,23 +89,27 @@ class ResultActivity : AppCompatActivity() {
                             flag_s = it as Boolean
                         }
 
+                        postSnapshot.child("listening").value?.let {
+                            score1 = it.toString().toDouble()
+                        }
+                        postSnapshot.child("speaking").value?.let {
+                            score2 = it.toString().toDouble()
+                        }
+                        postSnapshot.child("matching").value?.let {
+                            score3 = it.toString().toDouble()
+                        }
+
+
 
 
                         if (!flag_l) {
-                            writeNewScore(uid, score.toDouble(), 1.1, 20.6, true, flag_s, flag_m)
+                            flag_l = true
+                            writeNewScore(uid, score.toDouble(), score2, score3)
                         } else {
                             postSnapshot.child("listening").value?.let {
                                 val s = it.toString()
                                 Log.d("fxfx", "=======  $it")
-                                writeNewScore(
-                                    uid,
-                                    (score.toDouble() + s.toDouble()) / 2,
-                                    0.0,
-                                    0.0,
-                                    flag_l,
-                                    flag_s,
-                                    flag_m
-                                )
+                                writeNewScore(uid, (score.toDouble() + s.toDouble()) / 2, score2, score3)
                             }
                         }
                     }
@@ -124,26 +132,12 @@ class ResultActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    private fun writeNewScore(
-        userId: String,
-        listening: Double,
-        speaking: Double,
-        matching: Double,
-        flag_l: Boolean,
-        flag_s: Boolean,
-        flag_m: Boolean
-    ) {
+    private fun writeNewScore(userId: String, listening: Double, speaking: Double, matching: Double) {
         val score = Score(userId, listening, speaking, matching, flag_l, flag_s, flag_m)
         val childUpdates = HashMap<String, Any>()
         childUpdates["/users-score/$userId"] = score.toMap()
         database.updateChildren(childUpdates)
     }
 
-    private fun usernameFromEmail(email: String): String {
-        return if (email.contains("@")) {
-            email.split("@".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0]
-        } else {
-            email
-        }
-    }
+
 }
