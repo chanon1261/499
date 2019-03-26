@@ -204,6 +204,8 @@ open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     private fun writeNewUser(userId: String, name: String, email: String) {
         val user = User(name, email)
         database.child("users").child(userId).setValue(user)
+
+        //ต้องเอาไปเช็คก่อนว่ามีในdatabaseยัง
         val map = hashMapOf("uid" to userId)
         val childUpdates = HashMap<String, Any>()
         childUpdates["/users-score/$userId"] = map
