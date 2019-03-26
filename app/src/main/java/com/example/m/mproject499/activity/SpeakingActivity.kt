@@ -32,7 +32,13 @@ class SpeakingActivity : AppCompatActivity() {
 
         checkPermission()
         //startSpeechToText()
-        createFragment(SpeakingFragment.fragment(this), "XFDF")
+        val extras = intent.extras
+        if (extras != null) {
+            extras.getString("key")?.let {
+                createFragment(SpeakingFragment.fragment(this,it))
+            }
+        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -41,12 +47,11 @@ class SpeakingActivity : AppCompatActivity() {
         return true
     }
 
-    private fun createFragment(fragment: Fragment, name: String) {
+    private fun createFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.speaking_frag, fragment)
         fragmentTransaction.commit()
-        title = name
     }
 
     private fun checkPermission() {

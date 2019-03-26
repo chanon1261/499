@@ -9,14 +9,11 @@ import android.speech.tts.UtteranceProgressListener
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.util.Log
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.TextView
 import com.example.m.mproject499.MainApp.Companion.History
 import com.example.m.mproject499.MainApp.Companion.NUMBER
 import com.example.m.mproject499.MainApp.Companion.Result
@@ -24,8 +21,6 @@ import com.example.m.mproject499.activity.ListeningActivity
 import com.example.m.mproject499.activity.ResultActivity
 import com.example.m.mproject499.data.Constants.maxQuestions
 import kotlinx.android.synthetic.main.fragment_listening.*
-import kotlinx.android.synthetic.main.fragment_speaking.*
-import org.jetbrains.anko.toast
 import java.util.*
 
 
@@ -34,10 +29,14 @@ class ListeningFragment : Fragment() {
     private lateinit var listeningActivity: ListeningActivity
     private var tts: TextToSpeech? = MainApp.tts
     private var question = ""
+    private var mode = 0
 
     companion object {
-        fun fragment(listeningActivity: ListeningActivity): ListeningFragment {
+        fun fragment(listeningActivity: ListeningActivity, it: String): ListeningFragment {
             val fragment = ListeningFragment()
+            val args = Bundle()
+            args.putInt("mode", it.toInt())
+            fragment.arguments = args
             fragment.listeningActivity = listeningActivity
             return fragment
         }
@@ -71,9 +70,11 @@ class ListeningFragment : Fragment() {
         }
         tts?.setOnUtteranceProgressListener(speechListener)
 
+        mode = arguments?.getInt("mode")!!
+        Log.d("modex Fragment", mode.toString())
 
         randomQuiz()
-        question = History[NUMBER].word
+        question = getQuestion()
         list_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
         play_word.setOnClickListener {
             speakOut(question)
@@ -109,7 +110,7 @@ class ListeningFragment : Fragment() {
             NUMBER += 1
             editTextListen.text?.clear()
             list_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
-            question = History[NUMBER].word
+            question = getQuestion()
 
             if (NUMBER == 9) {
                 listenNextFrag.text = "EXIT"
@@ -196,6 +197,19 @@ class ListeningFragment : Fragment() {
     private fun View.hideKeyboard() {
         val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(windowToken, 0)
+    }
+
+    private fun getQuestion(): String {
+        var question = ""
+        when(mode){
+            0 -> {
+                question = History[NUMBER].word
+            }
+            1 -> {
+                question = History[NUMBER].desc_eng
+            }
+        }
+        return  question
     }
 
 }

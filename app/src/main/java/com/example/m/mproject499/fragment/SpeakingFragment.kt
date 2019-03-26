@@ -9,10 +9,7 @@ import android.speech.SpeechRecognizer
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.MotionEvent
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.EditText
 import com.example.m.mproject499.MainApp
 import com.example.m.mproject499.MainApp.Companion.History
@@ -32,11 +29,15 @@ class SpeakingFragment : Fragment() {
     lateinit var editText: EditText
     var answer: String = ""
     var question = ""
+    private var mode = 0
 
 
     companion object {
-        fun fragment(speakingActivity: SpeakingActivity): SpeakingFragment {
+        fun fragment(speakingActivity: SpeakingActivity, it: String): SpeakingFragment {
             val fragment = SpeakingFragment()
+            val args = Bundle()
+            args.putInt("mode", it.toInt())
+            fragment.arguments = args
             fragment.speakingActivity = speakingActivity
             return fragment
         }
@@ -52,14 +53,15 @@ class SpeakingFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         startSpeechToText()
-        editText = view.findViewById(R.id.editText)
-        speak_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
+        mode = arguments?.getInt("mode")!!
 
+        editText = view.findViewById(R.id.editText)
+        speak_count.text = "question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
 
         randomQuiz()
         println(History)
         if (History.isNotEmpty()) {
-            question = History[NUMBER].word
+            question = question()
             test_word.text = question
             nextFrag.text = "Next"
         } else {
@@ -81,16 +83,16 @@ class SpeakingFragment : Fragment() {
             speakAns.visibility = View.VISIBLE
             editText.text.clear()
 
-            speak_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
+            speak_count.text = "question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
 
-            question = History[NUMBER].word
-            test_word.text = History[NUMBER].word
+            question = question()
+            test_word.text = question
 
             if (NUMBER == 9) {
                 nextFrag.text = "EXIT"
                 nextFrag.setOnClickListener {
                     checkAnswer()
-                    startActivity(  ResultActivity.getStartIntent(MainApp.instance.applicationContext))
+                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext))
                     activity?.finish()
                 }
             }
@@ -198,5 +200,20 @@ class SpeakingFragment : Fragment() {
         Log.d("test fx", "${answer.toLowerCase()} == ${question.toLowerCase()}")
     }
 
+    private fun question(): String {
+        var question = ""
+        when (mode) {
+            4 -> {
+                question = History[NUMBER].word
+            }
+            5 -> {
+                question = History[NUMBER].desc_eng
+                test_word.textSize = 18F
+                test_word.gravity = Gravity.CENTER
+            }
+        }
+        return question
+
+    }
 
 }

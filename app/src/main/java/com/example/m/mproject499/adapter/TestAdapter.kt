@@ -3,6 +3,7 @@ package com.example.m.mproject499.adapter
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.android.databinding.library.baseAdapters.BR
@@ -45,6 +46,7 @@ class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestA
                 if (adapterPosition == 0 || adapterPosition == 1) {
                     val intent = ListeningActivity.getStartIntent(context)
                     intent.putExtra("key", "$adapterPosition")
+                    Log.d("modex position","$adapterPosition")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     context.startActivity(intent)
                 } else if (adapterPosition == 2 || adapterPosition == 3) {
