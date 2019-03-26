@@ -12,6 +12,7 @@ import com.example.m.mproject499.data.Constants
 import com.example.m.mproject499.MainActivity
 import com.example.m.mproject499.model.User
 import com.example.m.mproject499.R
+import com.example.m.mproject499.model.Score
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -21,9 +22,9 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_google_login.*
+import java.util.HashMap
 
 open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     // [START declare_auth]
@@ -202,6 +203,35 @@ open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     private fun writeNewUser(userId: String, name: String, email: String) {
         val user = User(name, email)
         database.child("users").child(userId).setValue(user)
+        //ต้องเอาไปเช็คก่อนว่ามีในdatabaseยัง
+        checkDatabase(userId)
+    }
+
+    private fun checkDatabase(userId: String) {
+        var uid = ""
+        database.child("users-score").orderByChild("uid")
+            .equalTo(userId)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onCancelled(p0: DatabaseError) {
+                    Log.d("fxfx", "======= ERROR")
+                }
+
+                override fun onDataChange(p0: DataSnapshot) {
+                    for (postSnapshot in p0.children) {
+                        postSnapshot.child("uid").value?.let {
+                            uid = it as String
+                        }
+                    }
+                    if (uid == "") {
+                        val map = hashMapOf("uid" to userId)
+                        val childUpdates = HashMap<String, Any>()
+                        childUpdates["/users-score/$userId"] = map
+                        database.updateChildren(childUpdates)
+                    }
+                }
+
+            })
+
     }
 
     private fun setGooglePlusButtonFont(signInButton: SignInButton) {
