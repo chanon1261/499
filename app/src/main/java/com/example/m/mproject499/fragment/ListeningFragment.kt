@@ -109,14 +109,14 @@ class ListeningFragment : Fragment() {
 
             NUMBER += 1
             editTextListen.text?.clear()
-            list_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
             question = getQuestion()
+            list_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString() + " " + question
 
             if (NUMBER == 9) {
                 listenNextFrag.text = "EXIT"
                 listenNextFrag.setOnClickListener {
                     checkAnswer()
-                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext))
+                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext, 0))
                     activity?.finish()
                 }
             }
@@ -201,7 +201,7 @@ class ListeningFragment : Fragment() {
 
     private fun getQuestion(): String {
         var question = ""
-        when(mode){
+        when (mode) {
             0 -> {
                 question = History[NUMBER].word
             }
@@ -209,7 +209,7 @@ class ListeningFragment : Fragment() {
                 question = History[NUMBER].desc_eng
             }
         }
-        return  question
+        return question
     }
 
 }

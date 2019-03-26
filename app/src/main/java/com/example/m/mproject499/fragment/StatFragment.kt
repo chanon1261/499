@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_stat.*
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 
 class StatFragment : Fragment() {
@@ -41,12 +43,13 @@ class StatFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
+        stat_page.text = "STAT FRAGMENT NO SCORE"
         val email = auth.currentUser!!.uid
         MainApp.database.child("users-score").orderByChild("uid")
             .equalTo(email)
             .addValueEventListener(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
-                    stat_page.text = "STAT FRAGMENT NO SCORE"
+
                 }
 
                 @SuppressLint("SetTextI18n")
@@ -55,11 +58,26 @@ class StatFragment : Fragment() {
                     for (postSnapshot in p0.children) {
 //                        Log.d("fxfx", "=======" + postSnapshot.child("listening").value!!)
 //                        stat_page.text = "STAT FRAGMENT " + postSnapshot.child("listening").value!!
+                        postSnapshot.child("listening").value?.let {
+                            stat_listening.text = "STAT Listening ${roundOffDecimal(it.toString().toDouble())} SCORE"
+                        }
+                        postSnapshot.child("matching").value?.let {
+                            stat_matching.text = "STAT Matching ${roundOffDecimal(it.toString().toDouble())} SCORE"
+                        }
+                        postSnapshot.child("speaking").value?.let {
+                            stat_speaking.text = "STAT Speaking ${roundOffDecimal(it.toString().toDouble())} SCORE"
+                        }
                     }
 
                 }
 
             })
+    }
+
+    fun roundOffDecimal(number: Double): Double? {
+        val df = DecimalFormat("#.##")
+        df.roundingMode = RoundingMode.CEILING
+        return df.format(number).toDouble()
     }
 
 

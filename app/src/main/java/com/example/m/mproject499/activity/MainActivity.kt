@@ -145,7 +145,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun logout() {
-        FirebaseAuth.getInstance().signOut()
+        auth.signOut()
+        googleSignInClient.signOut()
         startActivity(Intent(this, GoogleLoginActivity::class.java))
         finish()
     }

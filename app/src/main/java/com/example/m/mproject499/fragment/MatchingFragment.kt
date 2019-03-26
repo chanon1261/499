@@ -74,7 +74,7 @@ class MatchingFragment : Fragment() {
             if (NUMBER == 9) {
                 match_next.text = "EXIT"
                 match_next.setOnClickListener {
-                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext))
+                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext,1))
                     activity?.finish()
                 }
             }

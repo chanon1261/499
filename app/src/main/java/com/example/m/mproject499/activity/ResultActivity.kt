@@ -26,10 +26,17 @@ class ResultActivity : AppCompatActivity() {
     private var flag_l: Boolean = false
     private var flag_s: Boolean = false
     private var flag_m: Boolean = false
+
+    private var score1: Double = 0.0
+    private var score2: Double = 0.0
+    private var score3: Double = 0.0
     private var s = 0
 
     companion object {
-        fun getStartIntent(context: Context) = Intent(context, ResultActivity::class.java)
+        var mode = -1
+        fun getStartIntent(context: Context, m: Int) = Intent(context, ResultActivity::class.java).apply {
+            mode = m
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,30 +89,61 @@ class ResultActivity : AppCompatActivity() {
                         }
 
                         postSnapshot.child("flag_m").value?.let {
-                            flag_s = it as Boolean
+                            flag_m = it as Boolean
                         }
 
+                        postSnapshot.child("listening").value?.let {
+                            score1 = it.toString().toDouble()
+                        }
+                        postSnapshot.child("speaking").value?.let {
+                            score2 = it.toString().toDouble()
+                        }
+                        postSnapshot.child("matching").value?.let {
+                            score3 = it.toString().toDouble()
+                        }
 
+                        Log.d("fxfx", "======= mode $mode")
 
-                        if (!flag_l) {
-                            writeNewScore(uid, score.toDouble(), 1.1, 20.6, true, flag_s, flag_m)
-                        } else {
-                            postSnapshot.child("listening").value?.let {
-                                val s = it.toString()
-                                Log.d("fxfx", "=======  $it")
-                                writeNewScore(
-                                    uid,
-                                    (score.toDouble() + s.toDouble()) / 2,
-                                    0.0,
-                                    0.0,
-                                    flag_l,
-                                    flag_s,
-                                    flag_m
-                                )
+                        if (mode == 0) {
+                            if (!flag_l) {
+                                flag_l = true
+                                writeNewScore(uid, score.toDouble(), score2, score3)
+                            } else {
+                                postSnapshot.child("listening").value?.let {
+                                    val s = it.toString()
+                                    Log.d("fxfx", "=======  $it")
+                                    writeNewScore(uid, (score.toDouble() + s.toDouble()) / 2, score2, score3)
+                                }
                             }
                         }
-                    }
 
+                        if (mode == 1) {
+                            if (!flag_m) {
+                                flag_m = true
+                                writeNewScore(uid, score1, score2, score.toDouble())
+                            } else {
+                                postSnapshot.child("listening").value?.let {
+                                    val s = it.toString()
+                                    Log.d("fxfx", "=======  $it")
+                                    writeNewScore(uid, score1, score2, (score.toDouble() + s.toDouble()) / 2)
+                                }
+                            }
+                        }
+
+                        if (mode == 2) {
+                            if (!flag_s) {
+                                flag_s = true
+                                writeNewScore(uid, score1, score.toDouble(), score3)
+                            } else {
+                                postSnapshot.child("listening").value?.let {
+                                    val s = it.toString()
+                                    Log.d("fxfx", "=======  $it")
+                                    writeNewScore(uid, score1, (score.toDouble() + s.toDouble()) / 2, score3)
+                                }
+                            }
+                        }
+
+                    }
                 }
 
             })
@@ -124,26 +162,12 @@ class ResultActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    private fun writeNewScore(
-        userId: String,
-        listening: Double,
-        speaking: Double,
-        matching: Double,
-        flag_l: Boolean,
-        flag_s: Boolean,
-        flag_m: Boolean
-    ) {
+    private fun writeNewScore(userId: String, listening: Double, speaking: Double, matching: Double) {
         val score = Score(userId, listening, speaking, matching, flag_l, flag_s, flag_m)
         val childUpdates = HashMap<String, Any>()
         childUpdates["/users-score/$userId"] = score.toMap()
         database.updateChildren(childUpdates)
     }
 
-    private fun usernameFromEmail(email: String): String {
-        return if (email.contains("@")) {
-            email.split("@".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0]
-        } else {
-            email
-        }
-    }
+
 }
