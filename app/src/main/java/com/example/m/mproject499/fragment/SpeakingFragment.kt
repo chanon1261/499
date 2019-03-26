@@ -92,7 +92,7 @@ class SpeakingFragment : Fragment() {
                 nextFrag.text = "EXIT"
                 nextFrag.setOnClickListener {
                     checkAnswer()
-                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext))
+                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext, 2))
                     activity?.finish()
                 }
             }

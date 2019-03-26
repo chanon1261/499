@@ -33,7 +33,10 @@ class ResultActivity : AppCompatActivity() {
     private var s = 0
 
     companion object {
-        fun getStartIntent(context: Context) = Intent(context, ResultActivity::class.java)
+        var mode = -1
+        fun getStartIntent(context: Context, m: Int) = Intent(context, ResultActivity::class.java).apply {
+            mode = m
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,7 +89,7 @@ class ResultActivity : AppCompatActivity() {
                         }
 
                         postSnapshot.child("flag_m").value?.let {
-                            flag_s = it as Boolean
+                            flag_m = it as Boolean
                         }
 
                         postSnapshot.child("listening").value?.let {
@@ -99,21 +102,48 @@ class ResultActivity : AppCompatActivity() {
                             score3 = it.toString().toDouble()
                         }
 
+                        Log.d("fxfx", "======= mode $mode")
 
-
-
-                        if (!flag_l) {
-                            flag_l = true
-                            writeNewScore(uid, score.toDouble(), score2, score3)
-                        } else {
-                            postSnapshot.child("listening").value?.let {
-                                val s = it.toString()
-                                Log.d("fxfx", "=======  $it")
-                                writeNewScore(uid, (score.toDouble() + s.toDouble()) / 2, score2, score3)
+                        if (mode == 0) {
+                            if (!flag_l) {
+                                flag_l = true
+                                writeNewScore(uid, score.toDouble(), score2, score3)
+                            } else {
+                                postSnapshot.child("listening").value?.let {
+                                    val s = it.toString()
+                                    Log.d("fxfx", "=======  $it")
+                                    writeNewScore(uid, (score.toDouble() + s.toDouble()) / 2, score2, score3)
+                                }
                             }
                         }
-                    }
 
+                        if (mode == 1) {
+                            if (!flag_m) {
+                                flag_m = true
+                                writeNewScore(uid, score1, score2, score.toDouble())
+                            } else {
+                                postSnapshot.child("listening").value?.let {
+                                    val s = it.toString()
+                                    Log.d("fxfx", "=======  $it")
+                                    writeNewScore(uid, score1, score2, (score.toDouble() + s.toDouble()) / 2)
+                                }
+                            }
+                        }
+
+                        if (mode == 2) {
+                            if (!flag_s) {
+                                flag_s = true
+                                writeNewScore(uid, score1, score.toDouble(), score3)
+                            } else {
+                                postSnapshot.child("listening").value?.let {
+                                    val s = it.toString()
+                                    Log.d("fxfx", "=======  $it")
+                                    writeNewScore(uid, score1, (score.toDouble() + s.toDouble()) / 2, score3)
+                                }
+                            }
+                        }
+
+                    }
                 }
 
             })
