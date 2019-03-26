@@ -55,14 +55,11 @@ class ResultActivity : AppCompatActivity() {
             .equalTo(uid)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
-
                     Log.d("fxfx", "======= ERROR")
                 }
-
                 override fun onDataChange(p0: DataSnapshot) {
-
                     for (postSnapshot in p0.children) {
-//                        Log.d("fxfx", "=======" + postSnapshot.child("email").value!!)
+                        Log.d("fxfx", "=======" + postSnapshot.child("uid").value!!)
 //                        Log.d("fxfx", "=======" + postSnapshot.child("username").value!!)
 //                        if ((postSnapshot.child("status").value!! as Boolean)) {
 //                            val score1: Int = postSnapshot.child("listening").value!! as Int
