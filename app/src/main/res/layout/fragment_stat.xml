@@ -8,13 +8,43 @@
 
 >
     <TextView
-            style="@style/fontApp"
+            style="@style/stat"
             android:id="@+id/stat_page"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="STAT"/>
 
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+    >
+        <TextView
+                android:id="@+id/stat_listening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/stat"
+                tools:text="LISTENING SCORE :"
+        />
+
+        <TextView
+                android:id="@+id/stat_matching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/stat"
+                tools:text="MATCHING SCORE :"
+        />
+
+        <TextView
+                android:id="@+id/stat_speaking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/stat"
+                tools:text="SPEAKING SCORE :"
+        />
+
+    </LinearLayout>
 
 
 </LinearLayout>
