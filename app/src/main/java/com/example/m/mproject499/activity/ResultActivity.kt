@@ -153,11 +153,13 @@ class ResultActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         MainApp.Result.clear()
+        Result.clear()
         onBackPressed()
         return true
     }
 
     override fun onDestroy() {
+        MainApp.Result.clear()
         Result.clear()
         super.onDestroy()
     }

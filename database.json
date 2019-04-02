@@ -151,25 +151,6 @@
       "th" : "สถานที่"
     }
   },
-  "user-words" : {
-    "gm2mQTZOc3bowo5Ov6bAO9k5kQi1" : {
-      "-LaPAE-56BxSOJggtYO_" : {
-        "id" : "-L_fvyrVf-Ybx5KbHJ9y"
-      },
-      "-LaPALxq_zlJijpmoeFM" : {
-        "id" : "-L_fvyrxl__gW1XTkVVf"
-      },
-      "-LaPAPW8sf2yUbyDqGDW" : {
-        "id" : "-L_fvys-iz8Z8MW5kbCz"
-      },
-      "-LaPARhGedO23Nox3OII" : {
-        "id" : "-L_fvys3tOrFribGJQOm"
-      },
-      "-LaPAVg751oWVEQFuwaI" : {
-        "id" : "-L_fvys3tOrFribGJQOm"
-      }
-    }
-  },
   "users" : {
     "8xSXafK0Y7QKgMFMHuwYTQZn47H2" : {
       "email" : "chanon_w@elearning.cmu.ac.th",
@@ -182,6 +163,29 @@
     "gm2mQTZOc3bowo5Ov6bAO9k5kQi1" : {
       "email" : "llakiyama1@gmail.com",
       "username" : "llakiyama1"
+    }
+  },
+  "users-score" : {
+    "8xSXafK0Y7QKgMFMHuwYTQZn47H2" : {
+      "uid" : "8xSXafK0Y7QKgMFMHuwYTQZn47H2"
+    },
+    "X0jrwySFNcQYKFvHGD8A4CPIBDN2" : {
+      "flag_l" : true,
+      "flag_m" : false,
+      "flag_s" : false,
+      "listening" : 0,
+      "matching" : 0,
+      "speaking" : 0,
+      "uid" : "X0jrwySFNcQYKFvHGD8A4CPIBDN2"
+    },
+    "gm2mQTZOc3bowo5Ov6bAO9k5kQi1" : {
+      "flag_l" : true,
+      "flag_m" : true,
+      "flag_s" : true,
+      "listening" : 5.240966796875,
+      "matching" : 4.421875,
+      "speaking" : 2.6204833984375,
+      "uid" : "gm2mQTZOc3bowo5Ov6bAO9k5kQi1"
     }
   },
   "words" : {
@@ -249,7 +253,7 @@
       "word" : "Labourer"
     },
     "-L_fvysHnh-Ho0kMHBZ3" : {
-      "choice" : [ "desinger", "density", "dispatch", "devour" ],
+      "choice" : [ "designer", "density", "dispatch", "devour" ],
       "day" : 1,
       "desc_eng" : "It could have been done by a professional designer.",
       "desc_th" : "มันควรจะทำโดยนักออกแบบมืออาชีพ",
@@ -289,81 +293,81 @@
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แมว",
       "position" : 0,
-      "word" : " "
+      "word" : "Cat"
     },
     "-L_fvysX23DUcROQ64BF" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ลูกไก่",
       "position" : 0,
-      "word" : " "
+      "word" : "Chick"
     },
     "-L_fvys_SX2GJSJlBr3U" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สุนัข",
       "position" : 0,
-      "word" : " "
+      "word" : "Dog"
     },
     "-L_fvyscytnfjkz1PqWw" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาทอง",
       "position" : 0,
-      "word" : " "
+      "word" : "Goldfish"
     },
     "-L_fvysfSBqZdzofG6-g" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แฮมสเตอร์",
       "position" : 0,
-      "word" : " "
+      "word" : "Hamster"
     },
     "-L_fvysisMNsUItwYfRs" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ลูกสุนัข",
       "position" : 0,
-      "word" : " "
+      "word" : "Puppy"
     },
     "-L_fvysl1nFdR8zxbUUM" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ลูกหมู",
       "position" : 0,
-      "word" : " "
+      "word" : "Piggy"
     },
     "-L_fvyso6nhIPDkgrz8y" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เม่น",
       "position" : 0,
-      "word" : " "
+      "word" : "Hedgehog"
     },
     "-L_fvysrcTrqxkhTtELF" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กระรอก",
       "position" : 0,
-      "word" : " "
+      "word" : "Squirrel"
     },
     "-L_fvysvCJS2VBzsi48n" : {
       "choice" : [ "A", "B", "C", "D" ],
@@ -460,144 +464,144 @@
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาคาร์พ",
       "position" : 0,
-      "word" : " "
+      "word" : "Carp"
     },
     "-L_fvytUcBeCibXM8rM4" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หอยกาบ",
       "position" : 0,
-      "word" : " "
+      "word" : "Clam"
     },
     "-L_fvytY5ddvLIg0mn45" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หอยแครง",
       "position" : 0,
-      "word" : " "
+      "word" : "Cockle"
     },
     "-L_fvyta7ZvxSy5dhRbB" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาหมึกกระดอง",
       "position" : 0,
-      "word" : " "
+      "word" : "Cuttlefish"
     },
     "-L_fvytdOKmLOBrg1A5L" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "โลมา",
       "position" : 0,
-      "word" : " "
+      "word" : "Dolphin"
     },
     "-L_fvytgKj48-rfO8K_e" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาไหล",
       "position" : 0,
-      "word" : " "
+      "word" : "Eel"
     },
     "-L_fvytjxpsUgkxV3GGg" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาหมึกสาย หรือปลาหมึกยักษ์",
       "position" : 0,
-      "word" : " "
+      "word" : "Octopus"
     },
     "-L_fvytnuQDLxToH1q5q" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "นาก",
       "position" : 0,
-      "word" : " "
+      "word" : "Otter"
     },
     "-L_fvytqPyUImNg3nxvb" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กุ้ง",
       "position" : 0,
-      "word" : " "
+      "word" : "Prawn"
     },
     "-L_fvytuugrlqz2LSASQ" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาแซลมอน",
       "position" : 0,
-      "word" : " "
+      "word" : "Salmon"
     },
     "-L_fvytx3WOaPhPHqhin" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "การยิงธนู",
       "position" : 0,
-      "word" : " "
+      "word" : "Archery"
     },
     "-L_fvyu0xnLcOBU94OwM" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กีฬาแบดมินตัน",
       "position" : 0,
-      "word" : " "
+      "word" : "Badminton"
     },
     "-L_fvyu48at4aPgHxshP" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กีฬาเบสบอล",
       "position" : 0,
-      "word" : " "
+      "word" : "baseball"
     },
     "-L_fvyu7K2WsZyREdORZ" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กีฬาโบว์ลิ่ง",
       "position" : 0,
-      "word" : " "
+      "word" : "bowling"
     },
     "-L_fvyuBDvtRUC3Nqlcu" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กีฬาบาสเกตบอล",
       "position" : 0,
-      "word" : " "
+      "word" : "basketball"
     },
     "-L_fvyuEXmxxnQ_8DsTb" : {
       "choice" : [ "A", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "การฟันดาบ",
       "position" : 0,
-      "word" : " "
+      "word" : "fencing"
     },
     "-L_fvyuHmsp5lBzZ0mzu" : {
       "choice" : [ "A", "B", "C", "D" ],

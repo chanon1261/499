@@ -204,7 +204,7 @@ class SpeakingFragment : Fragment() {
         var question = ""
         when (mode) {
             4 -> {
-                question = History[NUMBER].word
+                question = History[NUMBER].word.capitalize()
             }
             5 -> {
                 question = History[NUMBER].desc_eng

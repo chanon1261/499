@@ -44,7 +44,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
         val context: Context = binding.root.context
 
         fun bind(item: WordFireBase) {
-            binding.setVariable(BR.word, item.word)
+            binding.setVariable(BR.word, item.word.capitalize())
             binding.setVariable(BR.meaning, "?")
             binding.setVariable(BR.descEng, item.desc_eng)
             binding.setVariable(BR.descTH, "?")
