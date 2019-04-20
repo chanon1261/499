@@ -3,7 +3,7 @@
               android:id="@+id/main_layout"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/grey_100"
+              android:background="@color/main"
               android:orientation="vertical"
               android:weightSum="4">
 
@@ -19,7 +19,19 @@
                 android:id="@+id/googleIcon"
                 android:contentDescription="@string/desc_firebase_lockup"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:text="BASIC LEANING ENGLISH"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/icons8_spiral_bound_booklet_100"
+        />
 
         <TextView
                 android:id="@+id/titleText"
@@ -27,23 +39,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/title_bottom_margin"
                 android:text="@string/google_title_text"
-                style="@style/fontApp"
-                android:theme="@style/ThemeOverlay.MyTitleText" />
+                android:textColor="@color/white"
+                />
 
         <TextView
                 android:id="@+id/status"
                 style="@style/ThemeOverlay.MyTextDetail"
-                android:text="@string/signed_out" />
+                android:visibility="gone"
+                android:text="@string/signed_out" android:layout_height="wrap_content" android:layout_width="10dp"/>
 
         <TextView
                 android:id="@+id/detail"
+                android:visibility="gone"
                 style="@style/ThemeOverlay.MyTextDetail"
-                tools:text="Firebase User ID: 123456789abc" />
+                tools:text="Firebase User ID: 123456789abc"/>
 
     </LinearLayout>
 
 
     <RelativeLayout
+            android:backgroundTint="@color/main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -90,7 +105,7 @@
                     android:layout_weight="1"
                     android:text="@string/disconnect"
                     android:fontFamily="@font/cloud"
-                    android:theme="@style/ThemeOverlay.MyDarkButton" />
+                    android:theme="@style/ThemeOverlay.MyDarkButton"/>
         </LinearLayout>
 
     </RelativeLayout>

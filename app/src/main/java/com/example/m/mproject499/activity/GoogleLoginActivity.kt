@@ -3,8 +3,10 @@ package com.example.m.mproject499.activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -36,6 +38,12 @@ open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_google_login)
+
+        supportActionBar?.hide()
+        if (Build.VERSION.SDK_INT >= 21) {
+            //window.navigationBarColor = ContextCompat.getColor(this, R.color.dark_nav); // Navigation bar the soft bottom of some phones like nexus and some Samsung note series
+            window.statusBarColor = ContextCompat.getColor(this,R.color.main) //status bar or the time bar at the top
+        }
 
         // Button listeners
         signInButton.setOnClickListener(this)

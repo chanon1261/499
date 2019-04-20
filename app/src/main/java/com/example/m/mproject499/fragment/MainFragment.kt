@@ -38,8 +38,6 @@ class MainFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        main_page.text = "CHAPTER LIST"
-
         database = FirebaseDatabase.getInstance().reference
         dayList = mutableListOf()
 

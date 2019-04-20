@@ -16,8 +16,6 @@
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".activity.ResultActivity">
         </activity>
-        <activity android:name=".fragment.SpeakingActivity">
-        </activity>
         <activity
                 android:name=".MainActivity"
                 android:theme="@style/AppTheme.NoActionBar">
@@ -35,7 +33,7 @@
         <activity
                 android:name=".activity.GoogleLoginActivity"
                 android:label="@string/app_name"
-                android:theme="@style/AppTheme.NoActionBar">
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

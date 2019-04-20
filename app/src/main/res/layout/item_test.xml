@@ -18,6 +18,7 @@
                   style="@style/fontApp"
                   android:id="@+id/test_mode_name"
                   tools:text="TEST NAME"
+                  android:textColor="@color/black"
                   android:text="@{test_name}"/>
 </LinearLayout>
 </layout>
