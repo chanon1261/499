@@ -3,75 +3,75 @@
     <data>
         <variable
                 name="word"
-                type="String" />
+                type="String"/>
         <variable
                 name="descEng"
-                type="String" />
+                type="String"/>
         <variable
                 name="meaning"
-                type="String" />
+                type="String"/>
         <variable
                 name="descTH"
-                type="String" />
+                type="String"/>
     </data>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:background="@color/white"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="10dp"
-              android:orientation="vertical"
->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:background="@color/white"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:orientation="vertical"
+    >
 
-   <LinearLayout
-           android:id="@+id/days_view"
-           android:layout_marginLeft="10dp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical">
+        <LinearLayout
+                android:id="@+id/days_view"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-       <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/txtName"
-               tools:text="word"
-               android:textColor="@color/colorAccent"
-               android:textSize="42dp"
-               android:text="@{word}"
-               style="@style/fontApp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtName"
+                    tools:text="word"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="42dp"
+                    android:text="@{word}"
+                    style="@style/fontApp"/>
 
-       <TextView
-               android:textColor="@color/black"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textSize="30dp"
-               android:id="@+id/txtMeaning"
-               android:text="@{meaning}"
-               tools:text="Meaning"
-               style="@style/fontApp"/>
+            <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:id="@+id/txtMeaning"
+                    android:text="@{meaning}"
+                    tools:text="Meaning"
+                    style="@style/fontApp"/>
 
-       <TextView
-               android:layout_marginTop="5dp"
-               android:layout_marginBottom="5dp"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textSize="20dp"
-               android:id="@+id/txtEng"
-               android:text="@{descEng}"
-               style="@style/fontApp"
-               tools:text="sentences_eng"/>
+            <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:id="@+id/txtEng"
+                    android:text="@{descEng}"
+                    style="@style/fontApp"
+                    tools:text="sentences_eng"/>
 
-       <TextView
-               android:textColor="@color/black"
-               android:textSize="20sp"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/txtTH"
-               android:text="@{descTH}"
-               style="@style/fontApp"
-               tools:text="sentences_TH"/>
+            <TextView
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTH"
+                    android:text="@{descTH}"
+                    style="@style/fontApp"
+                    tools:text="sentences_TH"/>
 
 
-   </LinearLayout>
-</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </layout>

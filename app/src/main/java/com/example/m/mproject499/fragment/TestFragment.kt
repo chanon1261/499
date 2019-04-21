@@ -3,6 +3,7 @@ package com.example.m.mproject499
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -35,6 +36,7 @@ class TestFragment : Fragment() {
         val layoutManager = LinearLayoutManager(activity?.applicationContext)
         test_recycle?.layoutManager = layoutManager
         test_recycle?.adapter = adapter
+        test_recycle.addItemDecoration(DividerItemDecoration(test_recycle.context, DividerItemDecoration.VERTICAL))
         adapter?.loadData(TEST_MODE)
         adapter?.notifyDataSetChanged()
         super.onViewCreated(view, savedInstanceState)

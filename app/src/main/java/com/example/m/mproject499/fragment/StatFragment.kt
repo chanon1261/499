@@ -62,7 +62,7 @@ class StatFragment : Fragment() {
                             stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(it.toString().toDouble())} SCORE"
                         }
                         postSnapshot.child("matching").value?.let {
-                            stat_matching.text = "MATCHING SCORE :g ${roundOffDecimal(it.toString().toDouble())} SCORE"
+                            stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(it.toString().toDouble())} SCORE"
                         }
                         postSnapshot.child("speaking").value?.let {
                             stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(it.toString().toDouble())} SCORE"

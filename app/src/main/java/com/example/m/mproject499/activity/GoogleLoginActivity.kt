@@ -42,7 +42,7 @@ open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
         supportActionBar?.hide()
         if (Build.VERSION.SDK_INT >= 21) {
             //window.navigationBarColor = ContextCompat.getColor(this, R.color.dark_nav); // Navigation bar the soft bottom of some phones like nexus and some Samsung note series
-            window.statusBarColor = ContextCompat.getColor(this,R.color.main) //status bar or the time bar at the top
+            window.statusBarColor = ContextCompat.getColor(this, R.color.main) //status bar or the time bar at the top
         }
 
         // Button listeners

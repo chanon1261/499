@@ -11,6 +11,9 @@ import com.example.m.mproject499.adapter.DaysAdapter
 import com.example.m.mproject499.model.Chapter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_main.*
+import android.support.v7.widget.DividerItemDecoration
+
+
 
 class MainFragment : Fragment() {
 
@@ -45,6 +48,7 @@ class MainFragment : Fragment() {
         val layoutManager = LinearLayoutManager(MainApp.instance.applicationContext)
         day_recycle?.layoutManager = layoutManager
         day_recycle?.adapter = adapter
+        day_recycle.addItemDecoration(DividerItemDecoration(day_recycle.context, DividerItemDecoration.VERTICAL))
         initChapter(adapter)
         adapter.loadData(dayList as java.util.ArrayList<Chapter>)
         adapter.notifyDataSetChanged()
