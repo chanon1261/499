@@ -17,10 +17,18 @@
             android:text="STAT"/>
 
     <LinearLayout
+            android:layout_marginLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
     >
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/sound"
+        />
+
         <TextView
                 android:id="@+id/stat_listening"
                 android:layout_width="wrap_content"
@@ -29,6 +37,20 @@
                 tools:text="LISTENING SCORE :"
         />
 
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal"
+    >
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/key"
+        />
         <TextView
                 android:id="@+id/stat_matching"
                 android:layout_width="wrap_content"
@@ -36,7 +58,19 @@
                 style="@style/stat"
                 tools:text="MATCHING SCORE :"
         />
-
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal"
+    >
+        <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/micro"
+        />
         <TextView
                 android:id="@+id/stat_speaking"
                 android:layout_width="wrap_content"
@@ -46,6 +80,8 @@
         />
 
     </LinearLayout>
+
+
 
 
 </LinearLayout>

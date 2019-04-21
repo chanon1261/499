@@ -37,7 +37,6 @@ class TestFragment : Fragment() {
         test_recycle?.adapter = adapter
         adapter?.loadData(TEST_MODE)
         adapter?.notifyDataSetChanged()
-
         super.onViewCreated(view, savedInstanceState)
     }
 

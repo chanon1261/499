@@ -9,16 +9,18 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:background="@color/colorPrimary"
+              android:layout_margin="10dp"
               android:orientation="vertical">
 
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:textSize="25dp"
+                  android:textSize="20dp"
                   android:layout_margin="10dp"
                   style="@style/fontApp"
                   android:id="@+id/test_mode_name"
                   tools:text="TEST NAME"
-                  android:textColor="@color/black"
+                  android:textColor="@color/white"
                   android:text="@{test_name}"/>
 </LinearLayout>
 </layout>
