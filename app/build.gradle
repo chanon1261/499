@@ -10,7 +10,7 @@ android {
         enabled = true
     }
     defaultConfig {
-        applicationId "com.example.m.mproject499"
+        applicationId "com.independent.m.mproject499"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
