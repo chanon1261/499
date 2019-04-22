@@ -58,11 +58,12 @@ class MatchingFragment : Fragment() {
         match_next.setOnClickListener {
 
             val count = gridView.count
-            Log.d("count", count.toString())
+            Log.d("count", NUMBER.toString())
             if (gridView.getChildAt(0).isClickable) {
                 context!!.toast("pls select choice")
                 return@setOnClickListener
             }
+
 
             NUMBER += 1
 

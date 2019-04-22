@@ -58,13 +58,13 @@ class StatFragment : Fragment() {
 //                        Log.d("fxfx", "=======" + postSnapshot.child("listening").value!!)
 //                        stat_page.text = "STAT FRAGMENT " + postSnapshot.child("listening").value!!
                         postSnapshot.child("listening").value?.let {
-                            stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(it.toString().toDouble())} SCORE"
+                            stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
                         }
                         postSnapshot.child("matching").value?.let {
-                            stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(it.toString().toDouble())} SCORE"
+                            stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
                         }
                         postSnapshot.child("speaking").value?.let {
-                            stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(it.toString().toDouble())} SCORE"
+                            stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
                         }
                     }
 
