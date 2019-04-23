@@ -113,6 +113,9 @@ class ListeningFragment : Fragment() {
             list_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString() + " " + question
 
             if (NUMBER == 9) {
+                if (MainApp.Result.size == 9){
+                    MainApp.Result.add(false)
+                }
                 listenNextFrag.text = "EXIT"
                 listenNextFrag.setOnClickListener {
                     checkAnswer()

@@ -89,6 +89,9 @@ class SpeakingFragment : Fragment() {
             test_word.text = question
 
             if (NUMBER == 9) {
+                if (MainApp.Result.size == 9){
+                    MainApp.Result.add(false)
+                }
                 nextFrag.text = "EXIT"
                 nextFrag.setOnClickListener {
                     checkAnswer()

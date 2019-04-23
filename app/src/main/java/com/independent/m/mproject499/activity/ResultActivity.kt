@@ -33,7 +33,7 @@ class ResultActivity : AppCompatActivity() {
     private var s = 0
 
     companion object {
-        var mode = -1
+        var mode = 0
         fun getStartIntent(context: Context, m: Int) = Intent(context, ResultActivity::class.java).apply {
             mode = m
         }
