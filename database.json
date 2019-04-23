@@ -62,8 +62,8 @@
     },
     "-L_awjUZwiknJy93KV4Z" : {
       "day" : 13,
-      "eng" : "Zoo",
-      "th" : "สวนสัตว์"
+      "eng" : "Family",
+      "th" : "ครอบครัว"
     },
     "-L_awjU_3Hp8rJzDFDfT" : {
       "day" : 14,
@@ -92,8 +92,8 @@
     },
     "-L_awjUgyXMDTjWMKbal" : {
       "day" : 19,
-      "eng" : "Family",
-      "th" : "ครอบครัว"
+      "eng" : "Zoo",
+      "th" : "สวนสัตว์"
     },
     "-L_awjUiatFvWN3bqMFX" : {
       "day" : 20,
@@ -289,7 +289,7 @@
       "word" : "Animal"
     },
     "-L_fvysU9T4W6_eok7KG" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Cat", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -298,7 +298,7 @@
       "word" : "Cat"
     },
     "-L_fvysX23DUcROQ64BF" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Chick", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -307,7 +307,7 @@
       "word" : "Chick"
     },
     "-L_fvys_SX2GJSJlBr3U" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Dog", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -316,7 +316,7 @@
       "word" : "Dog"
     },
     "-L_fvyscytnfjkz1PqWw" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Goldfish", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -325,7 +325,7 @@
       "word" : "Goldfish"
     },
     "-L_fvysfSBqZdzofG6-g" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Hamster", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -334,7 +334,7 @@
       "word" : "Hamster"
     },
     "-L_fvysisMNsUItwYfRs" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Puppy", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -343,7 +343,7 @@
       "word" : "Puppy"
     },
     "-L_fvysl1nFdR8zxbUUM" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Piggy", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -352,7 +352,7 @@
       "word" : "Piggy"
     },
     "-L_fvyso6nhIPDkgrz8y" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Hedgehog", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -361,7 +361,7 @@
       "word" : "Hedgehog"
     },
     "-L_fvysrcTrqxkhTtELF" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Squirrel", "B", "C", "D" ],
       "day" : 2,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -370,12 +370,12 @@
       "word" : "Squirrel"
     },
     "-L_fvysvCJS2VBzsi48n" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "beast", "battery", "blackpink", "branch" ],
       "day" : 3,
       "desc_eng" : "Love makees a beast a man ,and a man a beast",
       "desc_th" : "ความรักทำให้สัตว์กลายเป็นคน และทำให้คนกลายเป็นสัตว์",
       "meaning" : "สัตว์ป่า",
-      "position" : 0,
+      "position" : 3,
       "word" : "Beast"
     },
     "-L_fvysyXtyvvxOC1sIh" : {
@@ -397,7 +397,7 @@
       "word" : "Polar Bear"
     },
     "-L_fvyt4CtclO4Nnzcnj" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Wildebeest", "B", "C", "D" ],
       "day" : 3,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -406,7 +406,7 @@
       "word" : "Wildebeest"
     },
     "-L_fvyt7paHfABZIZQiY" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Rhinoceros", "B", "C", "D" ],
       "day" : 3,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -415,7 +415,7 @@
       "word" : "Rhinoceros"
     },
     "-L_fvytABtALUxkJzSck" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Porcupine", "B", "C", "D" ],
       "day" : 3,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -424,7 +424,7 @@
       "word" : "Porcupine"
     },
     "-L_fvytDbrDLtxcOx5qN" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Llama", "B", "C", "D" ],
       "day" : 3,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -433,7 +433,7 @@
       "word" : "Llama"
     },
     "-L_fvytGp9GhgAuU84VO" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Moose", "B", "C", "D" ],
       "day" : 3,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -442,7 +442,7 @@
       "word" : "Moose"
     },
     "-L_fvytJKe1eyJ1FNYci" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Kangaroo", "B", "C", "D" ],
       "day" : 3,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -451,7 +451,7 @@
       "word" : "Kangaroo"
     },
     "-L_fvytM0hDwh--1vTNz" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Gibbon", "B", "C", "D" ],
       "day" : 3,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -460,7 +460,7 @@
       "word" : "Gibbon"
     },
     "-L_fvytP-LEaCRaJurwy" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Carp", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -469,7 +469,7 @@
       "word" : "Carp"
     },
     "-L_fvytUcBeCibXM8rM4" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Clam", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -478,7 +478,7 @@
       "word" : "Clam"
     },
     "-L_fvytY5ddvLIg0mn45" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Cockle", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -487,7 +487,7 @@
       "word" : "Cockle"
     },
     "-L_fvyta7ZvxSy5dhRbB" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Cuttlefish", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -496,7 +496,7 @@
       "word" : "Cuttlefish"
     },
     "-L_fvytdOKmLOBrg1A5L" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Dolphin", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -505,7 +505,7 @@
       "word" : "Dolphin"
     },
     "-L_fvytgKj48-rfO8K_e" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Eel", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -514,7 +514,7 @@
       "word" : "Eel"
     },
     "-L_fvytjxpsUgkxV3GGg" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Octopus", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -523,7 +523,7 @@
       "word" : "Octopus"
     },
     "-L_fvytnuQDLxToH1q5q" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Otter", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -532,7 +532,7 @@
       "word" : "Otter"
     },
     "-L_fvytqPyUImNg3nxvb" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Prawn", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -541,7 +541,7 @@
       "word" : "Prawn"
     },
     "-L_fvytuugrlqz2LSASQ" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Salmon", "B", "C", "D" ],
       "day" : 4,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -550,7 +550,7 @@
       "word" : "Salmon"
     },
     "-L_fvytx3WOaPhPHqhin" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Archery", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -559,7 +559,7 @@
       "word" : "Archery"
     },
     "-L_fvyu0xnLcOBU94OwM" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Badminton", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -568,7 +568,7 @@
       "word" : "Badminton"
     },
     "-L_fvyu48at4aPgHxshP" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "baseball", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -577,7 +577,7 @@
       "word" : "baseball"
     },
     "-L_fvyu7K2WsZyREdORZ" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "bowling", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -586,7 +586,7 @@
       "word" : "bowling"
     },
     "-L_fvyuBDvtRUC3Nqlcu" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "basketball", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -595,7 +595,7 @@
       "word" : "basketball"
     },
     "-L_fvyuEXmxxnQ_8DsTb" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "fencing", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -604,7 +604,7 @@
       "word" : "fencing"
     },
     "-L_fvyuHmsp5lBzZ0mzu" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "gymnastics", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -613,7 +613,7 @@
       "word" : "gymnastics"
     },
     "-L_fvyuKfSMR4TxWfKd3" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "swimming", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -622,7 +622,7 @@
       "word" : "swimming"
     },
     "-L_fvyuNuHN_edce7WAA" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "weightlifting", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -631,7 +631,7 @@
       "word" : "weightlifting"
     },
     "-L_fvyuQqYTkEedbf5i4" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "skydive", "B", "C", "D" ],
       "day" : 5,
       "desc_eng" : " ",
       "desc_th" : " ",
@@ -640,904 +640,904 @@
       "word" : "skydive"
     },
     "-L_fvyuTx77DrBC3-0Gi" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Soap", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สบู่",
       "position" : 0,
-      "word" : " "
+      "word" : "Soap"
     },
     "-L_fvyuVfQZYXbrS_VTb" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Toothpaste", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ยาสีฟัน",
       "position" : 0,
-      "word" : " "
+      "word" : "Toothpaste"
     },
     "-L_fvyuZfPDMseQy5Z2r" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Toothbrush", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แปรงสีฟัน",
       "position" : 0,
-      "word" : " "
+      "word" : "Toothbrush"
     },
     "-L_fvyub9b_li1K_uf6X" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Dental floss", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ไหมขัดฟัน",
       "position" : 0,
-      "word" : " "
+      "word" : "Dental floss"
     },
     "-L_fvyuevzBAQcP6Yq7R" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Mirror", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กระจก",
       "position" : 0,
-      "word" : " "
+      "word" : "Mirror"
     },
     "-L_fvyuhFsKY8PDEawkL" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Shampoo", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แชมพูสระผม",
       "position" : 0,
-      "word" : " "
+      "word" : "Shampoo"
     },
     "-L_fvyuknBJkW3CjCm8j" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Water heater", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เครื่องทำน้ำอุ่น",
       "position" : 0,
-      "word" : " "
+      "word" : "Water heater"
     },
     "-L_fvyun5EhdTMH4Pi6k" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Washcloth", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ผ้าสำหรับเช็ดหน้า",
       "position" : 0,
-      "word" : " "
+      "word" : "Washcloth"
     },
     "-L_fvyuq0A7aEy6JZbN2" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Showerhead", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ฝักบัว",
       "position" : 0,
-      "word" : " "
+      "word" : "Showerhead"
     },
     "-L_fvyut-gJSGnvtr6sN" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "shower gel", "B", "C", "D" ],
       "day" : 6,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ครีมอาบน้ำ",
       "position" : 0,
-      "word" : " "
+      "word" : "Shower gel"
     },
     "-L_fvyuw0onQv9E17rWW" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "water", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "น้ำ",
       "position" : 0,
-      "word" : " "
+      "word" : "water"
     },
     "-L_fvyuzEKwJBpKlaVK5" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "coffee", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กาแฟ",
       "position" : 0,
-      "word" : " "
+      "word" : "coffee"
     },
     "-L_fvyv1GJaXyQ3LFDOE" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "mineral water", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "น้ำแร่",
       "position" : 0,
-      "word" : " "
+      "word" : "mineral water"
     },
     "-L_fvyv4RBjMJJ0xL3fg" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "juice", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "น้ำผลไม้",
       "position" : 0,
-      "word" : " "
+      "word" : "juice"
     },
     "-L_fvyv75yu6n78Oi7Rs" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "liquor", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เหล้า",
       "position" : 0,
-      "word" : " "
+      "word" : "liquor"
     },
     "-L_fvyvAnObqhS925htj" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "milk", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "นม",
       "position" : 0,
-      "word" : " "
+      "word" : "milk"
     },
     "-L_fvyvCrtlaDIKo7OZA" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "mocktail", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ม็อคเทล",
       "position" : 0,
-      "word" : " "
+      "word" : "mocktail"
     },
     "-L_fvyvFKppF06GO9xzi" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "punch", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "น้ำผลไม้ผสมแอลกอฮอล์",
       "position" : 0,
-      "word" : " "
+      "word" : "punch"
     },
     "-L_fvyvHOy0HpZjX86FK" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "squash", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "น้ำผลไม้คั้น",
       "position" : 0,
-      "word" : " "
+      "word" : "squash"
     },
     "-L_fvyvKLH_R1FHAExDm" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "smoothie", "B", "C", "D" ],
       "day" : 7,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "น้ำผลไม้ปั่น",
       "position" : 0,
-      "word" : " "
+      "word" : "smoothie"
     },
     "-L_fvyvNtqdrBFktFRU_" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "apple", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แอปเปิ้ล",
       "position" : 0,
-      "word" : " "
+      "word" : "apple"
     },
     "-L_fvyvQmYINJVEHiHCX" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "watermelon", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แตงโม",
       "position" : 0,
-      "word" : " "
+      "word" : "watermelon"
     },
     "-L_fvyvT_etDUOL71-0N" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "melon", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เมลอน",
       "position" : 0,
-      "word" : " "
+      "word" : "melon"
     },
     "-L_fvyvVa8ujhLE7l_pv" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "papaya", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "มะละกอ",
       "position" : 0,
-      "word" : " "
+      "word" : "papaya"
     },
     "-L_fvyvYlPzh1x6MzbUA" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "lychee", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ลิ้นจี่",
       "position" : 0,
-      "word" : " "
+      "word" : "lychee"
     },
     "-L_fvyvafdBHncbQSUKl" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "pineapple", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สัปปะรด",
       "position" : 0,
-      "word" : " "
+      "word" : "pineapple"
     },
     "-L_fvyvcWfpLm_g1V3NV" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "strawberry", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สตรอเบอรี่",
       "position" : 0,
-      "word" : " "
+      "word" : "strawberry"
     },
     "-L_fvyvfl_Zu0fAICoEr" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "raspberry", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ราสเบอรี",
       "position" : 0,
-      "word" : " "
+      "word" : "raspberry"
     },
     "-L_fvyvi57Sq8XSBmNNN" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "blueberry", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "บลูเบอรี่",
       "position" : 0,
-      "word" : " "
+      "word" : "blueberry"
     },
     "-L_fvyvlXrHzG_PeliAY" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "kiwi", "B", "C", "D" ],
       "day" : 8,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กีวี",
       "position" : 0,
-      "word" : " "
+      "word" : "kiwi"
     },
     "-L_fvyvnRM6p_HRnGN4w" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "astronaut", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "มนุษย์อวกาศ",
       "position" : 0,
-      "word" : " "
+      "word" : "astronaut "
     },
     "-L_fvyvq7u8dO0F677X7" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "rocket", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "จรวด",
       "position" : 0,
-      "word" : " "
+      "word" : "rocket "
     },
     "-L_fvyvtjGfCcn4B38mO" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "alien", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "มนุษย์ต่างดาว",
       "position" : 0,
-      "word" : " "
+      "word" : "alien"
     },
     "-L_fvyvwDEuwENFShxov" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "satellite", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ดาวเทียม",
       "position" : 0,
-      "word" : " "
+      "word" : "satellite"
     },
     "-L_fvyvyOCqtalVHKi9I" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "star", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ดวงดาว",
       "position" : 0,
-      "word" : " "
+      "word" : "star"
     },
     "-L_fvyw0a6rY8PXKLxzi" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "meteor", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ดาวตก",
       "position" : 0,
-      "word" : " "
+      "word" : "meteor"
     },
     "-L_fvyw2bzRg_UisyBLm" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "spacecraft", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ยานอวกาศ",
       "position" : 0,
-      "word" : " "
+      "word" : "spacecraft"
     },
     "-L_fvyw5m1cr8Ot_McZr" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "moon", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "พระจันทร์",
       "position" : 0,
-      "word" : " "
+      "word" : "moon"
     },
     "-L_fvyw8RqSpNsCY3JTS" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "galaxy", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กาแล็กซี,ดาราจักร",
       "position" : 0,
-      "word" : " "
+      "word" : "galaxy"
     },
     "-L_fvywAbsTDGCMawQrl" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "comet", "B", "C", "D" ],
       "day" : 9,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ดาวหาง",
       "position" : 0,
-      "word" : " "
+      "word" : "comet"
     },
     "-L_fvywDTv9jJRYs_rL8" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "classroom", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ห้องเรียน",
       "position" : 0,
-      "word" : " "
+      "word" : "classroom"
     },
     "-L_fvywGSRWSdBgF5mga" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "crayon", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สีเทียน",
       "position" : 0,
-      "word" : " "
+      "word" : "crayon"
     },
     "-L_fvywIr2vLcrejSoPU" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "desk", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "โตะเขียนหนังสือ",
       "position" : 0,
-      "word" : " "
+      "word" : "desk"
     },
     "-L_fvywLgoWB6QHIPnKG" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "pencil", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ดินสอ",
       "position" : 0,
-      "word" : " "
+      "word" : "pencil"
     },
     "-L_fvywON8OBOv3T4I9Z" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "blackboard", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กระดานดำ",
       "position" : 0,
-      "word" : " "
+      "word" : "blackboard"
     },
     "-L_fvywQY9ldOyfZ5x7l" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "paper", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กระดาษ",
       "position" : 0,
-      "word" : " "
+      "word" : "paper"
     },
     "-L_fvywSou0As7vAqhrB" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "notebook", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สมุด",
       "position" : 0,
-      "word" : " "
+      "word" : "notebook"
     },
     "-L_fvywV7gHQrx81YIpK" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "sharpener", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กบเหลาดินสอ",
       "position" : 0,
-      "word" : " "
+      "word" : "sharpener"
     },
     "-L_fvywY1dsE5R02kQ41" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "Bookshelf", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ชั้นวางหนังสือ",
       "position" : 0,
-      "word" : " "
+      "word" : "Bookshelf"
     },
     "-L_fvywauzirz0St_j_5" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "watercolour", "B", "C", "D" ],
       "day" : 10,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สีระบายน้ำ สีน้ำ",
       "position" : 0,
-      "word" : " "
+      "word" : "watercolour"
     },
     "-L_fvywcfXkJO-yDe6Vl" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "ashtray", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ที่เขี่ยบุหรี่",
       "position" : 0,
-      "word" : " "
+      "word" : "ashtray"
     },
     "-L_fvywf4DO4Y1pAd8np" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "cushion", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หมอนอิง",
       "position" : 0,
-      "word" : " "
+      "word" : "cushion"
     },
     "-L_fvywhqlZunL6bm__k" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "clock", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "นาฬิกา",
       "position" : 0,
-      "word" : " "
+      "word" : "clock"
     },
     "-L_fvywjzytT6o9V9Po7" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "carpet", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "พรม",
       "position" : 0,
-      "word" : " "
+      "word" : "carpet"
     },
     "-L_fvywmP_yN_ZNWj_Qg" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "newspaper", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หนังสือพิมพ์",
       "position" : 0,
-      "word" : " "
+      "word" : "newspaper"
     },
     "-L_fvywpsxnharkIHaC6" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "stereo", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เครื่องเสียงสเตอริโอ",
       "position" : 0,
-      "word" : " "
+      "word" : "stereo"
     },
     "-L_fvywr_FZmQeqZOJ8F" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "window", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หน้าต่าง",
       "position" : 0,
-      "word" : " "
+      "word" : "window"
     },
     "-L_fvywtmlRQ7frooGEE" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "curtain", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ผ้าม่าน",
       "position" : 0,
-      "word" : " "
+      "word" : "curtain"
     },
     "-L_fvywvXltkYJESLGQY" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "lamp", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "โคมไฟ",
       "position" : 0,
-      "word" : " "
+      "word" : "lamp"
     },
     "-L_fvywxACf9PE4SnNO8" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "photograph", "B", "C", "D" ],
       "day" : 11,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "รูปถ่าย",
       "position" : 0,
-      "word" : " "
+      "word" : "photograph"
     },
     "-L_fvywzypvtfctVkLyp" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "ambulance", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "รถพยาบาล",
       "position" : 0,
-      "word" : " "
+      "word" : "ambulance"
     },
     "-L_fvyx1NHvgJEfnWXfP" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "airplane", "B", "C", "D" ],
       "day" : 12,
-      "desc_eng" : " ",
+      "desc_eng" : "airplane",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เครื่องบิน",
       "position" : 0,
-      "word" : " "
+      "word" : "airplane"
     },
     "-L_fvyx3S6gpR4tRwnLm" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "ferry", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เรือข้ามฟาก",
       "position" : 0,
-      "word" : " "
+      "word" : "ferry"
     },
     "-L_fvyx5MuTnYlQc1sOf" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "jet", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เครื่องบินไอพ่น",
       "position" : 0,
-      "word" : " "
+      "word" : "jet"
     },
     "-L_fvyx8YSdfzr-a_DhG" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "submarine", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เรือดำน้ำ",
       "position" : 0,
-      "word" : " "
+      "word" : "submarine"
     },
     "-L_fvyxAHje3y24YZiRx" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "van", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "รถตู้",
       "position" : 0,
-      "word" : " "
+      "word" : "van"
     },
     "-L_fvyxCVJr0cQSpMY_Q" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "yacht", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เรือยนต์ที่ใช้ในการท่องเที่ยว, เรือยอชท์",
       "position" : 0,
-      "word" : " "
+      "word" : "yacht"
     },
     "-L_fvyxFS1yn5xNiBuQj" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "motorcycle", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "รถจักรยานยนต์",
       "position" : 0,
-      "word" : " "
+      "word" : "motorcycle"
     },
     "-L_fvyxHbjSgRCtzOiJN" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "bicycle", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "จักรยาน",
       "position" : 0,
-      "word" : " "
+      "word" : "bicycle"
     },
     "-L_fvyxJXjnRj38y5IfT" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "helicopter", "B", "C", "D" ],
       "day" : 12,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เฮลิคอปเตอร์",
       "position" : 0,
-      "word" : " "
+      "word" : "helicopter"
     },
     "-L_fvyxLapboCWvstDZ6" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "daughter", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ลูกสาว",
       "position" : 0,
-      "word" : " "
+      "word" : "daughter"
     },
     "-L_fvyxNMwWio719e-Gn" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "grandma", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ย่า / ยาย",
       "position" : 0,
-      "word" : " "
+      "word" : "grandma"
     },
     "-L_fvyxP63BSiaD52fBW" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "mother", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แม่",
       "position" : 0,
-      "word" : " "
+      "word" : "mother"
     },
     "-L_fvyxRlx3Rui7NSchh" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "parents", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "พ่อแม่",
       "position" : 0,
-      "word" : " "
+      "word" : "parents"
     },
     "-L_fvyxTZLfwxGd-QyZD" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "uncle", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ลุง / อาชาย / น้าชาย",
       "position" : 0,
-      "word" : " "
+      "word" : "uncle"
     },
     "-L_fvyxV-gCSl2VdJK0Z" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "grandchild", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หลาน",
       "position" : 0,
-      "word" : " "
+      "word" : "grandchild"
     },
     "-L_fvyxXoWkcDn6qmpDF" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "sister", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "พี่สาว / น้องสาว",
       "position" : 0,
-      "word" : " "
+      "word" : "sister"
     },
     "-L_fvyxYnU_SlHAyCe-t" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "husband", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "สามี",
       "position" : 0,
-      "word" : " "
+      "word" : "husband"
     },
     "-L_fvyx_bpKCu9aFkIZp" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "wife", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ภรรยา",
       "position" : 0,
-      "word" : " "
+      "word" : "wife"
     },
     "-L_fvyxbvJ9Rgq7pc26x" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "cousin", "B", "C", "D" ],
       "day" : 13,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ลูกพี่ลูกน้อง",
       "position" : 0,
-      "word" : " "
+      "word" : "cousin"
     },
     "-L_fvyxe4_0AmM1Er7yd" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "drum", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กลอง",
       "position" : 0,
-      "word" : " "
+      "word" : "drum"
     },
     "-L_fvyxgZ9Qv04Cp2vt3" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "cymbals", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ฉาบ",
       "position" : 0,
-      "word" : " "
+      "word" : "cymbals"
     },
     "-L_fvyxiMNMnPtAhXZei" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "flute", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ฟลูต",
       "position" : 0,
-      "word" : " "
+      "word" : "flute"
     },
     "-L_fvyxkQN-bLIh0RUay" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "piano", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เปียโน",
       "position" : 0,
-      "word" : " "
+      "word" : "piano"
     },
     "-L_fvyxmEEMWYXzfqCX5" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "saxophone", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แซกโซโฟน",
       "position" : 0,
-      "word" : " "
+      "word" : "saxophone"
     },
     "-L_fvyxnL8pjxBSw0g85" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "guitar", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
       "meaning" : " ",
       "position" : 0,
-      "word" : " "
+      "word" : "guitar"
     },
     "-L_fvyxpMJQxm5y9h5Qq" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "violin", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ไวโอลิน",
       "position" : 0,
-      "word" : " "
+      "word" : "violin"
     },
     "-L_fvyxrAd0aOqzuUBSF" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "accordion", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หีบเพลง",
       "position" : 0,
-      "word" : " "
+      "word" : "accordion"
     },
     "-L_fvyxtxqKeztF9jCaZ" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "ylophone", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ระนาดฝรั่ง",
       "position" : 0,
-      "word" : " "
+      "word" : "ylophone"
     },
     "-L_fvyxviewBnis3VMpm" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "bass", "B", "C", "D" ],
       "day" : 14,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "กีตาร์เบส",
       "position" : 0,
-      "word" : " "
+      "word" : "bass"
     },
     "-L_fvyxx9YyRUWaU4mLl" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "coral", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "หินปะการัง",
       "position" : 0,
-      "word" : " "
+      "word" : "coral"
     },
     "-L_fvyxzkLxpnsUDjNuo" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "jellyfish", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "แมงกะพรุน",
       "position" : 0,
-      "word" : " "
+      "word" : "jellyfish"
     },
     "-L_fvyy0e8knEkJzn7nW" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "octopus", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาหมึกสาย หรือปลาหมึกยักษ์",
       "position" : 0,
-      "word" : " "
+      "word" : "octopus"
     },
     "-L_fvyy2PnpRbRgnJbav" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "ray", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลากระเบน",
       "position" : 0,
-      "word" : " "
+      "word" : "ray"
     },
     "-L_fvyy4M0aCCTHNgolA" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "shark", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ฉลาม",
       "position" : 0,
-      "word" : " "
+      "word" : "shark"
     },
     "-L_fvyy6yb72gv1hUnI4" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "wreckage", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ซากปรักหักพัง",
       "position" : 0,
-      "word" : " "
+      "word" : "wreckage"
     },
     "-L_fvyy8W1_y-uPlZNUA" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "stone", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ก้อนหิน",
       "position" : 0,
-      "word" : " "
+      "word" : "stone"
     },
     "-L_fvyy9Me5qTcbxOcoH" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "starfish", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ปลาดาว",
       "position" : 0,
-      "word" : " "
+      "word" : "starfish"
     },
     "-L_fvyyB3cc33XDWx8YI" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "shell", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "เปลือกหอย",
       "position" : 0,
-      "word" : " "
+      "word" : "shell"
     },
     "-L_fvyyD_tO132keP767" : {
-      "choice" : [ "A", "B", "C", "D" ],
+      "choice" : [ "anemone", "B", "C", "D" ],
       "day" : 15,
       "desc_eng" : " ",
       "desc_th" : " ",
-      "meaning" : " ",
+      "meaning" : "ดอกไม้ทะเล",
       "position" : 0,
-      "word" : " "
+      "word" : "anemone"
     },
     "-L_fvyyFc-riv13u_BGZ" : {
       "choice" : [ "A", "B", "C", "D" ],

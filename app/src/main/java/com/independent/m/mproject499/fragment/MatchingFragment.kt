@@ -68,6 +68,9 @@ class MatchingFragment : Fragment() {
             NUMBER += 1
 
             if (NUMBER == 9) {
+                if (MainApp.Result.size == 9){
+                    MainApp.Result.add(false)
+                }
                 match_next.text = "EXIT"
                 match_next.setOnClickListener {
                     startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext,1))

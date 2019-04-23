@@ -203,10 +203,10 @@ class SpeakingFragment : Fragment() {
     private fun question(): String {
         var question = ""
         when (mode) {
-            4 -> {
+            3 -> {
                 question = History[NUMBER].word.capitalize()
             }
-            5 -> {
+            4 -> {
                 question = History[NUMBER].desc_eng
                 test_word.textSize = 18F
                 test_word.gravity = Gravity.CENTER

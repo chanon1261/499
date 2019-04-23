@@ -29,7 +29,7 @@ class MatchingAdapter(context: Context, var choice: List<String>, var ans: Strin
 
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val data = this.choice[position]
+        val data = this.choice[position].toLowerCase()
 
         val inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val grid = inflator.inflate(R.layout.item_matching, null)

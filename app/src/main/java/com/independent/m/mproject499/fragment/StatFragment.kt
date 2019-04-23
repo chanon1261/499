@@ -3,11 +3,14 @@ package com.independent.m.mproject499
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.independent.m.mproject499.model.Score
+import com.independent.m.mproject499.model.User
 import kotlinx.android.synthetic.main.fragment_stat.*
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -35,6 +38,7 @@ class StatFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_stat, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
@@ -43,6 +47,12 @@ class StatFragment : Fragment() {
         database = FirebaseDatabase.getInstance().reference
 
         stat_page.text = "STAT FRAGMENT NO SCORE"
+
+
+        stat_listening.text = "LISTENING SCORE : 0 POINT"
+        stat_matching.text = "MATCHING SCORE : 0 POINT"
+        stat_speaking.text = "SPEAKING SCORE : 0 POINT"
+
         val email = auth.currentUser!!.uid
         MainApp.database.child("users-score").orderByChild("uid")
             .equalTo(email)
@@ -55,19 +65,42 @@ class StatFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
 
                     for (postSnapshot in p0.children) {
-//                        Log.d("fxfx", "=======" + postSnapshot.child("listening").value!!)
 //                        stat_page.text = "STAT FRAGMENT " + postSnapshot.child("listening").value!!
                         postSnapshot.child("listening").value?.let {
-                            stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
+                            it.toString().toDouble().let{ x->
+                                stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(x)} POINT"
+                            }
                         }
                         postSnapshot.child("matching").value?.let {
-                            stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
+                            it.toString().toDouble().let{ x->
+                                stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(x)} POINT"
+                            }
+
                         }
                         postSnapshot.child("speaking").value?.let {
-                            stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
-                        }
-                    }
+                            it.toString().toDouble().let{ x->
+                                stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(x)} POINT"
+                            }
 
+                        }
+
+                    }
+                    // dataSnapshot.children.mapNotNullTo(wordList) { it.getValue<WordFireBase>(WordFireBase::class.java) }
+//                    val user: MutableList<Score> = mutableListOf()
+//                    p0.children.mapNotNullTo(user) {
+//                        it?.getValue<Score>(Score::class.java)
+//                    }
+//                    user?.first().let {
+//                        it.listening.let { x ->
+//                            stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(x)} POINT"
+//                        }
+//                        it.matching.let { x ->
+//                            stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(x)} POINT"
+//                        }
+//                        it.matching.let { x ->
+//                            stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(x)} POINT"
+//                        }
+//                    }
                 }
 
             })

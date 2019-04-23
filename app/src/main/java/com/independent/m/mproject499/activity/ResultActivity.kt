@@ -72,13 +72,6 @@ class ResultActivity : AppCompatActivity() {
                 override fun onDataChange(p0: DataSnapshot) {
                     for (postSnapshot in p0.children) {
                         Log.d("fxfx", "=======" + postSnapshot.child("uid").value!!)
-//                        Log.d("fxfx", "=======" + postSnapshot.child("username").value!!)
-//                        if ((postSnapshot.child("status").value!! as Boolean)) {
-//                            val score1: Int = postSnapshot.child("listening").value!! as Int
-//                            writeNewScore(uid, (score + score1) / 2.0, 0.0, 0.0, true)
-//                        } else {
-//                            writeNewScore(uid, score.toDouble(), 0.0, 0.0, true)
-//                        }
 
                         postSnapshot.child("flag_l").value?.let {
                             flag_l = it as Boolean
@@ -122,7 +115,7 @@ class ResultActivity : AppCompatActivity() {
                                 flag_m = true
                                 writeNewScore(uid, score1, score2, score.toDouble())
                             } else {
-                                postSnapshot.child("listening").value?.let {
+                                postSnapshot.child("matching").value?.let {
                                     val s = it.toString()
                                     Log.d("fxfx", "=======  $it")
                                     writeNewScore(uid, score1, score2, (score.toDouble() + s.toDouble()) / 2)
@@ -135,7 +128,7 @@ class ResultActivity : AppCompatActivity() {
                                 flag_s = true
                                 writeNewScore(uid, score1, score.toDouble(), score3)
                             } else {
-                                postSnapshot.child("listening").value?.let {
+                                postSnapshot.child("speaking").value?.let {
                                     val s = it.toString()
                                     Log.d("fxfx", "=======  $it")
                                     writeNewScore(uid, score1, (score.toDouble() + s.toDouble()) / 2, score3)
