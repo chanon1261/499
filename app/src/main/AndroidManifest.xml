@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
-            android:name="com.independent.m.mproject499.MainApp"
+            android:name=".MainApp"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -14,26 +14,27 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.independent.m.mproject499.activity.ResultActivity">
+        <activity android:name=".activity.TestActivity">
+        </activity>
+        <activity android:name=".activity.ResultActivity">
         </activity>
         <activity
-                android:name="com.independent.m.mproject499.MainActivity"
+                android:name=".MainActivity"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name="com.independent.m.mproject499.activity.BaseActivity">
+        <activity android:name=".activity.BaseActivity">
         </activity>
-        <activity android:name="com.independent.m.mproject499.activity.ListeningActivity">
+        <activity android:name=".activity.ListeningActivity">
         </activity>
-        <activity android:name="com.independent.m.mproject499.activity.MatchingActivity">
+        <activity android:name=".activity.MatchingActivity">
         </activity>
-        <activity android:name="com.independent.m.mproject499.activity.SpeakingActivity">
+        <activity android:name=".activity.SpeakingActivity">
         </activity>
-        <activity android:name="com.independent.m.mproject499.activity.WordsActivity">
+        <activity android:name=".activity.WordsActivity">
         </activity>
         <activity
-                android:name="com.independent.m.mproject499.activity.GoogleLoginActivity"
-                android:label="@string/app_name"
-        >
+                android:name=".activity.GoogleLoginActivity"
+                android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
