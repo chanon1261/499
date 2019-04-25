@@ -5,13 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.util.Log
+import android.view.View
 import com.independent.m.mproject499.MainApp
 import com.independent.m.mproject499.R
 import com.independent.m.mproject499.adapter.WordsAdapter
 import com.independent.m.mproject499.model.WordFireBase
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_words.*
+import org.jetbrains.anko.toast
 
 class WordsActivity : AppCompatActivity() {
 
@@ -59,6 +62,29 @@ class WordsActivity : AppCompatActivity() {
             }
         }
         database.child("words").addValueEventListener(userListener)
+
+        fabtext.setOnClickListener {
+
+            toast("fab click")
+        }
+
+        word_recycle.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                //dx horizontal distance scrolled in pixels
+                //dy vertical distance scrolled in pixels
+                super.onScrolled(recyclerView, dx, dy)
+
+                //                if (dy > 0 && fab.visibility == View.VISIBLE) {
+//                    fab.visibility = View.GONE
+//                } else if (dy < 0 && fab.visibility != View.VISIBLE) {
+//                    fab.visibility = View.VISIBLE
+//                    fabtext.visibility = View.VISIBLE
+//                }
+                if (dy < 0 && fabtext.visibility != View.VISIBLE) {
+                    fabtext.visibility = View.VISIBLE
+                }
+            }
+        })
 
     }
 
