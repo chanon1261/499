@@ -32,6 +32,7 @@ class TestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         test_page.text = "TEST FRAGMENT"
+        MainApp.chooseChapter = -1
         val adapter = activity?.applicationContext?.let { TestAdapter(it) }
         val layoutManager = LinearLayoutManager(activity?.applicationContext)
         test_recycle?.layoutManager = layoutManager

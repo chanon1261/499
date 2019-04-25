@@ -14,6 +14,7 @@ import com.independent.m.mproject499.activity.ResultActivity
 import com.independent.m.mproject499.adapter.MatchingAdapter
 import com.independent.m.mproject499.data.Constants
 import com.independent.m.mproject499.data.Constants.maxQuestions
+import com.independent.m.mproject499.data.Constants.maxSizeWord
 import kotlinx.android.synthetic.main.fragment_matching.*
 import org.jetbrains.anko.toast
 import java.util.*
@@ -116,7 +117,7 @@ class MatchingFragment : Fragment() {
 
             do {
                 //val next = random.nextInt(wordsList.size)
-                val next = random.nextInt(maxQuestions)
+                val next = random.nextInt(maxSizeWord)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
                     MainApp.History.add(MainApp.wordsList[next])
