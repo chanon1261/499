@@ -13,6 +13,7 @@ import com.independent.m.mproject499.activity.MatchingActivity
 import com.independent.m.mproject499.activity.ResultActivity
 import com.independent.m.mproject499.adapter.MatchingAdapter
 import com.independent.m.mproject499.data.Constants
+import com.independent.m.mproject499.data.Constants.maxQuestions
 import kotlinx.android.synthetic.main.fragment_matching.*
 import org.jetbrains.anko.toast
 import java.util.*
@@ -46,7 +47,7 @@ class MatchingFragment : Fragment() {
         match_quest.text = MainApp.History[NUMBER].let {
             it.desc_eng.replace(it.word.toLowerCase(), "______")
         }
-        match_count.text = "Question " + (NUMBER + 1).toString() + "/" + Constants.maxQuestions.toString()
+        match_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
 
 
 
@@ -78,7 +79,7 @@ class MatchingFragment : Fragment() {
                 }
             }
 
-            match_count.text = "Question " + (NUMBER + 1).toString() + "/" + Constants.maxQuestions.toString()
+            match_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
             MainApp.History[NUMBER].let { q ->
                 match_quest.text = q.desc_eng.replace(q.word.toLowerCase(), "______")
             }
@@ -105,22 +106,22 @@ class MatchingFragment : Fragment() {
             val chapter = MainApp.wordsList.filter { it.day == MainApp.chooseChapter }
             do {
                 //val next = random.nextInt(wordsList.size)
-                val next = random.nextInt(10)
+                val next = random.nextInt(maxQuestions)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
                     MainApp.History.add(chapter[next])
                 }
-            } while (numbers.size < Constants.maxQuestions)
+            } while (numbers.size < maxQuestions)
         } else {
 
             do {
                 //val next = random.nextInt(wordsList.size)
-                val next = random.nextInt(10)
+                val next = random.nextInt(maxQuestions)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
                     MainApp.History.add(MainApp.wordsList[next])
                 }
-            } while (numbers.size < Constants.maxQuestions)
+            } while (numbers.size < maxQuestions)
 
         }
 

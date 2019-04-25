@@ -150,7 +150,7 @@ class ListeningFragment : Fragment() {
             val chapter = wordsList.filter { it.day == chooseChapter }
             do {
                 //val next = random.nextInt(wordsList.size)
-                val next = random.nextInt(10)
+                val next = random.nextInt(maxQuestions)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
                     MainApp.History.add(chapter[next])
@@ -160,7 +160,7 @@ class ListeningFragment : Fragment() {
 
             do {
                 //val next = random.nextInt(wordsList.size)
-                val next = random.nextInt(10)
+                val next = random.nextInt(maxQuestions)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
                     MainApp.History.add(MainApp.wordsList[next])
