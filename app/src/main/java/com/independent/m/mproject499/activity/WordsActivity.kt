@@ -18,7 +18,7 @@ import org.jetbrains.anko.toast
 
 class WordsActivity : AppCompatActivity() {
 
-    var number: Int? = null
+    var number = 0
     var name = ""
     private lateinit var database: DatabaseReference
 
@@ -44,6 +44,8 @@ class WordsActivity : AppCompatActivity() {
                 supportActionBar?.title = "Day $number : $it"
             }
         }
+
+        MainApp.chooseChapter = number
 
         val adapter = WordsAdapter(this)
         val layoutManager = LinearLayoutManager(this)
@@ -95,12 +97,14 @@ class WordsActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        MainApp.chooseChapter = -1
         onBackPressed()
         return true
     }
 
     override fun onDestroy() {
         MainApp.instance.stopTTS()
+        MainApp.chooseChapter = -1
         super.onDestroy()
     }
 

@@ -14,6 +14,7 @@ import android.widget.EditText
 import com.independent.m.mproject499.MainApp
 import com.independent.m.mproject499.MainApp.Companion.History
 import com.independent.m.mproject499.MainApp.Companion.NUMBER
+import com.independent.m.mproject499.MainApp.Companion.chooseChapter
 import com.independent.m.mproject499.MainApp.Companion.wordsList
 import com.independent.m.mproject499.R
 import com.independent.m.mproject499.activity.ResultActivity
@@ -168,18 +169,34 @@ class SpeakingFragment : Fragment() {
         }
     }
 
-    private fun randomQuiz() {
-        History.clear()
+       private fun randomQuiz() {
+        MainApp.History.clear()
         val numbers: MutableList<Int> = mutableListOf()
         val random = Random()
-        do {
-            //val next = random.nextInt(wordsList.size)
-            val next = random.nextInt(10)
-            if (!numbers.contains(next)) {
-                numbers.add(next)
-                History.add(wordsList[next])
-            }
-        } while (numbers.size < maxQuestions)
+
+        if (chooseChapter > -1) {
+            val chapter = wordsList.filter { it.day == chooseChapter }
+            do {
+                //val next = random.nextInt(wordsList.size)
+                val next = random.nextInt(10)
+                if (!numbers.contains(next)) {
+                    numbers.add(next)
+                    MainApp.History.add(chapter[next])
+                }
+            } while (numbers.size < maxQuestions)
+        } else {
+
+            do {
+                //val next = random.nextInt(wordsList.size)
+                val next = random.nextInt(10)
+                if (!numbers.contains(next)) {
+                    numbers.add(next)
+                    MainApp.History.add(MainApp.wordsList[next])
+                }
+            } while (numbers.size < maxQuestions)
+
+        }
+
     }
 
     private fun checkAnswer() {

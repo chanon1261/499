@@ -95,18 +95,35 @@ class MatchingFragment : Fragment() {
         super.onDestroyView()
     }
 
+
     private fun randomQuiz() {
         MainApp.History.clear()
         val numbers: MutableList<Int> = mutableListOf()
         val random = Random()
-        do {
-            //val next = random.nextInt(wordsList.size)
-            val next = random.nextInt(10)
-            if (!numbers.contains(next)) {
-                numbers.add(next)
-                MainApp.History.add(MainApp.wordsList[next])
-            }
-        } while (numbers.size < Constants.maxQuestions)
+
+        if (MainApp.chooseChapter > -1) {
+            val chapter = MainApp.wordsList.filter { it.day == MainApp.chooseChapter }
+            do {
+                //val next = random.nextInt(wordsList.size)
+                val next = random.nextInt(10)
+                if (!numbers.contains(next)) {
+                    numbers.add(next)
+                    MainApp.History.add(chapter[next])
+                }
+            } while (numbers.size < Constants.maxQuestions)
+        } else {
+
+            do {
+                //val next = random.nextInt(wordsList.size)
+                val next = random.nextInt(10)
+                if (!numbers.contains(next)) {
+                    numbers.add(next)
+                    MainApp.History.add(MainApp.wordsList[next])
+                }
+            } while (numbers.size < Constants.maxQuestions)
+
+        }
+
     }
 
     private fun randomChoice(): MutableList<String> {

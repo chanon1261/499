@@ -148,6 +148,7 @@ class ResultActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         MainApp.Result.clear()
         Result.clear()
+        MainApp.chooseChapter = -1
         onBackPressed()
         return true
     }
@@ -155,6 +156,7 @@ class ResultActivity : AppCompatActivity() {
     override fun onDestroy() {
         MainApp.Result.clear()
         Result.clear()
+        MainApp.chooseChapter = -1
         super.onDestroy()
     }
 

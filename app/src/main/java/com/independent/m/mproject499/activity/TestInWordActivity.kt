@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
+import com.independent.m.mproject499.MainApp.Companion.chooseChapter
 import com.independent.m.mproject499.R
 import com.independent.m.mproject499.adapter.TestAdapter
 import com.independent.m.mproject499.data.Constants
@@ -47,7 +48,13 @@ class TestInWordActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        chooseChapter = -1
         onBackPressed()
         return true
+    }
+
+    override fun onDestroy() {
+        chooseChapter = -1
+        super.onDestroy()
     }
 }

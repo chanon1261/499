@@ -17,6 +17,8 @@ import android.view.inputmethod.InputMethodManager
 import com.independent.m.mproject499.MainApp.Companion.History
 import com.independent.m.mproject499.MainApp.Companion.NUMBER
 import com.independent.m.mproject499.MainApp.Companion.Result
+import com.independent.m.mproject499.MainApp.Companion.chooseChapter
+import com.independent.m.mproject499.MainApp.Companion.wordsList
 import com.independent.m.mproject499.activity.ListeningActivity
 import com.independent.m.mproject499.activity.ResultActivity
 import com.independent.m.mproject499.data.Constants.maxQuestions
@@ -143,14 +145,30 @@ class ListeningFragment : Fragment() {
         MainApp.History.clear()
         val numbers: MutableList<Int> = mutableListOf()
         val random = Random()
-        do {
-            //val next = random.nextInt(wordsList.size)
-            val next = random.nextInt(10)
-            if (!numbers.contains(next)) {
-                numbers.add(next)
-                MainApp.History.add(MainApp.wordsList[next])
-            }
-        } while (numbers.size < maxQuestions)
+
+        if (chooseChapter > -1) {
+            val chapter = wordsList.filter { it.day == chooseChapter }
+            do {
+                //val next = random.nextInt(wordsList.size)
+                val next = random.nextInt(10)
+                if (!numbers.contains(next)) {
+                    numbers.add(next)
+                    MainApp.History.add(chapter[next])
+                }
+            } while (numbers.size < maxQuestions)
+        } else {
+
+            do {
+                //val next = random.nextInt(wordsList.size)
+                val next = random.nextInt(10)
+                if (!numbers.contains(next)) {
+                    numbers.add(next)
+                    MainApp.History.add(MainApp.wordsList[next])
+                }
+            } while (numbers.size < maxQuestions)
+
+        }
+
     }
 
     private fun speakOut(text: String) {

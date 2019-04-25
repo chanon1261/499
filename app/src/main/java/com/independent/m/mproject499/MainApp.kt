@@ -30,6 +30,7 @@ open class MainApp : Application(), TextToSpeech.OnInitListener {
         var Result:ArrayList<Boolean> = ArrayList()
         var tts: TextToSpeech? = null
 
+        var chooseChapter = -1
     }
 
     override fun onCreate() {
