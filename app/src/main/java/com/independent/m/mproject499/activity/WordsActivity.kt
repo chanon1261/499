@@ -19,6 +19,7 @@ import org.jetbrains.anko.toast
 class WordsActivity : AppCompatActivity() {
 
     var number: Int? = null
+    var name = ""
     private lateinit var database: DatabaseReference
 
     companion object {
@@ -39,6 +40,7 @@ class WordsActivity : AppCompatActivity() {
                 number = it.toInt()
             }
             extras.getString("name")?.let {
+                name = it
                 supportActionBar?.title = "Day $number : $it"
             }
         }
@@ -65,7 +67,11 @@ class WordsActivity : AppCompatActivity() {
 
         fabtext.setOnClickListener {
 
-            toast("fab click")
+            val intent = TestInWordActivity.getStartIntent(this)
+            intent.putExtra("key", "$number")
+            intent.putExtra("name", name)
+            startActivity(intent)
+
         }
 
         word_recycle.addOnScrollListener(object : RecyclerView.OnScrollListener() {

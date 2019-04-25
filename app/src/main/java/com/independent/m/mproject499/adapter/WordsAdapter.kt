@@ -28,7 +28,7 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordsAdapterViewHolder {
         val layoutInflator: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         return WordsAdapterViewHolder(
-            com.independent.m.mproject499.databinding.ItemWordBinding.inflate(
+            ItemWordBinding.inflate(
                 layoutInflator,
                 parent,
                 false
