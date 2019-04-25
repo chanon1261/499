@@ -89,6 +89,9 @@ class SpeakingFragment : Fragment() {
             test_word.text = question
 
             if (NUMBER == 9) {
+                if (MainApp.Result.size == 9) {
+                    MainApp.Result.add(false)
+                }
                 nextFrag.text = "EXIT"
                 nextFrag.setOnClickListener {
                     checkAnswer()
@@ -203,10 +206,10 @@ class SpeakingFragment : Fragment() {
     private fun question(): String {
         var question = ""
         when (mode) {
-            4 -> {
+            3 -> {
                 question = History[NUMBER].word.capitalize()
             }
-            5 -> {
+            4 -> {
                 question = History[NUMBER].desc_eng
                 test_word.textSize = 18F
                 test_word.gravity = Gravity.CENTER

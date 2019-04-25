@@ -50,7 +50,7 @@ class MatchingFragment : Fragment() {
 
 
 
-        adapter = MatchingAdapter(MainApp.instance.applicationContext,randomChoice(), History[NUMBER].word)
+        adapter = MatchingAdapter(MainApp.instance.applicationContext, randomChoice(), History[NUMBER].word)
         gridView.adapter = adapter
 
 
@@ -68,9 +68,12 @@ class MatchingFragment : Fragment() {
             NUMBER += 1
 
             if (NUMBER == 9) {
+                if (MainApp.Result.size == 9) {
+                    MainApp.Result.add(false)
+                }
                 match_next.text = "EXIT"
                 match_next.setOnClickListener {
-                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext,1))
+                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext, 1))
                     activity?.finish()
                 }
             }
@@ -80,7 +83,7 @@ class MatchingFragment : Fragment() {
                 match_quest.text = q.desc_eng.replace(q.word.toLowerCase(), "______")
             }
 
-            adapter = MatchingAdapter(MainApp.instance.applicationContext,randomChoice(), History[NUMBER].word)
+            adapter = MatchingAdapter(MainApp.instance.applicationContext, randomChoice(), History[NUMBER].word)
             gridView.adapter = adapter
         }
 

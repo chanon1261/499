@@ -48,7 +48,7 @@ class TestAdapter(val context: Context) : RecyclerView.Adapter<TestAdapter.TestA
                     Log.d("modex position","$adapterPosition")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     context.startActivity(intent)
-                } else if (adapterPosition == 2 || adapterPosition == 3) {
+                } else if (adapterPosition == 2) {
                     val intent = MatchingActivity.getStartIntent(context)
                     intent.putExtra("key", "$adapterPosition")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

@@ -55,8 +55,6 @@ class StatFragment : Fragment() {
                 override fun onDataChange(p0: DataSnapshot) {
 
                     for (postSnapshot in p0.children) {
-//                        Log.d("fxfx", "=======" + postSnapshot.child("listening").value!!)
-//                        stat_page.text = "STAT FRAGMENT " + postSnapshot.child("listening").value!!
                         postSnapshot.child("listening").value?.let {
                             stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
                         }

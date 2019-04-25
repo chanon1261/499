@@ -50,15 +50,18 @@ class DaysAdapter(val context: Context) : RecyclerView.Adapter<DaysAdapter.DaysA
             binding.setVariable(BR.th, item.th)
 
             itemView.setOnClickListener {
-                Log.d("", "test $itemId")
-                MainApp.instance.applicationContext?.let { context ->
-                    val intent = WordsActivity.getStartIntent(context)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.putExtra("key", "${adapterPosition + 1}")
-                    intent.putExtra("name", item.eng)
-                    context.startActivity(intent)
+                if (adapterPosition > 14) {
+                    context.toast("coming soon....")
+                } else {
+                    MainApp.instance.applicationContext?.let { context ->
+                        val intent = WordsActivity.getStartIntent(context)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        intent.putExtra("key", "${adapterPosition + 1}")
+                        intent.putExtra("name", item.eng)
+                        context.startActivity(intent)
+                    }
+
                 }
-                context.toast("${adapterPosition + 1}")
             }
         }
     }
