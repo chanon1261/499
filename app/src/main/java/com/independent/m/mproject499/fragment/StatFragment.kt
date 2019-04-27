@@ -9,9 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import com.independent.m.mproject499.MainApp.Companion.listScore
-import com.independent.m.mproject499.MainApp.Companion.mathScore
-import com.independent.m.mproject499.MainApp.Companion.speakScore
 import kotlinx.android.synthetic.main.fragment_stat.*
 import java.math.RoundingMode
 import java.text.DecimalFormat
