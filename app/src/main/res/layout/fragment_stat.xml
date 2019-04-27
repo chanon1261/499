@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context=".StatFragment"
+             android:background="@color/colorPrimary"
+              tools:context=".StatFragment">
 
->
     <TextView
             style="@style/stat"
             android:id="@+id/stat_page"
@@ -17,71 +16,79 @@
             android:text="STAT"/>
 
     <LinearLayout
-            android:layout_marginLeft="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-    >
-        <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/sound"
-        />
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center|top"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-        <TextView
-                android:id="@+id/stat_listening"
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/stat"
-                android:text="LISTENING SCORE : 0 POINT"
-        />
+                android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageView
+                    android:gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sound"/>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:orientation="horizontal"
-    >
-        <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/key"
-        />
-        <TextView
-                android:id="@+id/stat_matching"
+            <TextView
+                    android:id="@+id/stat_listening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/white"
+                    style="@style/stat"
+                    android:text="LISTENING SCORE : 0 POINT"/>
+        </LinearLayout>
+
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/stat"
-                android:text="MATCHING SCORE : 0 POINT"
-        />
-    </LinearLayout>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:orientation="horizontal"
-    >
-        <ImageView
-                android:layout_gravity="center"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/micro"
-        />
-        <TextView
-                android:id="@+id/stat_speaking"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/key"/>
+            <TextView
+                    android:id="@+id/stat_matching"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    style="@style/stat"
+                    android:text="MATCHING SCORE : 0 POINT"/>
+        </LinearLayout>
+
+
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/stat"
-                android:text="SPEAKING SCORE : 0 POINT"
-        />
+                android:orientation="horizontal">
 
+            <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/micro"/>
+            <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/stat_speaking"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/stat"
+                    android:text="SPEAKING SCORE : 0 POINT"/>
+        </LinearLayout>
     </LinearLayout>
 
 
-
-
-</LinearLayout>
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center|bottom"
+               android:src="@drawable/app"
+    />
+</FrameLayout>

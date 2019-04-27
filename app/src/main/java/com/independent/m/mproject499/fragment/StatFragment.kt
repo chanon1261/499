@@ -73,8 +73,8 @@ class StatFragment : Fragment() {
                     }
 
                     stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(score_1)} POINT"
-                    stat_matching.text = "MATCHING SCORE :  ${roundOffDecimal(score_3)} POINT"
-                    stat_speaking.text = "SPEAKING SCORE :  ${roundOffDecimal(score_2)} POINT"
+                    stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(score_3)} POINT"
+                    stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(score_2)} POINT"
                 }
             })
     }
