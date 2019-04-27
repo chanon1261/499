@@ -29,6 +29,10 @@ open class MainApp : Application(), TextToSpeech.OnInitListener {
         var History: MutableList<WordFireBase> = mutableListOf()
         var Result:ArrayList<Boolean> = ArrayList()
         var tts: TextToSpeech? = null
+        var listScore = 0.0
+        var mathScore = 0.0
+        var speakScore = 0.0
+
 
         var chooseChapter = -1
     }

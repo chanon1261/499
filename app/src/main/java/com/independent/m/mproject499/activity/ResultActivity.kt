@@ -45,7 +45,7 @@ class ResultActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var score = 0
-        for (it in MainApp.Result.filter { it }) {
+        for (it in Result.filter { it }) {
             score += 1
         }
         title = "SCORE $score/10"

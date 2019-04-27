@@ -3,11 +3,15 @@ package com.independent.m.mproject499
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.independent.m.mproject499.MainApp.Companion.listScore
+import com.independent.m.mproject499.MainApp.Companion.mathScore
+import com.independent.m.mproject499.MainApp.Companion.speakScore
 import kotlinx.android.synthetic.main.fragment_stat.*
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -18,6 +22,10 @@ class StatFragment : Fragment() {
     private lateinit var mainActivity: MainActivity
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
+
+    var score_1: Double = 0.0
+    var score_2: Double = 0.0
+    var score_3: Double = 0.0
 
     companion object {
         fun fragment(mainActivity: MainActivity): StatFragment {
@@ -35,39 +43,42 @@ class StatFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_stat, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
+        val uid = auth.currentUser!!.uid
 
         stat_page.text = "STAT FRAGMENT NO SCORE"
-        val email = auth.currentUser!!.uid
-        MainApp.database.child("users-score").orderByChild("uid")
-            .equalTo(email)
-            .addValueEventListener(object : ValueEventListener {
+        database.child("users-score").orderByChild("uid")
+            .equalTo(uid)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
-
+                    Log.d("fxfx", "======= ERROR")
                 }
 
-                @SuppressLint("SetTextI18n")
                 override fun onDataChange(p0: DataSnapshot) {
-
                     for (postSnapshot in p0.children) {
+                        Log.d("fxfx", "======= " + postSnapshot.child("uid").value!!)
+
                         postSnapshot.child("listening").value?.let {
-                            stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
-                        }
-                        postSnapshot.child("matching").value?.let {
-                            stat_matching.text = "MATCHING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
+                            score_1 = it.toString().toDouble()
                         }
                         postSnapshot.child("speaking").value?.let {
-                            stat_speaking.text = "SPEAKING SCORE : ${roundOffDecimal(it.toString().toDouble())} POINT"
+                            score_2 = it.toString().toDouble()
+                        }
+                        postSnapshot.child("matching").value?.let {
+                            score_3 = it.toString().toDouble()
                         }
                     }
 
+                    stat_listening.text = "LISTENING SCORE : ${roundOffDecimal(score_1)} POINT"
+                    stat_matching.text = "MATCHING SCORE :  ${roundOffDecimal(score_3)} POINT"
+                    stat_speaking.text = "SPEAKING SCORE :  ${roundOffDecimal(score_2)} POINT"
                 }
-
             })
     }
 
