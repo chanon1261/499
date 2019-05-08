@@ -87,17 +87,19 @@
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:visibility="visible"
                 android:focusable="true"/>
         <TextView
                 android:layout_marginRight="20dp"
                 android:id="@+id/listenNextFrag"
-                android:text="next"
+                android:text="NEXT"
                 android:textSize="20dp"
                 android:layout_gravity="right"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:focusable="true"/>
     </FrameLayout>
 

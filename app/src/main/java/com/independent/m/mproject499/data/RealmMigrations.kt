@@ -1,8 +1,8 @@
 package com.independent.m.mproject499.data
 
 import io.realm.DynamicRealm
-import io.realm.RealmMigration
 import io.realm.FieldAttribute
+import io.realm.RealmMigration
 
 
 class RealmMigrations : RealmMigration {
@@ -32,6 +32,5 @@ class RealmMigrations : RealmMigration {
             }
 
         }
-
     }
 }

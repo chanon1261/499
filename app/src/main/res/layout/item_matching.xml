@@ -17,6 +17,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
                 android:maxLines="2"
+                android:padding="15dp"
                 style="@style/fontApp"
                 android:id="@+id/item_choice"
                 tools:text="TEST NAME"/>
