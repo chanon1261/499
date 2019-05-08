@@ -45,8 +45,8 @@ class MatchingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         randomQuiz()
-        match_quest.text = MainApp.History[NUMBER].let {
-            it.desc_eng.replace(it.word.toLowerCase(), "______")
+        match_quest.text = History[NUMBER].let {
+            it.desc_eng.toLowerCase().replace(it.word.toLowerCase(), "______")
         }
         match_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
 
@@ -81,8 +81,8 @@ class MatchingFragment : Fragment() {
             }
 
             match_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
-            MainApp.History[NUMBER].let { q ->
-                match_quest.text = q.desc_eng.replace(q.word.toLowerCase(), "______")
+            History[NUMBER].let { q ->
+                match_quest.text = q.desc_eng.toLowerCase().replace(q.word.toLowerCase(), "______")
             }
 
             adapter = MatchingAdapter(MainApp.instance.applicationContext, randomChoice(), History[NUMBER].word)
@@ -99,7 +99,7 @@ class MatchingFragment : Fragment() {
 
 
     private fun randomQuiz() {
-        MainApp.History.clear()
+        History.clear()
         val numbers: MutableList<Int> = mutableListOf()
         val random = Random()
 
@@ -110,7 +110,7 @@ class MatchingFragment : Fragment() {
                 val next = random.nextInt(maxQuestions)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
-                    MainApp.History.add(chapter[next])
+                    History.add(chapter[next])
                 }
             } while (numbers.size < maxQuestions)
         } else {
@@ -120,7 +120,7 @@ class MatchingFragment : Fragment() {
                 val next = random.nextInt(maxSizeWord)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
-                    MainApp.History.add(MainApp.wordsList[next])
+                    History.add(MainApp.wordsList[next])
                 }
             } while (numbers.size < maxQuestions)
 

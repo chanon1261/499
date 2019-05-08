@@ -6,15 +6,17 @@
     </data>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
                  xmlns:tools="http://schemas.android.com/tools"
+                 android:layout_margin="5dp"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content">
 
         <TextView
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                android:layout_margin="10dp"
+                android:maxLines="2"
                 style="@style/fontApp"
                 android:id="@+id/item_choice"
                 tools:text="TEST NAME"/>
