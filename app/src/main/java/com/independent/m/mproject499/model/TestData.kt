@@ -27,3 +27,12 @@ open class TestWord : RealmObject() {
     var desc_th: String? = null
     var desc_eng: String? = null
 }
+
+@RealmClass
+@PaperParcel
+open class WordHistory : RealmObject() {
+    @PrimaryKey
+    var id: String? = null
+    var correct: Int = 0
+    var fail: Int = 0
+}

@@ -12,7 +12,8 @@ import com.independent.m.mproject499.model.Chapter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_main.*
 import android.support.v7.widget.DividerItemDecoration
-
+import com.independent.m.mproject499.model.WordHistory
+import com.vicpin.krealmextensions.queryAll
 
 
 class MainFragment : Fragment() {
@@ -52,6 +53,10 @@ class MainFragment : Fragment() {
         initChapter(adapter)
         adapter.loadData(dayList as java.util.ArrayList<Chapter>)
         adapter.notifyDataSetChanged()
+
+        val count = WordHistory().queryAll().count()
+        Log.d("WordHistory","$count")
+
         super.onViewCreated(view, savedInstanceState)
 
     }

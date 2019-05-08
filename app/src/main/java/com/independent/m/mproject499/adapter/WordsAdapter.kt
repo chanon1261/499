@@ -12,6 +12,8 @@ import com.independent.m.mproject499.MainApp
 import com.independent.m.mproject499.MainApp.Companion.History
 import com.independent.m.mproject499.databinding.ItemWordBinding
 import com.independent.m.mproject499.model.WordFireBase
+import com.independent.m.mproject499.model.WordHistory
+import com.vicpin.krealmextensions.save
 import kotlinx.android.synthetic.main.item_word.view.*
 import java.util.*
 
@@ -50,6 +52,10 @@ class WordsAdapter(val context: Context) : RecyclerView.Adapter<WordsAdapter.Wor
             binding.setVariable(BR.descTH, "?")
 
             itemView.txtName.setOnClickListener {
+                WordHistory().let {
+                    it.id = item.word
+                    it.save()
+                }
                 speakOut(item.word)
             }
             itemView.txtEng.setOnClickListener {

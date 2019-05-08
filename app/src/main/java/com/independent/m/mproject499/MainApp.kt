@@ -38,7 +38,7 @@ open class MainApp : Application(), TextToSpeech.OnInitListener {
         instance = this
 
         Realm.init(this)
-        val realmConfig = RealmConfiguration.Builder().schemaVersion(9).migration(RealmMigrations()).build()
+        val realmConfig = RealmConfiguration.Builder().schemaVersion(2).migration(RealmMigrations()).build()
         Realm.setDefaultConfiguration(realmConfig)
 
         initializeGraph()

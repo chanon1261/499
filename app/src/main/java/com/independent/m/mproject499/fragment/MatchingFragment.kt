@@ -15,6 +15,9 @@ import com.independent.m.mproject499.adapter.MatchingAdapter
 import com.independent.m.mproject499.data.Constants
 import com.independent.m.mproject499.data.Constants.maxQuestions
 import com.independent.m.mproject499.data.Constants.maxSizeWord
+import com.independent.m.mproject499.model.WordHistory
+import com.vicpin.krealmextensions.count
+import com.vicpin.krealmextensions.queryAll
 import kotlinx.android.synthetic.main.fragment_matching.*
 import org.jetbrains.anko.toast
 import java.util.*
@@ -59,7 +62,6 @@ class MatchingFragment : Fragment() {
 
         match_next.setOnClickListener {
 
-            val count = gridView.count
             Log.d("count", NUMBER.toString())
             if (gridView.getChildAt(0).isClickable) {
                 context!!.toast("pls select choice")
@@ -93,7 +95,7 @@ class MatchingFragment : Fragment() {
     }
 
     override fun onDestroyView() {
-        MainApp.NUMBER = 0
+        NUMBER = 0
         super.onDestroyView()
     }
 
@@ -115,15 +117,38 @@ class MatchingFragment : Fragment() {
             } while (numbers.size < maxQuestions)
         } else {
 
-            do {
-                //val next = random.nextInt(wordsList.size)
-                val next = random.nextInt(maxSizeWord)
-                if (!numbers.contains(next)) {
-                    numbers.add(next)
-                    History.add(MainApp.wordsList[next])
-                }
-            } while (numbers.size < maxQuestions)
+            val hisCount = WordHistory().count()
+            if (hisCount >= 10) {
+                val hisWord = WordHistory().queryAll()
+                do {
+                    //val next = random.nextInt(wordsList.size)
+                    val next = random.nextInt(maxSizeWord)
+                    if (!numbers.contains(next)) {
+                        numbers.add(next)
+                        History.add(MainApp.wordsList.filter { it.word == hisWord[next].id }.first())
+                    }
+                } while (numbers.size < maxQuestions)
+            } else {
 
+                val hisWord = WordHistory().queryAll()
+                do {
+                    //val next = random.nextInt(wordsList.size)
+                    val next = random.nextInt(hisCount.toInt())
+                    if (!numbers.contains(next)) {
+                        numbers.add(next)
+                        History.add(MainApp.wordsList.filter { it.word == hisWord[next].id }.first())
+                    }
+                } while (numbers.size < hisCount)
+
+                do {
+                    //val next = random.nextInt(wordsList.size)
+                    val next = random.nextInt(maxSizeWord - hisCount.toInt())
+                    if (!numbers.contains(next)) {
+                        numbers.add(next)
+                        MainApp.History.add(MainApp.wordsList[next])
+                    }
+                } while (numbers.size < maxQuestions - hisCount.toInt())
+            }
         }
 
     }
