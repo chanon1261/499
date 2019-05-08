@@ -23,6 +23,9 @@ import com.independent.m.mproject499.activity.ListeningActivity
 import com.independent.m.mproject499.activity.ResultActivity
 import com.independent.m.mproject499.data.Constants.maxQuestions
 import com.independent.m.mproject499.data.Constants.maxSizeWord
+import com.independent.m.mproject499.model.WordHistory
+import com.vicpin.krealmextensions.count
+import com.vicpin.krealmextensions.queryAll
 import kotlinx.android.synthetic.main.fragment_listening.*
 import java.util.*
 
@@ -138,12 +141,12 @@ class ListeningFragment : Fragment() {
     }
 
     override fun onDestroyView() {
-        MainApp.NUMBER = 0
+        NUMBER = 0
         super.onDestroyView()
     }
 
     private fun randomQuiz() {
-        MainApp.History.clear()
+        History.clear()
         val numbers: MutableList<Int> = mutableListOf()
         val random = Random()
 
@@ -154,20 +157,43 @@ class ListeningFragment : Fragment() {
                 val next = random.nextInt(maxQuestions)
                 if (!numbers.contains(next)) {
                     numbers.add(next)
-                    MainApp.History.add(chapter[next])
+                    History.add(chapter[next])
                 }
             } while (numbers.size < maxQuestions)
         } else {
 
-            do {
-                //val next = random.nextInt(wordsList.size)
-                val next = random.nextInt(maxSizeWord)
-                if (!numbers.contains(next)) {
-                    numbers.add(next)
-                    MainApp.History.add(MainApp.wordsList[next])
-                }
-            } while (numbers.size < maxQuestions)
+            val hisCount = WordHistory().count()
+            if (hisCount >= 10) {
+                val hisWord = WordHistory().queryAll()
+                do {
+                    //val next = random.nextInt(wordsList.size)
+                    val next = random.nextInt(maxSizeWord)
+                    if (!numbers.contains(next)) {
+                        numbers.add(next)
+                        History.add(wordsList.filter { it.word == hisWord[next].id }.first())
+                    }
+                } while (numbers.size < maxQuestions)
+            } else {
 
+                val hisWord = WordHistory().queryAll()
+                do {
+                    //val next = random.nextInt(wordsList.size)
+                    val next = random.nextInt(hisCount.toInt())
+                    if (!numbers.contains(next)) {
+                        numbers.add(next)
+                        History.add(wordsList.filter { it.word == hisWord[next].id }.first())
+                    }
+                } while (numbers.size < hisCount)
+
+                do {
+                    //val next = random.nextInt(wordsList.size)
+                    val next = random.nextInt(maxSizeWord - hisCount.toInt())
+                    if (!numbers.contains(next)) {
+                        numbers.add(next)
+                        MainApp.History.add(MainApp.wordsList[next])
+                    }
+                } while (numbers.size < maxQuestions - hisCount.toInt())
+            }
         }
 
     }
