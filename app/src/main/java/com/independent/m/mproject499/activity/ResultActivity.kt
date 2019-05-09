@@ -16,6 +16,9 @@ import kotlinx.android.synthetic.main.activity_result.*
 import com.google.firebase.database.DataSnapshot
 import android.util.Log
 import com.independent.m.mproject499.model.Score
+import com.independent.m.mproject499.model.WordHistory
+import com.vicpin.krealmextensions.query
+import com.vicpin.krealmextensions.queryAll
 import java.util.HashMap
 
 
@@ -141,6 +144,20 @@ class ResultActivity : AppCompatActivity() {
                 }
 
             })
+
+        val index = 0
+
+        WordHistory().queryAll().forEach {
+            History.forEach { h ->
+                if (it.id == h.word) {
+                    if (Result[index]) {
+                        it.correct += 1
+                    } else {
+                        it.fail += 1
+                    }
+                }
+            }
+        }
 
 
     }

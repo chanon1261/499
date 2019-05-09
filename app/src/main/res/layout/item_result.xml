@@ -13,6 +13,7 @@
                   android:layout_height="wrap_content"
                   android:textSize="25dp"
                   android:layout_margin="10dp"
+                  android:textColor="@color/black"
                   style="@style/fontApp"
                   android:id="@+id/result_word"
                   tools:text="TEST NAME"
