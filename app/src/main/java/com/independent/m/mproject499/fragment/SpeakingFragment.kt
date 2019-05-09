@@ -68,7 +68,7 @@ class SpeakingFragment : Fragment() {
         if (History.isNotEmpty()) {
             question = question()
             test_word.text = question
-            nextFrag.text = "Next"
+            nextFrag.text = "NEXT"
         } else {
             activity?.finish()
         }

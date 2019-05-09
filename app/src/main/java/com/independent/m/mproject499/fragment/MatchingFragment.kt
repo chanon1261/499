@@ -49,7 +49,7 @@ class MatchingFragment : Fragment() {
 
         randomQuiz()
         match_quest.text = History[NUMBER].let {
-            it.desc_eng.toLowerCase().replace(it.word.toLowerCase(), "______")
+            it.desc_eng.toLowerCase().replace(it.word.toLowerCase(), "______").capitalize()
         }
         match_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
 
@@ -84,7 +84,7 @@ class MatchingFragment : Fragment() {
 
             match_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
             History[NUMBER].let { q ->
-                match_quest.text = q.desc_eng.toLowerCase().replace(q.word.toLowerCase(), "______")
+                match_quest.text = q.desc_eng.toLowerCase().replace(q.word.toLowerCase(), "______").capitalize()
             }
 
             adapter = MatchingAdapter(MainApp.instance.applicationContext, randomChoice(), History[NUMBER].word)
