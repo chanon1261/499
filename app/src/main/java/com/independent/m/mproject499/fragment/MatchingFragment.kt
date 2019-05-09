@@ -142,12 +142,14 @@ class MatchingFragment : Fragment() {
 
                 do {
                     //val next = random.nextInt(wordsList.size)
-                    val next = random.nextInt(maxSizeWord - hisCount.toInt())
+                    val next = random.nextInt(maxSizeWord)
                     if (!numbers.contains(next)) {
                         numbers.add(next)
                         MainApp.History.add(MainApp.wordsList[next])
                     }
-                } while (numbers.size < maxQuestions - hisCount.toInt())
+                } while (numbers.size < maxQuestions)
+
+                Log.d("hiszie", History.size.toString())
             }
         }
 
