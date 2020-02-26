@@ -46,8 +46,6 @@ open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
 
         // Button listeners
         signInButton.setOnClickListener(this)
-        signOutButton.setOnClickListener(this)
-        disconnectButton.setOnClickListener(this)
 
         // [START config_signin]
         // Configure Google Sign In
@@ -169,22 +167,17 @@ open class GoogleLoginActivity : BaseActivity(), View.OnClickListener {
             detail.text = getString(R.string.firebase_status_fmt, user.uid)
 
             signInButton.visibility = View.GONE
-            signOutAndDisconnect.visibility = View.VISIBLE
         } else {
             status.setText(R.string.signed_out)
             detail.text = null
 
             signInButton.visibility = View.VISIBLE
-            signOutAndDisconnect.visibility = View.GONE
         }
     }
 
     override fun onClick(v: View) {
-        val i = v.id
-        when (i) {
+        when (v.id) {
             R.id.signInButton -> signIn()
-            R.id.signOutButton -> signOut()
-            R.id.disconnectButton -> revokeAccess()
         }
     }
 
