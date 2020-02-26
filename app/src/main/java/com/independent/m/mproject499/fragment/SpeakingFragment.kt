@@ -15,7 +15,6 @@ import com.independent.m.mproject499.MainApp
 import com.independent.m.mproject499.MainApp.Companion.History
 import com.independent.m.mproject499.MainApp.Companion.NUMBER
 import com.independent.m.mproject499.MainApp.Companion.chooseChapter
-import com.independent.m.mproject499.MainApp.Companion.wordsList
 import com.independent.m.mproject499.R
 import com.independent.m.mproject499.activity.ResultActivity
 import com.independent.m.mproject499.activity.SpeakingActivity
@@ -100,7 +99,12 @@ class SpeakingFragment : Fragment() {
                 nextFrag.text = "EXIT"
                 nextFrag.setOnClickListener {
                     checkAnswer()
-                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext, 2))
+                    startActivity(
+                        ResultActivity.getStartIntent(
+                            MainApp.instance.applicationContext,
+                            2
+                        )
+                    )
                     activity?.finish()
                 }
             }
@@ -121,7 +125,8 @@ class SpeakingFragment : Fragment() {
 
     private fun startSpeechToText() {
 
-        val speechRecognizer = SpeechRecognizer.createSpeechRecognizer(MainApp.instance.applicationContext)
+        val speechRecognizer =
+            SpeechRecognizer.createSpeechRecognizer(MainApp.instance.applicationContext)
         val speechRecognizerIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
         speechRecognizerIntent.putExtra(
             RecognizerIntent.EXTRA_LANGUAGE_MODEL,
@@ -143,7 +148,8 @@ class SpeakingFragment : Fragment() {
             override fun onError(i: Int) {}
 
             override fun onResults(bundle: Bundle) {
-                val matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)//getting all the matches
+                val matches =
+                    bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)//getting all the matches
                 //displaying the first match
                 if (matches != null) {
                     editText.setText(matches[0])
@@ -204,14 +210,16 @@ class SpeakingFragment : Fragment() {
             } else {
 
                 val hisWord = WordHistory().queryAll()
-                do {
-                    //val next = random.nextInt(wordsList.size)
-                    val next = random.nextInt(hisCount.toInt())
-                    if (!numbers.contains(next)) {
-                        numbers.add(next)
-                        History.add(MainApp.wordsList.filter { it.word == hisWord[next].id }.first())
-                    }
-                } while (numbers.size < hisCount)
+                if (hisCount.toInt() != 0) {
+                    do {
+                        //val next = random.nextInt(wordsList.size)
+                        val next = random.nextInt(hisCount.toInt())
+                        if (!numbers.contains(next)) {
+                            numbers.add(next)
+                            History.add(MainApp.wordsList.filter { it.word == hisWord[next].id }.first())
+                        }
+                    } while (numbers.size < hisCount)
+                }
 
                 do {
                     //val next = random.nextInt(wordsList.size)
@@ -220,7 +228,7 @@ class SpeakingFragment : Fragment() {
                         numbers.add(next)
                         MainApp.History.add(MainApp.wordsList[next])
                     }
-                } while (numbers.size < maxQuestions )
+                } while (numbers.size < maxQuestions)
             }
         }
 

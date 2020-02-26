@@ -116,7 +116,8 @@ class ListeningFragment : Fragment() {
             NUMBER += 1
             editTextListen.text?.clear()
             question = getQuestion()
-            list_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString() + " "
+            list_count.text =
+                "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString() + " "
 
             if (NUMBER == 9) {
                 if (MainApp.Result.size == 9) {
@@ -125,12 +126,15 @@ class ListeningFragment : Fragment() {
                 listenNextFrag.text = "EXIT"
                 listenNextFrag.setOnClickListener {
                     checkAnswer()
-                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext, 0))
+                    startActivity(
+                        ResultActivity.getStartIntent(
+                            MainApp.instance.applicationContext,
+                            0
+                        )
+                    )
                     activity?.finish()
                 }
             }
-
-
         }
 
         listenAns.setOnClickListener {
@@ -176,14 +180,16 @@ class ListeningFragment : Fragment() {
             } else {
 
                 val hisWord = WordHistory().queryAll()
-                do {
-                    //val next = random.nextInt(wordsList.size)
-                    val next = random.nextInt(hisCount.toInt())
-                    if (!numbers.contains(next)) {
-                        numbers.add(next)
-                        History.add(wordsList.filter { it.word == hisWord[next].id }.first())
-                    }
-                } while (numbers.size < hisCount)
+                if (hisCount.toInt() != 0) {
+                    do {
+                        //val next = random.nextInt(wordsList.size)
+                        val next = random.nextInt(hisCount.toInt())
+                        if (!numbers.contains(next)) {
+                            numbers.add(next)
+                            History.add(wordsList.filter { it.word == hisWord[next].id }.first())
+                        }
+                    } while (numbers.size < hisCount)
+                }
 
                 do {
                     //val next = random.nextInt(wordsList.size)

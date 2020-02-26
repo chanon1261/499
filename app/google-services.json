@@ -8,43 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1041559311879:android:b3e61e303836969f",
-        "android_client_info": {
-          "package_name": "com.example.m.mproject499"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1041559311879-39gl9b2ac92m38hh0g469n34ds7el2ur.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.m.mproject499",
-            "certificate_hash": "823d34a3a9ecda5b2d31a4495a886c5e7d0d895f"
-          }
-        },
-        {
-          "client_id": "1041559311879-9a8e68bo09n7jjmvubaj4gtsfroa1pni.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAMHXJjfJakuUlelYWpyn0lb4jyBGhWXyc"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1041559311879-9a8e68bo09n7jjmvubaj4gtsfroa1pni.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:1041559311879:android:679e639dd6f58a26",
         "android_client_info": {
           "package_name": "com.independent.m.mproject499"
@@ -52,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "1041559311879-06glpln97duj2eia5eepdduufgiftocp.apps.googleusercontent.com",
+          "client_id": "1041559311879-57n89i4r08vtkqto4ai8gd7ctade3s5p.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.independent.m.mproject499",
-            "certificate_hash": "823d34a3a9ecda5b2d31a4495a886c5e7d0d895f"
+            "certificate_hash": "0fe394b85e138b68247fa3385eb2808c3b842101"
           }
         },
         {

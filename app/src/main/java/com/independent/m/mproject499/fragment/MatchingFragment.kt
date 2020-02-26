@@ -12,7 +12,6 @@ import com.independent.m.mproject499.MainApp.Companion.NUMBER
 import com.independent.m.mproject499.activity.MatchingActivity
 import com.independent.m.mproject499.activity.ResultActivity
 import com.independent.m.mproject499.adapter.MatchingAdapter
-import com.independent.m.mproject499.data.Constants
 import com.independent.m.mproject499.data.Constants.maxQuestions
 import com.independent.m.mproject499.data.Constants.maxSizeWord
 import com.independent.m.mproject499.model.WordHistory
@@ -55,7 +54,11 @@ class MatchingFragment : Fragment() {
 
 
 
-        adapter = MatchingAdapter(MainApp.instance.applicationContext, randomChoice(), History[NUMBER].word)
+        adapter = MatchingAdapter(
+            MainApp.instance.applicationContext,
+            randomChoice(),
+            History[NUMBER].word
+        )
         gridView.adapter = adapter
 
 
@@ -77,17 +80,27 @@ class MatchingFragment : Fragment() {
                 }
                 match_next.text = "EXIT"
                 match_next.setOnClickListener {
-                    startActivity(ResultActivity.getStartIntent(MainApp.instance.applicationContext, 1))
+                    startActivity(
+                        ResultActivity.getStartIntent(
+                            MainApp.instance.applicationContext,
+                            1
+                        )
+                    )
                     activity?.finish()
                 }
             }
 
             match_count.text = "Question " + (NUMBER + 1).toString() + "/" + maxQuestions.toString()
             History[NUMBER].let { q ->
-                match_quest.text = q.desc_eng.toLowerCase().replace(q.word.toLowerCase(), "______").capitalize()
+                match_quest.text =
+                    q.desc_eng.toLowerCase().replace(q.word.toLowerCase(), "______").capitalize()
             }
 
-            adapter = MatchingAdapter(MainApp.instance.applicationContext, randomChoice(), History[NUMBER].word)
+            adapter = MatchingAdapter(
+                MainApp.instance.applicationContext,
+                randomChoice(),
+                History[NUMBER].word
+            )
             gridView.adapter = adapter
         }
 
@@ -131,14 +144,16 @@ class MatchingFragment : Fragment() {
             } else {
 
                 val hisWord = WordHistory().queryAll()
-                do {
-                    //val next = random.nextInt(wordsList.size)
-                    val next = random.nextInt(hisCount.toInt())
-                    if (!numbers.contains(next)) {
-                        numbers.add(next)
-                        History.add(MainApp.wordsList.filter { it.word == hisWord[next].id }.first())
-                    }
-                } while (numbers.size < hisCount)
+                if (hisCount.toInt() != 0) {
+                    do {
+                        //val next = random.nextInt(wordsList.size)
+                        val next = random.nextInt(hisCount.toInt())
+                        if (!numbers.contains(next)) {
+                            numbers.add(next)
+                            History.add(MainApp.wordsList.filter { it.word == hisWord[next].id }.first())
+                        }
+                    } while (numbers.size < hisCount)
+                }
 
                 do {
                     //val next = random.nextInt(wordsList.size)
